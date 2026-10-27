@@ -1,0 +1,247 @@
+
+/* 文字樣式 */
+
+.showcase-postcard-fullbleed .showcase-caption strong,
+.showcase-postcard-fullbleed .showcase-caption small,
+.showcase-postcard-fullbleed .showcase-caption p {
+  margin: 0 0 0.5rem;
+  color: inherit;
+  font-size: clamp(0.75rem, 1.1vw, 0.95rem);
+  line-height: 1.5;
+}
+
+.showcase-postcard-fullbleed .showcase-caption p {
+  margin-bottom: 0;
+}
+
+/* 明信片裝飾 */
+
+.showcase-postcard-fullbleed .showcase-sticker {
+  position: absolute;
+  z-index: 2;
+}
+
+/* 手機版 */
+
+@media (max-width: 575.98px) {
+  .showcase-postcard-fullbleed .showcase-caption {
+    width: 36%;
+    padding: 8px;
+  }
+
+  .showcase-postcard-fullbleed .showcase-caption strong,
+  .showcase-postcard-fullbleed .showcase-caption small,
+  .showcase-postcard-fullbleed .showcase-caption p {
+    font-size: 0.65rem;
+    line-height: 1.35;
+  }
+}
+.cart-line .qty-control {
+  flex-wrap: wrap;
+  max-width: 100%;
+  gap: 6px;
+}
+.cart-line [data-remove-cart] {
+  white-space: nowrap;
+  line-height: 1.2;
+  padding: 5px 8px;
+  border-radius: 999px;
+}
+.address-entry {
+  border-radius: 16px;
+}
+.product-badge {
+  background-color: #00a882;
+  color: #fff;
+}
+@media (max-width: 760px) {
+  .site-header .nav-link {
+    padding: 7px 10px;
+  }
+  .cover-book {
+    width: 100%;
+    aspect-ratio: 1.55 / 1;
+  }
+  .showcase-single-page {
+    padding: 8px;
+  }
+  .showcase-single-page .showcase-postcard {
+    aspect-ratio: 1.35 / 1;
+  }
+  .showcase-single-page .showcase-caption {
+    padding: 8px;
+  }
+  .showcase-single-page .showcase-caption p {
+    margin-top: 4px;
+  }
+  .printed-postcard {
+    aspect-ratio: 1.35 / 1;
+  }
+  .printed-postcard-note {
+    padding: 7px;
+  }
+  .printed-postcard-note p {
+    font-size: 0.65rem;
+  }
+  .showcase-closed-cover {
+    min-height: 230px;
+    aspect-ratio: 1.5 / 1;
+  }
+}
+@keyframes page-turn-in {
+  from {
+    opacity: 0.45;
+    transform: perspective(900px) rotateY(-8deg) translateX(8px);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(900px) rotateY(0) translateX(0);
+  }
+}
+.page-turn-in {
+  animation: page-turn-in 0.32s ease-out both;
+  transform-origin: left center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-turn-in {
+    animation: none;
+  }
+}
+
+.language-select-wrap,
+.currency-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 0.82rem;
+}
+
+/* Real postcard photography */
+.postcard-scene.has-photo {
+  background: #e8eadf;
+}
+.postcard-scene.has-photo::before,
+.postcard-scene.has-photo::after {
+  display: none;
+}
+.postcard-photo {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.postcard-scene.has-photo > .postcard-photo[hidden] {
+  display: none;
+}
+.editor-canvas .original-postcard-image .postcard-photo {
+  object-position: center;
+}
+
+/* Step progress is visible and tied to the current studio step */
+.stepper-summary {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+.stepper-summary__label {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.stepper-summary strong {
+  font-size: 0.92rem;
+}
+.stepper-summary__name {
+  margin-left: auto;
+  color: var(--green-dark, #526c48);
+  font-size: 0.82rem;
+  font-weight: 750;
+}
+.stepper-progress-track {
+  height: 5px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #e7e9df;
+}
+.stepper-progress-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--green, #7a936a);
+  transition: width 0.25s ease;
+}
+.stepper {
+  margin-top: 16px;
+}
+.stepper-item.active .stepper-circle {
+  box-shadow: 0 0 0 4px rgba(122, 147, 106, 0.16);
+}
+
+/* Real-photo album showcase */
+.showcase-cover-photo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #e8eadf;
+}
+.showcase-cover-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+  object-fit: cover;
+  display: block;
+}
+.showcase-photo-sticker,
+.sample-photo-sticker,
+.showcase-sticker {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  background: #fff8d8;
+  color: #e77f59;
+  box-shadow: 0 3px 12px #26302024;
+  font-size: 1.25rem;
+  transform: rotate(10deg);
+}
+.showcase-photo-sticker {
+  right: 12px;
+  top: 12px;
+}
+.floating-postcard .postcard-scene {
+  position: relative;
+}
+.sample-photo-sticker {
+  right: 8px;
+  top: 8px;
+}
+.floating-postcard-caption {
+  position: absolute;
+  left: 7px;
+  right: 7px;
+  bottom: 7px;
+  padding: 4px 6px;
+  background: rgba(255, 254, 250, 0.92);
+  color: #3d4b38;
+  font-size: 0.58rem;
+  text-align: center;
+  border-radius: 4px;
+}

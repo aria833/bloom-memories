@@ -1,0 +1,240 @@
+.section-block {
+  padding: 68px 0;
+}
+.section-heading-row {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.step-card {
+  padding: 24px;
+  min-height: 180px;
+}
+.step-number {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--green-soft);
+  color: var(--green-dark);
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.step-card h3 {
+  font-size: 1.08rem;
+  font-weight: 750;
+}
+.step-card p {
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.7;
+  margin: 8px 0 0;
+}
+/* ========================================
+   Showcase 相冊卡片
+======================================== */
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.showcase-card {
+  padding: 14px;
+}
+
+.showcase-image {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  padding: 25px;
+  background: #f1f0e8;
+  border-radius: 12px;
+}
+
+.showcase-card h3 {
+  margin: 14px 3px 4px;
+  font-size: 0.95rem;
+  font-weight: 750;
+}
+
+.showcase-card p {
+  margin: 0 3px 4px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+/* ========================================
+   相冊遮罩
+======================================== */
+
+.showcase-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px;
+
+  background: rgba(30, 39, 31, 0.62);
+  backdrop-filter: blur(7px);
+}
+
+.showcase-overlay.show {
+  display: flex;
+}
+
+/* ========================================
+   相冊視窗
+======================================== */
+
+.showcase-dialog {
+  position: relative;
+
+  width: min(1080px, 100%);
+  max-height: calc(100vh - 32px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  padding: clamp(20px, 3vw, 36px);
+
+  border-radius: 24px;
+  background: var(--paper);
+
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.24);
+}
+
+.showcase-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  z-index: 2;
+
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--line);
+  border-radius: 50%;
+
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* ========================================
+   相冊標題
+======================================== */
+
+.showcase-modal-header {
+  flex: 0 0 auto;
+
+  text-align: center;
+
+  padding: 0 48px;
+  margin-bottom: 20px;
+}
+
+.showcase-modal-header h2 {
+  margin-top: 10px;
+
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.showcase-modal-header p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+/* ========================================
+   書本展示區域
+
+   高度由 JavaScript 依照書頁調整
+   不再使用固定 aspect-ratio
+======================================== */
+
+.showcase-book-stage {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  margin: 0 auto 20px;
+}
+
+/* ========================================
+   書本容器
+
+   一次只展示一個書頁
+======================================== */
+
+.showcase-open-book {
+  width: min(620px, 100%);
+
+  display: block;
+
+  overflow: hidden;
+
+  border: 1px solid #d5d9cf;
+  border-radius: 8px;
+
+  background: #f5f1e8;
+
+  box-shadow: 0 18px 38px rgba(48, 60, 50, 0.12);
+}
+
+/* ========================================
+   單一書頁
+======================================== */
+
+.showcase-book-page {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 3 / 2;
+
+  min-width: 0;
+
+  display: flex;
+  align-items: stretch;
+
+  overflow: hidden;
+
+  background: #fffefa;
+
+  box-sizing: border-box;
+
+  border: 0;
+}
+
+/* ========================================
+   封面與封底
+======================================== */
+
+.showcase-book-page.cover-page.travel {
+  background: #f0d4bd;
+  color: #785e49;
+}

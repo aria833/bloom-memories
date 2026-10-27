@@ -1,0 +1,242 @@
+.studio-heading h2 {
+  font-size: clamp(1.45rem, 3vw, 2.1rem);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  margin-bottom: 8px;
+}
+.studio-heading p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.7;
+}
+.field-label {
+  display: block;
+  font-size: 0.83rem;
+  font-weight: 750;
+  margin-bottom: 8px;
+}
+.form-control,
+.form-select {
+  border-color: #dce1d7;
+  border-radius: 11px;
+  padding: 12px 14px;
+  background-color: #fffefa;
+  color: var(--ink);
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: #9bb58a;
+  box-shadow: 0 0 0 0.2rem #dfe9d8;
+}
+.create-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 38px;
+  align-items: center;
+}
+.create-preview {
+  min-height: 340px;
+  display: grid;
+  place-items: center;
+  background: #f2f1e9;
+  border-radius: 16px;
+  padding: 28px;
+}
+.create-preview .mini-book {
+  width: 341px;
+  height: 228px;
+}
+.selection-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.filter-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+/* 明信片篩選器 */
+.filter-row .form-select {
+  width: auto;
+  min-width: 130px;
+  max-width: 100%;
+  padding-right: 2.25rem;
+  flex: 0 1 auto;
+}
+@media (max-width: 575.98px) {
+  .filter-row .form-select {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 0;
+  }
+}
+
+.filter-row #locationFilter,
+.filter-row #methodFilter {
+  min-width: 150px;
+}
+
+.filter-chip {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 13px;
+  background: var(--paper);
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.filter-chip.active {
+  background: var(--green-soft);
+  border-color: #c8d5bf;
+  color: var(--green-dark);
+}
+.postcard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.postcard-card {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 13px;
+  padding: 8px;
+  text-align: left;
+  position: relative;
+  min-width: 0;
+  color: var(--ink);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.postcard-card:hover {
+  border-color: #aab99f;
+}
+.postcard-card.selected {
+  border: 2px solid var(--green);
+  padding: 7px;
+  box-shadow: 0 0 0 3px #e4ebdf;
+}
+.postcard-card:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.postcard-card .postcard-scene {
+  min-height: 128px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 0;
+}
+.postcard-meta {
+  padding: 0 3px 4px;
+}
+.postcard-meta strong {
+  display: block;
+  font-size: 0.78rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.postcard-meta span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.69rem;
+}
+.postcard-check {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+
+  width: 25px;
+  height: 25px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: #fffefa;
+  border: 1px solid #d9dfd3;
+  color: transparent;
+
+  pointer-events: none;
+}
+.postcard-card.selected .postcard-check {
+  background: var(--green);
+  color: white;
+  border-color: var(--green);
+}
+.selection-footer {
+  position: sticky;
+  bottom: 0;
+  margin: 26px -1px -1px;
+  padding: 15px 18px;
+  background: rgba(255, 254, 250, 0.96);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  z-index: 10;
+  box-shadow: 0 -8px 24px #3541370b;
+  backdrop-filter: blur(12px);
+}
+.selection-footer strong {
+  font-size: 0.9rem;
+}
+
+.product-card,
+.shop-product {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  text-align: left;
+}
+.product-card .product-image,
+.shop-product .product-image {
+  margin-bottom: 0.5rem;
+  flex-shrink: 0;
+}
+.product-card h3,
+.shop-product h3 {
+  overflow-wrap: anywhere;
+}
+.product-card p,
+.shop-product p {
+  flex: 1 0 auto;
+  overflow-wrap: anywhere;
+}
+.product-card .price {
+  display: block;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+.shop-product > .d-flex {
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+.product-card .related-product-main {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+}
+.product-card .related-add-cart {
+  align-self: stretch;
+  margin-top: 0.75rem;
+}
+
+/* 商品詳情：主要圖片 */
+.product-gallery-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}

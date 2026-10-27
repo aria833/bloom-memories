@@ -1,0 +1,29 @@
+
+/* 商品詳情：縮圖按鈕 */
+.gallery-thumbnails button {
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+/* 商品詳情：縮圖照片 */
+.gallery-thumb-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 商品卡片圖片 */
+.product-card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

@@ -1,0 +1,242 @@
+
+.currency-select-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: var(--paper);
+  font-size: 0.76rem;
+}
+.currency-select-wrap select {
+  max-width: 92px;
+  border: 0;
+  outline: 0;
+  color: var(--ink);
+  background: transparent;
+  font: inherit;
+}
+.feedback-toast {
+  box-shadow: 0 12px 34px rgba(42, 54, 40, 0.16);
+  border-radius: 14px;
+  min-width: 270px;
+  animation: feedback-in 0.22s ease-out;
+}
+#toastContainer {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@keyframes feedback-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.cart-count.cart-pop {
+  animation: cart-pop 0.34s ease-out;
+}
+@keyframes cart-pop {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.45);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.showcase-button,
+.product-card-button,
+.shop-product-button {
+  font: inherit;
+  text-align: left;
+  width: 100%;
+  color: inherit;
+  cursor: pointer;
+}
+.showcase-button {
+  position: relative;
+  border: 1px solid var(--line);
+}
+.showcase-button:hover,
+.product-card-button:hover,
+.shop-product-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(48, 60, 50, 0.09);
+}
+.showcase-card,
+.product-card,
+.shop-product {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.showcase-cta {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  color: var(--green-dark);
+  font-size: 0.8rem;
+  font-weight: 750;
+  margin: 10px 3px 3px;
+}
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+.product-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.shop-product-button {
+  border: 1px solid var(--line);
+  padding: 14px;
+}
+.product-card-button {
+  border: 1px solid var(--line);
+  padding: 14px;
+}
+.detail-buy-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.btn-wish-active {
+  color: #fff;
+  background: #c87975;
+  border: 1px solid #c87975;
+}
+.btn-wish-active:hover {
+  color: #fff;
+  background: #ad625f;
+  border-color: #ad625f;
+}
+.qty-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 7px;
+  background: var(--paper);
+}
+.qty-control button {
+  width: 27px;
+  height: 27px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--green-soft);
+  color: var(--green-dark);
+  display: inline-grid;
+  place-items: center;
+  font-weight: 800;
+}
+.qty-control button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.qty-control.large {
+  padding: 6px 9px;
+  gap: 12px;
+}
+.qty-control.large button {
+  width: 31px;
+  height: 31px;
+}
+.product-gallery {
+  position: relative;
+  padding: 30px 38px 48px;
+  overflow: hidden;
+}
+.product-gallery .product-image {
+  width: 100%;
+  min-height: 330px;
+  border-radius: 15px;
+}
+.gallery-art {
+  position: relative;
+  background: linear-gradient(140deg, #e7eddf, #f5e5d8);
+}
+.gallery-art-1 {
+  background: linear-gradient(140deg, #e3e9df, #e8e1d3);
+}
+.gallery-art-2 {
+  background: linear-gradient(140deg, #dce9e9, #f5e4d8);
+}
+.gallery-art::before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 48%;
+  bottom: 0;
+  left: 20%;
+  border-radius: 50% 50% 0 0;
+  background: rgba(113, 145, 98, 0.24);
+}
+.gallery-art .bi {
+  position: relative;
+  z-index: 1;
+  font-size: 5rem;
+}
+.gallery-caption {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  z-index: 2;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+.gallery-prev {
+  left: 10px;
+}
+.gallery-next {
+  right: 10px;
+}
+.gallery-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+.gallery-dots button {
+  width: 7px;
+  height: 7px;
+  border: 0;
+  padding: 0;
+  border-radius: 50%;
+  background: #bdc8b6;
+}

@@ -1,0 +1,377 @@
+/* ========================================
+   範例明信片：圖片
+======================================== */
+
+.showcase-postcard-photo {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  min-height: 115px;
+  overflow: hidden;
+  background: #e8eadf;
+}
+
+.showcase-postcard-photo > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 115px;
+  object-fit: cover;
+}
+
+/* 範例明信片上的貼紙 */
+.showcase-sticker {
+  top: 8px;
+  right: 8px;
+}
+
+/* ========================================
+   手機版：步驟導覽
+======================================== */
+
+@media (max-width: 760px) {
+  .stepper-summary__name {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .stepper {
+    grid-template-columns: repeat(7, minmax(68px, 1fr));
+  }
+
+  .progress-wrap {
+    overflow-x: auto;
+  }
+
+  .stepper-progress-track,
+  .stepper-summary {
+    min-width: 0;
+  }
+
+  .showcase-cover-photo,
+  .showcase-cover-photo img {
+    min-height: 125px;
+  }
+}
+
+/* ========================================
+   明信片共用設定
+   編輯畫布與預覽相冊
+======================================== */
+
+.editor-canvas.postcard-landscape,
+.printed-postcard.postcard-landscape {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1023 / 684;
+  overflow: hidden;
+  isolation: isolate;
+  background: #e8eadf;
+}
+
+/* ========================================
+   明信片背景圖片
+======================================== */
+
+.editor-canvas.postcard-landscape .postcard-fullbleed-image,
+.printed-postcard.postcard-landscape .postcard-fullbleed-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* 圖片場景 */
+.editor-canvas.postcard-landscape .postcard-fullbleed-image .postcard-scene,
+.printed-postcard.postcard-landscape .postcard-fullbleed-image .postcard-scene {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  border-radius: 0;
+}
+
+/* 明信片照片 */
+.editor-canvas.postcard-landscape .postcard-fullbleed-image .postcard-photo,
+.printed-postcard.postcard-landscape .postcard-fullbleed-image .postcard-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  background: #e8eadf;
+}
+
+/* ========================================
+   明信片右側文字區
+   編輯畫布與預覽相冊共用
+======================================== */
+
+.editor-canvas.postcard-landscape .postcard-message-overlay,
+.printed-postcard.postcard-landscape .postcard-message-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  box-sizing: border-box;
+  width: 33.3333%;
+  min-width: 0;
+  margin: 0;
+  padding: clamp(8px, 1.8vw, 20px);
+
+  border: 0;
+  background: rgb(255 254 250 / 88%);
+  color: #252820;
+
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   明信片標題
+======================================== */
+
+.editor-canvas.postcard-landscape .postcard-message-location,
+.printed-postcard.postcard-landscape .postcard-message-location {
+  position: static;
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  color: #68785e;
+
+  font-size: clamp(0.7rem, 1.4vw, 0.95rem);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+
+  text-indent: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   明信片日期
+======================================== */
+
+.editor-canvas.postcard-landscape .date-label,
+.printed-postcard.postcard-landscape .date-label {
+  position: static;
+  display: block;
+
+  margin: 0.5rem 0 0;
+  padding: 0;
+
+  color: #68785e;
+
+  font-size: clamp(0.6rem, 1.1vw, 0.75rem);
+  line-height: 1.5;
+
+  text-indent: 0;
+}
+
+/* ========================================
+   明信片文字內容
+======================================== */
+
+.editor-canvas.postcard-landscape .editor-note,
+.printed-postcard.postcard-landscape .editor-note {
+  position: static;
+  display: block;
+
+  margin: 0.75rem 0 0;
+  padding: 0;
+
+  color: inherit;
+
+  font-size: clamp(0.65rem, 1.2vw, 0.9rem);
+  line-height: 1.65;
+
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  text-indent: 0;
+}
+
+/* ========================================
+   明信片裝飾
+======================================== */
+
+.editor-canvas.postcard-landscape .postcard-decoration,
+.printed-postcard.postcard-landscape .postcard-decoration {
+  z-index: 3;
+}
+
+/* 裝飾縮放控制點 */
+.decoration-resize-handle {
+  right: -6px;
+  bottom: -6px;
+
+  width: 12px;
+  height: 12px;
+}
+
+/* 裝飾刪除按鈕 */
+.decoration-delete-button {
+  position: absolute;
+  top: -13px;
+  right: -13px;
+  z-index: 6;
+
+  display: grid;
+  place-items: center;
+
+  width: 21px;
+  height: 21px;
+
+  border: 2px solid #fff;
+  border-radius: 50%;
+
+  background: #d94b4b;
+  color: #fff;
+
+  box-shadow: 0 1px 5px #0003;
+
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.decoration-delete-button:hover,
+.decoration-delete-button:focus-visible {
+  background: #b92d2d;
+  outline: 2px solid #fff;
+  outline-offset: 1px;
+}
+
+/* ========================================
+   範例明信片冊：完整圖片
+======================================== */
+
+.showcase-postcard.showcase-postcard-fullbleed {
+  position: relative;
+  display: block;
+
+  aspect-ratio: 1023 / 684;
+  min-height: 0;
+
+  border: 0;
+  border-radius: 3px;
+
+  overflow: hidden;
+  background: #e8eadf;
+}
+
+/* 範例明信片背景圖片 */
+.showcase-postcard-background {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  background: #e8eadf;
+}
+
+/* 範例明信片右側文字 */
+.showcase-postcard-fullbleed .showcase-caption {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  box-sizing: border-box;
+  width: 33.3333%;
+  padding: clamp(8px, 1.8vw, 20px);
+
+  overflow-wrap: anywhere;
+
+  background: rgb(255 254 250 / 88%);
+  color: #252820;
+  text-align: left;
+}
+
+/* 範例明信片標題與日期 */
+.showcase-postcard-fullbleed .showcase-caption strong,
+.showcase-postcard-fullbleed .showcase-caption small {
+  display: block;
+}
+
+/* 範例明信片標題 */
+.showcase-postcard-fullbleed .showcase-caption strong {
+  margin: 0;
+  font-size: clamp(0.7rem, 1.4vw, 0.95rem);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* 範例明信片日期 */
+.showcase-postcard-fullbleed .showcase-caption small {
+  margin-top: 0.5rem;
+  font-size: clamp(0.6rem, 1.1vw, 0.75rem);
+  line-height: 1.5;
+}
+
+/* 範例明信片文字 */
+.showcase-postcard-fullbleed .showcase-caption p {
+  margin: 0.75rem 0 0;
+  font-size: clamp(0.65rem, 1.2vw, 0.9rem);
+  line-height: 1.65;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   手機版：編輯畫布與預覽相冊
+======================================== */
+
+@media (max-width: 575.98px) {
+  .editor-canvas.postcard-landscape .postcard-message-overlay,
+  .printed-postcard.postcard-landscape .postcard-message-overlay {
+    width: 36%;
+    padding: 7px;
+    background: rgb(255 254 250 / 91%);
+  }
+
+  .editor-canvas.postcard-landscape .postcard-message-location,
+  .printed-postcard.postcard-landscape .postcard-message-location {
+    font-size: 0.7rem;
+  }
+
+  .editor-canvas.postcard-landscape .date-label,
+  .printed-postcard.postcard-landscape .date-label {
+    font-size: 0.6rem;
+  }
+
+  .editor-canvas.postcard-landscape .editor-note,
+  .printed-postcard.postcard-landscape .editor-note {
+    font-size: 0.65rem;
+    line-height: 1.5;
+  }
+}

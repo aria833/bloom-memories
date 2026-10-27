@@ -1,0 +1,221 @@
+.gallery-dots button.active {
+  width: 21px;
+  border-radius: 10px;
+  background: var(--green);
+}
+.gallery-thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+.gallery-thumbnails button {
+  width: 74px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+}
+.gallery-thumbnails button.active {
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px var(--green-soft);
+}
+.gallery-thumb-art {
+  min-height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: #e7eddf;
+  color: var(--green);
+}
+.gallery-thumb-art .bi {
+  font-size: 1.3rem;
+}
+.related-products {
+  margin-top: 60px;
+}
+.related-products .product-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.studio-landing .draft-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.create-new-draft {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.create-preview {
+  min-width: 0;
+}
+
+.create-new-draft__content {
+  min-width: 0;
+}
+
+@media (max-width: 767.98px) {
+  .create-new-draft {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    padding: 1.25rem;
+    margin-inline: 0.75rem;
+  }
+
+  .create-preview {
+    width: 100%;
+  }
+
+  .create-new-draft__content {
+    width: 100%;
+  }
+}
+.preview-page-strip {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.print-confirm-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(290px, 0.8fr);
+  gap: 28px;
+}
+.addon-select-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.addon-select-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  cursor: pointer;
+  background: var(--paper);
+}
+.addon-select-card.selected {
+  border-color: var(--green);
+  background: #f4f7f0;
+  box-shadow: 0 0 0 2px var(--green-soft);
+}
+.addon-image {
+  position: relative;
+  min-height: 82px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #edf0e7;
+  color: var(--green);
+  font-size: 2rem;
+}
+.addon-image .badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 0.58rem;
+}
+.addon-select-card strong {
+  font-size: 0.83rem;
+}
+.addon-select-card small {
+  color: var(--muted);
+}
+.wishlist-add-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.wishlist-add-row strong {
+  margin-left: auto;
+}
+.info-accordion {
+  width: 100%;
+  max-width: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.info-accordion .accordion-item {
+  border-color: var(--line);
+}
+.info-accordion .accordion-button {
+  color: var(--ink);
+  background: var(--paper);
+  font-weight: 700;
+  box-shadow: none;
+}
+.info-accordion .accordion-button:not(.collapsed) {
+  color: var(--green-dark);
+  background: var(--green-soft);
+}
+.info-accordion .accordion-body {
+  color: var(--muted);
+  line-height: 1.8;
+}
+.contact-form-wrap {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: clamp(20px, 4vw, 42px);
+  border-radius: var(--radius-card);
+}
+.editor-canvas.postcard-landscape {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  aspect-ratio: 1.9 / 1;
+  overflow: hidden;
+  background: #fffefa;
+  border: 1px solid #d9ddd3;
+}
+.original-postcard-image {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+}
+.original-postcard-image .postcard-scene {
+  height: 100%;
+  min-height: 0;
+  border-radius: 0;
+}
+.original-postcard-writing {
+  padding: 16px;
+  position: relative;
+  border-left: 1px dashed #d8d8cd;
+  background: #fffefa;
+}
+.original-postcard-writing .date-label {
+  position: static;
+  display: block;
+  color: #7e8d78;
+  font-size: 0.65rem;
+}
+
+.cart-line-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  min-width: 0;
+}
+.cart-line-copy {
+  min-width: 0;
+}
+.cart-line-copy h3,
+.cart-line-copy p {
+  overflow-wrap: anywhere;
+}
+.cart-remove-button {
+  flex: 0 0 auto;
+}
+@media (max-width: 575.98px) {
+  .cart-line-actions {
+    gap: 0.5rem;
+  }
+}

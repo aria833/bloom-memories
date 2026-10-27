@@ -1,0 +1,242 @@
+
+.showcase-book-page.cover-page.family {
+  background: #d7e5e7;
+  color: #4c6c70;
+}
+
+.showcase-book-page.cover-page.back-cover {
+  background: #e9e5d9;
+  color: #686c5c;
+}
+
+/* ========================================
+   相冊封面與封底
+======================================== */
+
+.showcase-closed-cover {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 3 / 2;
+
+  overflow: hidden;
+
+  padding: 0;
+  border: 0;
+
+  background: #f3e9d8;
+}
+
+.showcase-cover-image {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 圖片路徑失效時的提示 */
+.showcase-cover-fallback {
+  position: absolute;
+  inset: 0;
+
+  display: grid;
+  place-items: center;
+
+  padding: 20px;
+
+  background: #f3e9d8;
+  color: #686c5c;
+
+  text-align: center;
+}
+
+.showcase-cover-content {
+  position: relative;
+  z-index: 1;
+
+  width: min(82%, 420px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 254, 250, 0.82);
+
+  backdrop-filter: blur(4px);
+}
+
+.showcase-cover-content .bi {
+  font-size: 2.5rem;
+}
+
+.showcase-cover-content h3 {
+  margin: 0;
+
+  font-family: Georgia, serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+
+  line-height: 1.4;
+}
+
+.showcase-cover-content p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.showcase-cover-content small {
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+}
+
+/* ========================================
+   明信片
+======================================== */
+
+.showcase-single-page {
+  display: flex;
+  align-items: stretch;
+}
+
+.showcase-postcard {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: #fff;
+}
+
+.showcase-postcard-fullbleed {
+  position: relative;
+}
+/* ========================================
+   明信片右側文字遮罩
+======================================== */
+
+.showcase-postcard-fullbleed::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 52%;
+
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.68));
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+.showcase-postcard-background {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.showcase-landscape {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(155deg, #d9e8dc, #a9c5a3 58%, #e8d7bc);
+}
+
+.showcase-landscape::before {
+  content: "";
+
+  position: absolute;
+
+  width: 70%;
+  height: 70%;
+
+  left: 15%;
+  bottom: -8%;
+
+  border-radius: 55% 55% 0 0;
+
+  background: rgba(90, 126, 81, 0.45);
+}
+
+/* ========================================
+   明信片裝飾
+======================================== */
+
+.showcase-sticker {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  z-index: 1;
+
+  display: grid;
+  place-items: center;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 254, 250, 0.9);
+
+  font-size: 1.1rem;
+}
+
+/* ========================================
+   明信片右側文字
+======================================== */
+
+.showcase-caption {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+
+  width: 52%;
+  box-sizing: border-box;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: clamp(12px, 2vw, 24px);
+
+  color: #fff;
+
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.showcase-caption strong,
+.showcase-caption small {
+  display: block;
+}

@@ -1,0 +1,442 @@
+.selection-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.selection-footer__info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.selection-footer__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 575.98px) {
+  .selection-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .selection-footer__info {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 0.5rem;
+  }
+
+  .selection-footer__actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .selection-footer__actions .btn {
+    width: 100%;
+  }
+}
+.editor-layout {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr) 230px;
+  gap: 18px;
+  align-items: start;
+}
+.editor-panel {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: #fbfbf6;
+  min-width: 0;
+}
+.editor-panel h3 {
+  font-size: 0.8rem;
+  font-weight: 800;
+  margin-bottom: 13px;
+}
+.layout-option {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+  margin-bottom: 9px;
+  text-align: left;
+  color: var(--ink);
+}
+.layout-option.active {
+  border: 2px solid var(--green);
+  padding: 7px;
+  background: #f3f6ef;
+}
+.layout-thumb {
+  height: 72px;
+  background: #e9eee3;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 8px;
+  color: #809475;
+  font-size: 1.3rem;
+}
+.layout-option span {
+  font-size: 0.73rem;
+  font-weight: 750;
+}
+.editor-canvas-wrap {
+  min-height: 420px;
+  background: #f1f0e8;
+  border-radius: 13px;
+  padding: 25px;
+  display: grid;
+  place-items: center;
+}
+.editor-canvas {
+  width: min(100%, 440px);
+  aspect-ratio: 4 / 3;
+  background: #dce8d4;
+  border: 10px solid white;
+  box-shadow: 0 8px 24px #35413716;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: end;
+  padding: 18px;
+}
+.editor-canvas .postcard-scene {
+  position: absolute;
+  inset: 0;
+  border-radius: 0;
+}
+.editor-canvas .postcard-scene::before {
+  width: 80%;
+  height: 70%;
+}
+.editor-canvas .editor-note {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  background: #fffefaeb;
+  padding: 10px 12px;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  min-height: 28px;
+  overflow-wrap: anywhere;
+}
+.editor-canvas.layout-original {
+  padding: 0;
+  border-width: 8px;
+}
+.editor-canvas.layout-original .editor-note {
+  display: none;
+}
+.editor-canvas.layout-scrapbook::after {
+  content: "✳  ✿";
+  position: absolute;
+  z-index: 3;
+  top: 13px;
+  right: 16px;
+  color: #e59c75;
+  font-size: 1.8rem;
+  letter-spacing: 7px;
+}
+.editor-canvas .date-label {
+  position: absolute;
+  z-index: 4;
+  top: 13px;
+  left: 13px;
+  background: #fffefa;
+  color: #596c50;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+}
+.editor-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+.editor-bottom span {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.decor-buttons {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.page-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.page-thumb {
+  padding: 9px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 12px;
+  text-align: left;
+  color: var(--ink);
+}
+.page-thumb:hover {
+  border-color: #a9b89e;
+}
+.page-thumb .postcard-scene {
+  min-height: 130px;
+}
+.page-thumb .thumb-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 9px;
+  font-size: 0.75rem;
+}
+.drag-hint {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.cover-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr) 240px;
+  gap: 25px;
+  align-items: start;
+}
+.cover-preview-area {
+  min-width: 0;
+  min-height: 470px;
+  display: grid;
+  place-items: center;
+  background: #f1f0e8;
+  border-radius: 14px;
+  padding: 28px;
+}
+/* 相冊正面 */
+
+.cover-book {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+
+  aspect-ratio: 1023 / 684;
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  gap: 0.125rem;
+
+  justify-content: flex-start;
+
+  padding: 12% 7% 7%;
+
+  border: 1px solid var(--line, #e5e3da);
+
+  border-radius: 0.75rem;
+
+  background-color: #f8f7f3;
+
+  background-position: center;
+
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  box-shadow: 0 0.75rem 2rem rgb(37 40 32 / 10%);
+}
+
+/* 背景圖片上增加淡淡的遮罩，提升文字辨識度 */
+
+.cover-book::before {
+  position: absolute;
+
+  z-index: -1;
+
+  inset: 0;
+
+  background: rgb(255 255 255 / 12%);
+
+  content: "";
+
+  pointer-events: none;
+}
+/* 疊在封面上的明信片 */
+
+.cover-book__postcard {
+  display: block;
+  width: min(50%, 256px);
+  aspect-ratio: 512 / 342;
+  object-fit: cover;
+  border: 0.35rem solid #fffefa;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1.5rem rgb(37 40 32 / 20%);
+  margin-bottom: 16px;
+}
+
+/* 封面沒有明信片時的提示 */
+.cover-book__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: min(65%, 512px);
+  aspect-ratio: 512 / 342;
+  border: 1px dashed rgb(37 40 32 / 30%);
+  border-radius: 0.25rem;
+  color: #77796f;
+  background: rgb(255 254 250 / 75%);
+}
+.cover-book__empty .bi {
+  font-size: 2rem;
+}
+/* 封面文字區 */
+
+.cover-book__copy {
+  width: 100%;
+
+  margin-top: 0;
+
+  text-align: center;
+
+  overflow-wrap: anywhere;
+
+  color: #252820;
+}
+
+/* 封面主標題 */
+
+.cover-book__copy h3 {
+  margin: 0;
+
+  font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+
+  font-weight: 700;
+
+  line-height: 1.35;
+}
+
+/* 封面副標題 */
+
+.cover-book__copy p {
+  margin: 0.25rem 0 0;
+
+  font-size: clamp(0.625rem, 0.9vw, 0.75rem);
+
+  line-height: 1.4;
+}
+
+/* 三款封面在圖片尚未準備好時的底色 */
+.cover-botanical {
+  background-color: #dce6d2;
+}
+.cover-orange {
+  background-color: #f0d4bd;
+}
+.cover-blue {
+  background-color: #d7e5e7;
+}
+
+/* 手機版 */
+@media (max-width: 767.98px) {
+  .cover-book {
+    padding: 6%;
+    gap: 0.125rem;
+  }
+  .cover-book__postcard {
+    width: 36%;
+
+    border-width: 0.125rem;
+  }
+  .cover-book__empty {
+    width: 72%;
+  }
+}
+/* ========================================
+   整本相冊預覽：封面
+   沿用設計封面的視覺設定
+======================================== */
+
+/* 預覽頁封面容器 */
+.book-page.cover-page {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background-color: #f8f7f3;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 預覽頁的封面背景遮罩 */
+.book-page.cover-page::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: rgb(255 255 255 / 12%);
+  content: "";
+  pointer-events: none;
+}
+
+/* 預覽頁的明信片 */
+.book-page.cover-page .cover-book__postcard {
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  width: min(50%, 256px);
+  aspect-ratio: 512 / 342;
+  object-fit: cover;
+
+  border: 0.35rem solid #fffefa;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1.5rem rgb(37 40 32 / 20%);
+
+  margin-bottom: 16px;
+}
+
+/* 預覽頁的封面文字 */
+.book-page.cover-page .cover-book__copy {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  margin-top: 0;
+
+  text-align: center;
+  overflow-wrap: anywhere;
+  color: #252820;
+}
+
+/* 預覽頁主標題 */
+.book-page.cover-page .cover-book__copy h3 {
+  margin: 0;
+
+  font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* 預覽頁副標題 */
+.book-page.cover-page .cover-book__copy p {
+  margin: 0.25rem 0 0;
+
+  font-size: clamp(0.625rem, 0.9vw, 0.75rem);
+  line-height: 1.4;
+}

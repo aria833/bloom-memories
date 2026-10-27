@@ -1,0 +1,157 @@
+@media (max-width: 760px) {
+
+  .mobile-nav > button {
+    min-height: 44px;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.95rem;
+  }
+
+  .mobile-nav > button:hover,
+  .mobile-nav > button.active {
+    color: var(--green-dark);
+    background: var(--green-soft);
+    border-radius: 8px;
+  }
+
+  .mobile-nav-tools {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+    padding-top: 14px;
+  }
+
+  .mobile-nav-tools .language-select-wrap,
+  .mobile-nav-tools .currency-dropdown {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .mobile-nav-tools .language-select-wrap {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 10px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--paper);
+  }
+
+  .mobile-nav-tools .language-select-wrap select {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    color: var(--ink);
+  }
+
+  .mobile-nav-tools .currency-button {
+    width: 100%;
+    min-height: 42px;
+    justify-content: center;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--paper);
+  }
+
+  .showcase-grid,
+  .shop-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .showcase-card {
+    width: 100%;
+    text-align: left;
+  }
+
+  .showcase-image {
+    min-height: 180px;
+  }
+
+  .shop-product .product-image {
+    min-height: 170px;
+  }
+
+  .keepsake-products,
+  .related-products .product-grid {
+    display: grid;
+    grid-auto-columns: minmax(78%, 1fr);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2px 2px 14px;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .keepsake-products > *,
+  .related-products .product-grid > * {
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+
+  .keepsake-products .product-card,
+  .related-products .product-card {
+    height: 100%;
+  }
+
+  .account-layout {
+    min-width: 0;
+    gap: 14px;
+  }
+
+  .account-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .account-menu button {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    width: auto;
+    min-height: 42px;
+    white-space: nowrap;
+    padding: 10px 12px;
+  }
+
+  .account-main {
+    min-width: 0;
+    padding: 16px;
+    overflow-wrap: anywhere;
+  }
+
+  .detail-buy-row {
+    flex-wrap: wrap;
+  }
+
+  .detail-buy-row > .btn {
+    flex: 1 1 100%;
+  }
+
+  .related-products {
+    margin-top: 40px;
+  }
+
+  .related-products .related-product-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .related-products .related-product-main {
+    flex: 1 1 auto;
+  }
+}

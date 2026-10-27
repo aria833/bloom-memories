@@ -1,0 +1,159 @@
+.btn-soft:hover {
+  background: #d9efcb;
+  color: #286a24;
+}
+.surface {
+  border-color: #e5eddf;
+  box-shadow: 0 5px 22px rgba(47, 89, 37, 0.045);
+}
+.hero-section {
+  position: relative;
+  background: linear-gradient(120deg, #f7fced 0%, #ffffff 54%, #fff9e9 100%);
+  border-bottom: 1px solid rgba(225, 233, 220, 0.7);
+}
+.hero-section::before,
+.hero-section::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 0;
+}
+.hero-section::before {
+  width: 230px;
+  height: 230px;
+  right: -80px;
+  top: -80px;
+  background: rgba(205, 237, 181, 0.27);
+}
+.hero-section::after {
+  width: 100px;
+  height: 100px;
+  left: 42%;
+  bottom: -42px;
+  background: rgba(255, 224, 159, 0.2);
+}
+.hero-grid {
+  position: relative;
+  z-index: 1;
+}
+.hero-copy .display-title {
+  color: #2f522b;
+}
+.hero-art {
+  isolation: isolate;
+}
+.hero-orbit {
+  border: 2px dashed #d6e9ca;
+  width: 410px;
+  height: 410px;
+}
+.album-back {
+  background: #f5c97d;
+  border-radius: 18px;
+}
+.album-front {
+  border: 2px solid #fff;
+  border-radius: 18px;
+  box-shadow: 0 24px 50px rgba(57, 91, 45, 0.16);
+}
+.album-cover-art {
+  border-radius: 12px;
+  background: linear-gradient(145deg, #e3f4d8, #cbe8bb);
+}
+.album-cover-art::before,
+.album-cover-art::after {
+  border-color: #82b86e;
+}
+.album-cover-art i {
+  color: #55a13f;
+}
+.floating-postcard {
+  border-radius: 12px;
+  box-shadow: 0 14px 30px rgba(57, 91, 45, 0.16);
+}
+.postcard-scene {
+  border-radius: 8px;
+}
+.section-block {
+  position: relative;
+}
+.section-block:nth-of-type(odd) {
+  background: rgba(240, 248, 233, 0.34);
+}
+.section-heading-row {
+  margin-bottom: 32px;
+}
+.step-card {
+  border-radius: 24px;
+  border-color: #e4eddd;
+  background: rgba(255, 255, 255, 0.92);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(53, 115, 40, 0.09);
+}
+.step-number {
+  background: #e9f6df;
+  color: #428d32;
+  box-shadow: inset 0 0 0 1px #d7ebca;
+}
+.showcase-card,
+.product-card,
+.shop-product {
+  border-radius: 22px;
+}
+.showcase-card {
+  padding: 13px;
+}
+.showcase-image {
+  border-radius: 17px;
+  background: linear-gradient(140deg, #eff8e7, #fff6e3);
+}
+.mini-book {
+  border-radius: 12px;
+  border: 5px solid #fff;
+  box-shadow: 0 14px 24px rgba(49, 77, 39, 0.15);
+}
+.mini-book.orange {
+  background: #f8dca8;
+  color: #bd8538;
+}
+.mini-book.blue {
+  background: #d9ecdf;
+  color: #57936d;
+}
+.showcase-cta {
+  color: #438d32;
+}
+.product-card-button,
+.shop-product-button {
+  border-radius: 22px;
+  background: #fff;
+}
+.product-image {
+  border-radius: 16px;
+  background: linear-gradient(145deg, #eff8e7, #fff4df);
+}
+.product-card:hover,
+.shop-product:hover {
+  border-color: #c6e3b7;
+}
+.product-badge {
+  background-color: #4d9b39;
+  color: #fff;
+}
+.gift-panel {
+  border-radius: 28px;
+  background: linear-gradient(120deg, #edf8e4, #fff7e5);
+  border: 1px solid #e1edd7;
+}
+.gift-box {
+  background: #f5bf66;
+}
+.gift-bow {
+  background: #ee936a;
+}

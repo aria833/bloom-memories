@@ -1,0 +1,160 @@
+/* ========================================
+   Header responsive safeguards
+   Keep header controls from shrinking or changing shape at tablet widths.
+   ======================================== */
+.site-header,
+.header-actions,
+.header-actions > *,
+.header-actions .icon-button,
+.header-actions .language-select-wrap {
+  min-width: 0;
+}
+
+.header-actions {
+  flex-shrink: 0;
+}
+
+.header-actions .icon-button,
+.mobile-menu-button {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.header-actions .icon-button {
+  justify-content: center;
+}
+
+.cart-button {
+  min-width: 38px;
+}
+
+.cart-count {
+  flex-shrink: 0;
+}
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  .site-header {
+    padding-inline: clamp(12px, 2.2vw, 24px);
+    gap: clamp(8px, 1.4vw, 16px);
+  }
+
+  .brand {
+    min-width: 0;
+    flex-shrink: 1;
+    gap: 7px;
+  }
+
+  .brand-name {
+    white-space: nowrap;
+    font-size: 0.84rem;
+  }
+
+  .brand-name span {
+    font-size: 0.54rem;
+  }
+
+  .desktop-nav {
+    flex-shrink: 0;
+    gap: 2px;
+  }
+
+  .desktop-nav .nav-link {
+    padding-inline: clamp(6px, 0.9vw, 10px);
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  .header-actions {
+    gap: 2px;
+  }
+
+  .header-actions .icon-button {
+    padding-inline: 7px;
+    font-size: 0.8rem;
+  }
+
+  .language-select-wrap {
+    gap: 4px;
+  }
+
+  .language-select-wrap select {
+    max-width: 66px;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .brand-name {
+    min-width: 0;
+  }
+
+  .header-actions {
+    margin-left: auto;
+    gap: 2px;
+  }
+
+  .header-actions .icon-button {
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    min-height: 36px;
+    padding: 0;
+    line-height: 1;
+  }
+
+  .header-actions .cart-button {
+    position: relative;
+  }
+
+  .header-actions .cart-count {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    min-width: 16px;
+    height: 16px;
+    padding-inline: 3px;
+    font-size: 0.6rem;
+  }
+
+  .mobile-menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    padding: 0;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header {
+    padding-inline: 8px;
+    gap: 4px;
+  }
+
+  .header-actions .icon-button {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    min-height: 32px;
+  }
+
+  .mobile-menu-button {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+  }
+}

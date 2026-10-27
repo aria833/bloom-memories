@@ -1,0 +1,262 @@
+@media (max-width: 760px) {
+
+  .site-header {
+    height: 66px;
+    padding-inline: 16px;
+    gap: 10px;
+  }
+  .concept-banner {
+    font-size: 0.57rem;
+    letter-spacing: 0.07em;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .brand-name {
+    font-size: 0.83rem;
+  }
+  .brand-name span {
+    font-size: 0.57rem;
+  }
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+  .header-actions {
+    margin-left: auto;
+    gap: 3px;
+  }
+  .icon-button {
+    padding: 7px;
+  }
+  .mobile-menu-button {
+    display: inline-block;
+  }
+  .mobile-nav {
+    top: 66px;
+  }
+  .page-container {
+    width: min(100% - 32px, 600px);
+  }
+  .hero-section {
+    padding: 44px 0 40px;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .hero-art {
+    min-height: 320px;
+  }
+  .album-stack {
+    max-width: 350px;
+    height: 280px;
+  }
+  .album-front {
+    padding: 20px 18px;
+  }
+  .floating-postcard {
+    right: 0;
+    width: 118px;
+    height: 88px;
+  }
+  .section-block {
+    padding: 42px 0;
+  }
+  .section-heading-row {
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .step-card {
+    min-height: 0;
+    padding: 20px;
+  }
+  .showcase-grid,
+  .product-grid,
+  .shop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .showcase-image {
+    min-height: 160px;
+    padding: 15px;
+  }
+  .mini-book {
+    width: 100px;
+    height: 130px;
+  }
+  .product-image {
+    min-height: 140px;
+  }
+  .gift-panel {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .gift-illustration {
+    min-height: 180px;
+  }
+  .page-intro {
+    padding: 32px 0 18px;
+  }
+  .studio-topbar {
+    align-items: start;
+  }
+  .studio-topbar-actions {
+    flex-direction: column;
+    align-items: end;
+    gap: 5px;
+  }
+  .progress-wrap {
+    padding: 18px 0 22px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .stepper {
+    min-width: 650px;
+  }
+  .stepper-label {
+    font-size: 0.67rem;
+  }
+  .studio-content {
+    padding: 18px 14px;
+  }
+  .studio-heading {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .create-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .create-preview {
+    min-height: 260px;
+  }
+  .selection-toolbar {
+    align-items: stretch;
+  }
+  .filter-row {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    padding-bottom: 4px;
+  }
+
+  .filter-row .form-select {
+    display: block;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 110px;
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    font-size: 0.875rem;
+  }
+  .filter-chip {
+    white-space: nowrap;
+  }
+  .postcard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .postcard-card .postcard-scene {
+    min-height: 105px;
+  }
+  .selection-footer {
+    margin-inline: -6px;
+    padding: 12px;
+  }
+  .selection-footer span {
+    display: block;
+  }
+  .editor-layout {
+    grid-template-columns: 1fr;
+  }
+  .editor-panel.layout-panel {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .editor-panel.layout-panel h3 {
+    grid-column: 1 / -1;
+    margin-bottom: 3px;
+  }
+  .layout-option {
+    margin-bottom: 0;
+    padding: 6px;
+  }
+  .layout-thumb {
+    height: 50px;
+  }
+  .editor-panel.options-panel {
+    grid-template-columns: 1fr;
+  }
+  .editor-canvas-wrap {
+    min-height: 300px;
+    padding: 15px;
+  }
+  .editor-canvas {
+    width: 100%;
+  }
+  .editor-bottom {
+    flex-wrap: wrap;
+  }
+  .page-thumbnails {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .page-thumb .postcard-scene {
+    min-height: 115px;
+  }
+  .cover-layout {
+    grid-template-columns: 1fr;
+  }
+  .cover-options {
+    grid-template-columns: 1fr;
+  }
+  .cover-preview-area {
+    min-height: 390px;
+  }
+  .cover-book {
+    width: 220px;
+  }
+  .preview-layout {
+    grid-template-columns: 1fr;
+  }
+  .book-preview-stage {
+    aspect-ratio: 1055 / 716;
+  }
+  .open-book {
+    width: 100%;
+  }
+  .book-page {
+    padding: 5px;
+  }
+  .book-page .page-note {
+    left: 7px;
+    right: 7px;
+    bottom: 7px;
+    padding: 5px;
+    font-size: 0.6rem;
+  }
+  .auth-layout {
+    margin: 20px auto;
+    padding: 25px 20px;
+  }
+  .detail-layout,
+  .cart-layout,
+  .account-layout,
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+}

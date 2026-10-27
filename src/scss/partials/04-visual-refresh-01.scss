@@ -1,0 +1,242 @@
+.original-postcard-writing .editor-note {
+  position: static;
+  color: #4c574b;
+  font-family: Georgia, serif;
+  font-size: 0.86rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.writing-lines {
+  display: block;
+  height: 44%;
+  margin-top: 12px;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 17px,
+    #e4e6dc 18px,
+    transparent 19px
+  );
+}
+.book-page.inner-page {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
+.printed-postcard {
+  flex: 1;
+  background: #fffefa;
+}
+.printed-postcard > .postcard-scene {
+  min-height: 0;
+  height: 100%;
+  border-radius: 0;
+}
+.printed-postcard-note {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.printed-postcard-note small {
+  font-size: 0.56rem;
+  color: var(--muted);
+}
+.printed-postcard-note p {
+  font-size: 0.68rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.blank-postcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #a0a99a;
+  font-size: 0.75rem;
+}
+.cover-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 14px;
+  background: #dce6d2;
+  color: #4f6848;
+}
+.cover-page.orange {
+  background: #f0d4bd;
+  color: #785e49;
+}
+.cover-page.blue {
+  background: #d7e5e7;
+  color: #4c6c70;
+}
+.cover-page .bi {
+  font-size: 2rem;
+}
+.cover-page h3 {
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+}
+.back-cover {
+  background: #e7e8df;
+}
+.book-end-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.6rem;
+  color: rgba(60, 70, 55, 0.6);
+}
+@media (max-width: 800px) {
+  .currency-select-wrap {
+    padding: 5px 7px;
+  }
+  .currency-select-wrap select {
+    max-width: 74px;
+  }
+  .related-products .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .studio-landing .draft-list {
+    grid-template-columns: 1fr;
+  }
+  .print-confirm-grid {
+    grid-template-columns: 1fr;
+  }
+  .addon-select-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .showcase-open-book {
+    min-height: 280px;
+  }
+  .showcase-book-page {
+    padding: 8px;
+  }
+  .showcase-caption {
+    padding: 6px;
+  }
+  .showcase-caption p {
+    font-size: 0.65rem;
+  }
+  .editor-canvas.postcard-landscape {
+    aspect-ratio: 1.35 / 1;
+  }
+  .original-postcard-writing {
+    padding: 8px;
+  }
+  .original-postcard-writing .editor-note {
+    font-size: 0.7rem;
+  }
+  .writing-lines {
+    margin-top: 6px;
+  }
+}
+
+:root {
+  --ink: #293d2c;
+  --muted: #68786a;
+  --line: #e1e9dc;
+  --paper: #ffffff;
+  --canvas: #fbfdf8;
+  --green: #58a83f;
+  --green-dark: #347d2e;
+  --green-soft: #e9f6df;
+  --orange: #f6b65f;
+  --radius-card: 24px;
+}
+
+body {
+  background:
+    radial-gradient(
+      ellipse at 5% 6%,
+      rgba(226, 245, 210, 0.42),
+      transparent 27rem
+    ),
+    var(--canvas);
+}
+.concept-banner {
+  background: #f1f7e8;
+  color: #56734a;
+  letter-spacing: 0.08em;
+}
+.site-header {
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom-color: #e7eee1;
+  box-shadow: 0 3px 18px rgba(55, 93, 43, 0.035);
+}
+.brand-mark {
+  background: #e6f5d9;
+  color: #4e9b37;
+  box-shadow: inset 0 0 0 1px rgba(78, 155, 55, 0.08);
+}
+.brand-name {
+  letter-spacing: -0.025em;
+}
+.nav-link {
+  font-weight: 650;
+}
+.nav-link:hover,
+.nav-link.active {
+  background: #eaf6df;
+  color: #347d2e;
+}
+.icon-button:hover {
+  background: #f0f8e9;
+}
+.cart-count {
+  background: #e9a54c;
+  color: #3b4b2e;
+  font-weight: 800;
+}
+.site-footer {
+  background: #f0f7e9;
+  border-top-color: #e0ebd7;
+}
+.eyebrow {
+  color: #478f35;
+  letter-spacing: 0.13em;
+}
+.display-title {
+  letter-spacing: -0.045em;
+}
+.section-title {
+  letter-spacing: -0.03em;
+}
+.btn {
+  box-shadow: 0 2px 0 rgba(34, 81, 29, 0.04);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(53, 115, 40, 0.12);
+}
+.btn-primary {
+  --bs-btn-bg: #58a83f;
+  --bs-btn-border-color: #58a83f;
+  --bs-btn-hover-bg: #438d32;
+  --bs-btn-hover-border-color: #438d32;
+  --bs-btn-active-bg: #347d2e;
+  --bs-btn-active-border-color: #347d2e;
+  --bs-btn-disabled-bg: #b8d7aa;
+  --bs-btn-disabled-border-color: #b8d7aa;
+}
+.btn-outline-primary {
+  --bs-btn-color: #347d2e;
+  --bs-btn-border-color: #a9d39a;
+  --bs-btn-hover-bg: #edf8e7;
+  --bs-btn-hover-color: #286a24;
+  --bs-btn-hover-border-color: #8dc57c;
+}
+.btn-soft {
+  background: #eaf6df;
+  color: #347d2e;
+}

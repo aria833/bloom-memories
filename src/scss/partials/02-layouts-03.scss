@@ -1,0 +1,240 @@
+.cart-line:last-child {
+  border-bottom: 0;
+}
+.cart-thumb {
+  height: 76px;
+  border-radius: 10px;
+  background: #e6ecdf;
+  display: grid;
+  place-items: center;
+  color: var(--green-dark);
+  font-size: 1.7rem;
+}
+.cart-line h3 {
+  font-size: 0.9rem;
+  font-weight: 750;
+  margin-bottom: 4px;
+}
+.cart-line p {
+  font-size: 0.77rem;
+  color: var(--muted);
+  margin: 0;
+}
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 8px;
+}
+.qty-control button {
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: white;
+}
+.summary-card {
+  padding: 22px;
+}
+.summary-card h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.account-layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.account-menu {
+  padding: 10px;
+}
+.account-menu button {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  padding: 12px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--muted);
+  text-align: left;
+  font-size: 0.84rem;
+}
+.account-menu button.active,
+.account-menu button:hover {
+  background: var(--green-soft);
+  color: var(--green-dark);
+}
+.account-main {
+  padding: 24px;
+  min-height: 300px;
+}
+.account-main h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+.draft-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.draft-card {
+  padding: 12px;
+}
+.draft-card .product-image {
+  min-height: 125px;
+}
+.draft-card h3 {
+  font-size: 0.9rem;
+  font-weight: 750;
+  margin: 12px 0 4px;
+}
+.draft-card p {
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+.checkout-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(290px, 0.75fr);
+  gap: 24px;
+  align-items: start;
+}
+.checkout-panel {
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.checkout-panel h2 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+.checkout-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.checkout-step span {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--green-soft);
+  color: var(--green-dark);
+  font-weight: 800;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.form-field.full {
+  grid-column: 1 / -1;
+}
+.radio-card {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.radio-card:has(input:checked) {
+  border-color: var(--green);
+  background: #f3f6ef;
+}
+.radio-card input {
+  margin-top: 4px;
+  accent-color: var(--green);
+}
+.radio-card strong {
+  display: block;
+  font-size: 0.83rem;
+}
+.radio-card small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+.success-mark {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: var(--green-soft);
+  color: var(--green-dark);
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}
+.success-layout {
+  max-width: 700px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 40px 24px;
+}
+.success-layout h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+.success-layout > p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+.status-timeline {
+  margin: 25px 0;
+  text-align: left;
+}
+.status-row {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 12px;
+  min-height: 68px;
+  position: relative;
+}
+.status-row:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 28px;
+  bottom: -2px;
+  width: 2px;
+  background: var(--line);
+}
+.status-dot {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  border: 2px solid #d5dbd0;
+  background: white;
+  display: grid;
+  place-items: center;
+  color: transparent;
+  font-size: 0.7rem;
+  z-index: 1;
+}
+.status-row.done .status-dot {
+  background: var(--green);
+  color: white;
+  border-color: var(--green);
+}
+.status-row h3 {
+  font-size: 0.86rem;
+  font-weight: 750;
+  margin: 3px 0 4px;
+}
+.status-row p {
+  color: var(--muted);
+  font-size: 0.76rem;
+  margin: 0;
+}

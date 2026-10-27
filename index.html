@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f7f2" />
+    <meta
+      name="description"
+      content="Bloom Memories 是一個非官方的概念作品，探索如何將數位明信片整理成可珍藏、可送禮的實體相冊。"
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="author" content="Bloom Memories Concept Project" />
+    <meta
+      name="keywords"
+      content="Bloom Memories, 明信片相冊, 旅行回憶, 相冊設計, 作品集概念, postcard album, Pikmin Bloom, 皮克敏"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Bloom Memories" />
+    <meta
+      property="og:title"
+      content="Bloom Memories｜把旅途中的明信片收藏成一冊回憶"
+    />
+    <meta
+      property="og:description"
+      content="探索將數位明信片轉化為實體相冊的專案作品。此為非官方的概念作品。"
+    />
+    <meta property="og:locale" content="zh_TW" />
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Bloom Memories",
+        "description": "將旅途中的數位明信片轉化為實體相冊的非官方概念作品。",
+        "inLanguage": "zh-Hant",
+        "isAccessibleForFree": true
+      }
+    </script>
+    <link
+      rel="icon"
+      type="image/png"
+      href="./public/images/bloom-memories-mark.svg"
+    />
+    <title>Bloom Memories｜獨立非官方概念專案</title>
+  </head>
+  <body>
+    <div id="app" class="app-shell">
+      <div class="concept-banner">
+        UNOFFICIAL CONCEPT PROJECT · PORTFOLIO PURPOSES ONLY
+      </div>
+      <header class="site-header" id="siteHeader">
+        <a
+          class="brand"
+          href="#home"
+          data-route="home"
+          aria-label="Bloom Memories home"
+          data-i18n="Bloom Memories home"
+          data-i18n-attr="aria-label"
+        >
+          <img
+            class="brand-logo-image"
+            src="/images/bloom-memories-mark.svg"
+            alt=""
+            width="40"
+            height="40"
+          />
+          <span class="brand-name d-none d-md-block"
+            >Bloom Memories<span data-i18n="Postcard Book"
+              >Postcard Book</span
+            ></span
+          >
+        </a>
+        <nav
+          class="desktop-nav"
+          aria-label="Main navigation"
+          data-i18n="Main navigation"
+          data-i18n-attr="aria-label"
+        >
+          <button class="nav-link active" data-route="home" data-i18n="首頁">
+            首頁
+          </button>
+          <button class="nav-link" data-route="studio" data-i18n="製作相冊">
+            製作相冊
+          </button>
+          <button class="nav-link" data-route="shop" data-i18n="商店">
+            商店
+          </button>
+          <button class="nav-link" data-route="faq" data-i18n="常見QA">
+            常見QA
+          </button>
+        </nav>
+        <div class="header-actions">
+          <label
+            class="language-select-wrap"
+            aria-label="選擇語言"
+            data-i18n="選擇語言"
+            data-i18n-attr="aria-label"
+            ><i class="bi bi-translate"></i
+            ><select
+              id="languageSelect"
+              aria-label="選擇語言"
+              data-i18n="選擇語言"
+              data-i18n-attr="aria-label"
+            >
+              <option value="zh-Hant">繁中</option>
+              <option value="en">EN</option>
+              <option value="ja">日本語</option>
+            </select></label
+          >
+          <div
+            class="dropdown currency-dropdown"
+            title="展示用匯率，非即時匯率"
+            data-i18n="展示用匯率，非即時匯率"
+            data-i18n-attr="title"
+          >
+            <button
+              class="icon-button currency-button text-center"
+              id="currencyButton"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              aria-label="選擇幣別"
+              data-i18n="選擇幣別"
+              data-i18n-attr="aria-label"
+            >
+              <i class="bi bi-currency-exchange"></i><span>¥</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <button
+                  class="dropdown-item"
+                  data-currency="JPY"
+                  data-i18n="日圓"
+                >
+                  ¥（JPY日圓）
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  data-currency="TWD"
+                  data-i18n="新台幣"
+                >
+                  NT$（TWD新台幣）
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  data-currency="USD"
+                  data-i18n="美元"
+                >
+                  $（USD美元）
+                </button>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="icon-button"
+            data-route="account"
+            aria-label="帳戶"
+            data-i18n="帳戶"
+            data-i18n-attr="aria-label"
+          >
+            <i class="bi bi-person-circle"></i
+            ><span class="account-label" data-i18n="帳戶">帳戶</span>
+          </button>
+          <button
+            class="icon-button cart-button"
+            data-route="cart"
+            aria-label="購物車"
+            data-i18n="購物車"
+            data-i18n-attr="aria-label"
+          >
+            <i class="bi bi-bag"></i
+            ><span class="cart-count" id="cartCount">0</span>
+          </button>
+          <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-label="開啟導覽選單"
+            data-i18n="開啟導覽選單"
+            data-i18n-attr="aria-label"
+            aria-expanded="false"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </header>
+      <div class="mobile-nav d-none" id="mobileNav">
+        <button data-route="home" data-i18n="首頁">首頁</button
+        ><button data-route="studio" data-i18n="製作相冊">製作相冊</button
+        ><button data-route="shop" data-i18n="商店">商店</button
+        ><button data-route="faq" data-i18n="常見QA">常見QA</button>
+        <div
+          class="mobile-nav-tools"
+          id="mobileNavTools"
+          aria-label="顯示偏好設定"
+          data-i18n="顯示偏好設定"
+          data-i18n-attr="aria-label"
+        ></div>
+      </div>
+      <main
+        id="mainContent"
+        class="app-main"
+        tabindex="-1"
+        aria-live="polite"
+      ></main>
+      <footer class="site-footer" id="siteFooter">
+        <div class="footer-brand">
+          <img
+            class="brand-logo-image"
+            src="/images/bloom-memories-mark.svg"
+            alt=""
+            width="30"
+            height="30"
+          /><span>Bloom Memories</span>
+        </div>
+        <p data-i18n="把旅途中的小小發現，收藏成可以翻閱的回憶。">
+          把旅途中的小小發現，收藏成可以翻閱的回憶。
+        </p>
+        <div class="footer-links">
+          <button data-route="about" data-i18n="關於服務">關於服務</button
+          ><button data-route="faq" data-i18n="常見QA">常見QA</button
+          ><button data-route="contact" data-i18n="聯絡我們">聯絡我們</button
+          ><button data-route="privacy" data-i18n="隱私權政策">
+            隱私權政策
+          </button>
+        </div>
+        <small
+          data-i18n="獨立非官方概念專案，與 Nintendo 及 Pikmin Bloom 無官方合作、授權或背書關係。"
+          >獨立非官方概念專案，與 Nintendo 及 Pikmin Bloom
+          無官方合作、授權或背書關係。</small
+        >
+      </footer>
+      <div
+        class="toast-container position-fixed p-3"
+        id="toastContainer"
+        aria-live="polite"
+        aria-atomic="true"
+      ></div>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

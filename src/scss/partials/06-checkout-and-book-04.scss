@@ -1,0 +1,53 @@
+
+@media (max-width: 420px) {
+  .site-header {
+    padding-inline: 8px;
+    gap: 4px;
+  }
+
+  .brand-name {
+    max-width: 88px;
+    font-size: 0.75rem;
+  }
+
+  .brand-name span {
+    font-size: 0.52rem;
+  }
+
+  .header-actions .icon-button {
+    min-width: 32px;
+    padding: 5px;
+  }
+
+  .mobile-menu-button {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+    font-size: 1.4rem;
+  }
+
+  .keepsake-products,
+  .related-products .product-grid {
+    grid-auto-columns: minmax(86%, 1fr);
+  }
+
+  .page-container {
+    width: min(100% - 24px, 600px);
+  }
+
+  .account-main {
+    padding: 12px;
+  }
+
+  .addon-select-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .keepsake-products,
+  .related-products .product-grid,
+  .account-menu {
+    scroll-behavior: auto;
+  }
+}
