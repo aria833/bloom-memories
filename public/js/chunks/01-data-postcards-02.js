@@ -13,9 +13,11 @@ const postcardBatch2 = [
     favorite: false,
     translations: {
       en: {
+        lace: "Sakata, Yamagata",
         note: "This lion statue has such a quirky expression—it looks just as weirdly cute as you (haha)!",
       },
       ja: {
+        place: "山形・酒田市",
         note: "このシーサーの表情、お茶目でちょっと変で可愛くて、あなたにそっくり（笑）。",
       },
     },
@@ -33,9 +35,11 @@ const postcardBatch2 = [
     favorite: false,
     translations: {
       en: {
+        place: "Obanazawa, Yamagata",
         note: "The snow scene illuminated at night looks just like a painting; so beautiful we couldn't look away.",
       },
       ja: {
+        place: "山形・尾花沢市",
         note: "ライトアップされた雪景色はまるで絵画のよう。美しすぎて目が離せません。",
       },
     },
@@ -53,9 +57,11 @@ const postcardBatch2 = [
     favorite: false,
     translations: {
       en: {
+        place: "Tsuruoka, Yamagata",
         note: "Enjoying the peaceful silence away from the noise; simply being together quietly is wonderful.",
       },
       ja: {
+        place: "山形・鶴岡市",
         note: "静けさに包まれた時間を楽しむ。ただ静かに寄り添っているだけでもとても幸せです。",
       },
     },
@@ -73,9 +79,11 @@ const postcardBatch2 = [
     favorite: false,
     translations: {
       en: {
+        place: "Yamagata City",
         note: "Making a wish to keep holding hands and explore more unknown places together in the future.",
       },
       ja: {
+        place: "山形・山形市",
         note: "これからも手を繋いで、もっとたくさんの素晴らしい場所を一緒に旅できますように。",
       },
     },
@@ -93,9 +101,11 @@ const postcardBatch2 = [
     favorite: false,
     translations: {
       en: {
+        place: "Tsuruoka, Yamagata",
         note: "Taking photos together at landmark spots, leaving behind precious memories of our journey.",
       },
       ja: {
+        place: "山形・鶴岡市",
         note: "思い出のスポットで記念撮影。私たちが一緒に歩んできた大切な足跡を残します。",
       },
     },
@@ -105,179 +115,329 @@ const postcardBatch2 = [
     place: "神奈川縣・小田原市",
     continent: "亞洲",
     region: "東亞 | 日本",
-    date: "2024-10-21",
+    date: "2023-02-14",
     method: "蘑菇",
     scene: "scene-1",
     image: "/images/sample-japan/japan_1.jpeg",
     note: "櫻花盛開的季節，你一個人來到陌生的地方",
     favorite: false,
+    translations: {
+      en: {
+        place: "Odawara, Kanagawa",
+        note: "In the season of cherry blossoms, you came alone to an unfamiliar place.",
+      },
+      ja: {
+        place: "神奈川県・小田原市",
+        note: "桜が満開の季節、あなたは一人で見知らぬ場所へとやってきました。",
+      },
+    },
   },
   {
     id: 27,
     place: "富山縣・富山市",
     continent: "亞洲",
     region: "東亞 | 日本",
-    date: "2025-12-26",
+    date: "2023-03-29",
     method: "蘑菇",
     scene: "scene-1",
     image: "/images/sample-japan/japan_2.jpeg",
     note: "搬進新家的頭幾日，電還沒有通，床架跟棉被還沒送來，你只能裹著大衣入睡",
     favorite: false,
+    translations: {
+      en: {
+        place: "Toyama, Toyama",
+        note: "During the first few days in your new home, the electricity wasn't on yet, and the bed frame and futon hadn't arrived, so you slept wrapped in your heavy coat.",
+      },
+      ja: {
+        place: "富山県・富山市",
+        note: "新居に引っ越して最初の数日、まだ電気も通っておらず、ベッドや布団も届いていなかったため、コートにくるまって眠りました。",
+      },
+    },
   },
   {
     id: 28,
     place: "神奈川縣・橫濱市",
     continent: "亞洲",
     region: "東亞 | 日本",
-    date: "2025-12-26",
+    date: "2023-05-11",
     method: "蘑菇",
     scene: "scene-1",
     image: "/images/sample-japan/japan_3.jpeg",
     note: "開始了新生活，你交到了朋友，大家一起出去玩、一起看橫濱的煙火",
     favorite: false,
+    translations: {
+      en: {
+        place: "Yokohama, Kanagawa",
+        note: "Starting a new life, you made friends, went out together, and watched the Yokohama fireworks as a group.",
+      },
+      ja: {
+        place: "神奈川県・横浜市",
+        note: "新しい生活が始まり、友達ができました。みんなでお出かけしたり、横浜の花火を一緒に見たりしました。",
+      },
+    },
   },
   {
     id: 29,
     place: "東京都・大田區",
     continent: "亞洲",
     region: "東亞 | 日本",
-    date: "2025-12-26",
+    date: "2023-06-03",
     method: "蘑菇",
     scene: "scene-1",
     image: "/images/sample-japan/japan_4.jpeg",
     note: "開始到機場打工，這裡的人很多，來來去去",
     favorite: false,
+    translations: {
+      en: {
+        place: "Ota, Tokyo",
+        note: "You started a part-time job at the airport, where crowds of people were constantly coming and going.",
+      },
+      ja: {
+        place: "東京都・大田区",
+        note: "空港でのアルバイトが始まりました。ここにはたくさんの人が行き交っています。",
+      },
+    },
   },
   {
     id: 30,
     place: "東京都・中央區",
     continent: "亞洲",
     region: "東亞 | 日本",
-    date: "2025-12-26",
+    date: "2023-07-18",
     method: "蘑菇",
     scene: "scene-1",
     image: "/images/sample-japan/japan_5.jpeg",
     note: "有時你會跟著超市的老奶奶圍著日式甜食區，挑著糰子、桃餅",
     favorite: false,
+    translations: {
+      en: {
+        place: "Chuo, Tokyo",
+        note: "Sometimes you would join the elderly ladies at the supermarket around the traditional sweets section, picking out dango and doryaki/wagashi.",
+      },
+      ja: {
+        place: "東京都・中央区",
+        note: "時々、スーパーでおばあさんたちと一緒に和菓子コーナーを囲み、団子や和菓子を選んだりしました。",
+      },
+    },
   },
   {
     id: 31,
     place: "神奈川縣・川崎市",
     continent: "亞洲",
     region: "東亞 | 日本",
-    date: "2025-12-26",
+    date: "2023-09-02",
     method: "蘑菇",
     scene: "scene-1",
     image: "/images/sample-japan/japan_6.jpeg",
     note: "在異國的第一次生病，自己去看醫生，買一包吐司和幾瓶水躺在床上好幾天",
     favorite: false,
+    translations: {
+      en: {
+        place: "Kawasaki, Kanagawa",
+        note: "Getting sick for the first time in a foreign country, you went to the doctor by yourself, bought a loaf of bread and a few bottles of water, and stayed in bed for days.",
+      },
+      ja: {
+        place: "神奈川県・川崎市",
+        note: "異国で初めて病気になり、一人で病院へ行き、食パンと水を数本買って何日間もベッドで横になって過ごしました。",
+      },
+    },
   },
   {
     id: 32,
     place: "神奈川縣・藤澤市",
     continent: "亞洲",
     region: "東亞 | 日本",
-    date: "2025-12-26",
+    date: "2023-11-20",
     method: "蘑菇",
     scene: "scene-1",
     image: "/images/sample-japan/japan_7.jpeg",
     note: "偶爾會遇見不錯的人，但你不知道你會停留在這裡多久",
     favorite: false,
+    translations: {
+      en: {
+        place: "Fujisawa, Kanagawa",
+        note: "Occasionally you met nice people, but you didn't know how long you would stay in this place.",
+      },
+      ja: {
+        place: "神奈川県・藤沢市",
+        note: "たまに素敵なお手本になるような人に出会うけれど、自分がここにいつまで居続けるのかはわかりませんでした。",
+      },
+    },
   },
   {
     id: 33,
     place: "神奈川縣・川崎市",
     continent: "亞洲",
     region: "東亞 | 日本",
-    date: "2025-12-26",
+    date: "2024-01-15",
     method: "蘑菇",
     scene: "scene-1",
     image: "/images/sample-japan/japan_8.jpeg",
     note: "畢業時，你是唯一拿到獎項的外國人",
     favorite: false,
+    translations: {
+      en: {
+        place: "Kawasaki, Kanagawa",
+        note: "At graduation, you were the only international student to receive an award.",
+      },
+      ja: {
+        place: "神奈川県・川崎市",
+        note: "卒業式で、あなたは唯一賞を受賞した外国人留学生でした。",
+      },
+    },
   },
   {
     id: 34,
     place: "茨城縣・日立市",
     continent: "亞洲",
     region: "東亞 | 日本",
-    date: "2025-12-26",
+    date: "2024-02-28",
     method: "蘑菇",
     scene: "scene-1",
     image: "/images/sample-japan/japan_9.jpeg",
     note: "從沒搬過家的你，在這裡搬了好幾次家",
     favorite: false,
+    translations: {
+      en: {
+        place: "Hitachi, Ibaraki",
+        note: "Having never moved before, you ended up moving several times while living here.",
+      },
+      ja: {
+        place: "茨城県・日立市",
+        note: "これまで引っ越しをしたことがなかったあなたが、ここでは何度も引っ越しを重ねました。",
+      },
+    },
   },
   {
     id: 35,
     place: "東京都・足立區",
     continent: "亞洲",
     region: "東亞 | 日本",
-    date: "2025-12-26",
+    date: "2024-04-10",
     method: "蘑菇",
     scene: "scene-1",
     image: "/images/sample-japan/japan_10.jpeg",
     note: "畢業後，你進入一家貿易公司工作",
     favorite: false,
+    translations: {
+      en: {
+        place: "Adachi, Tokyo",
+        note: "After graduating, you joined a trading company to work.",
+      },
+      ja: {
+        place: "東京都・足立区",
+        note: "卒業後、あなたは貿易会社に入社して働き始めました。",
+      },
+    },
   },
   {
     id: 36,
     place: "北海道・禮文町",
     continent: "亞洲",
     region: "東亞 | 日本",
-    date: "2025-12-26",
+    date: "2024-05-22",
     method: "蘑菇",
     scene: "scene-1",
     image: "/images/sample-japan/japan_11.jpeg",
     note: "有時候加班的日子，就到超市買個便當當晚餐，回家洗個澡就睡覺了",
     favorite: false,
+    translations: {
+      en: {
+        place: "Rebun, Hokkaido",
+        note: "On days with overtime, you would buy a bento at the supermarket for dinner, take a shower at home, and go straight to sleep.",
+      },
+      ja: {
+        place: "北海道・礼文町",
+        note: "残業の日はスーパーでお弁当を買って夕食にし、家に帰ってお風呂に入ってすぐに眠る毎日でした。",
+      },
+    },
   },
   {
     id: 37,
     place: "沖繩縣・宇流麻市",
     continent: "亞洲",
     region: "東亞 | 日本",
-    date: "2025-12-26",
+    date: "2024-07-04",
     method: "蘑菇",
     scene: "scene-1",
     image: "/images/sample-japan/japan_12.jpeg",
     note: "家裡附近有好吃的家庭餐廳，即使只有這桌是一個人",
     favorite: false,
+    translations: {
+      en: {
+        place: "Uruma, Okinawa",
+        note: "There was a delicious family restaurant near your home, even if your table was the only one dining alone.",
+      },
+      ja: {
+        place: "沖縄県・うるま市",
+        note: "家の近くに美味しいファミリーレストランがありました。一人で座っているのは自分のテーブルだけだとしても。",
+      },
+    },
   },
   {
     id: 38,
     place: "香川縣・高松市",
     continent: "亞洲",
     region: "東亞 | 日本",
-    date: "2025-12-26",
+    date: "2024-08-19",
     method: "蘑菇",
     scene: "scene-1",
     image: "/images/sample-japan/japan_13.jpeg",
     note: "休假時躺在木地板，看著落地窗外的雲緩緩飄過",
     favorite: false,
+    translations: {
+      en: {
+        place: "Takamatsu, Kagawa",
+        note: "On days off, lying on the wooden floor and watching the clouds drift slowly past the French windows.",
+      },
+      ja: {
+        place: "香川県・高松市",
+        note: "休日にフローリングに寝そべり、掃き出し窓の外をゆっくりと流れる雲を眺めていました。",
+      },
+    },
   },
   {
     id: 39,
     place: "宮城縣・仙台市",
     continent: "亞洲",
     region: "東亞 | 日本",
-    date: "2025-12-26",
+    date: "2024-10-05",
     method: "蘑菇",
     scene: "scene-1",
     image: "/images/sample-japan/japan_14.jpeg",
     note: "朋友來訪，你們辦了個生日派對，聊了很久的天",
     favorite: false,
+    translations: {
+      en: {
+        place: "Sendai, Miyagi",
+        note: "Friends came over for a visit, held a birthday party, and talked for a long time.",
+      },
+      ja: {
+        place: "宮城県・仙台市",
+        note: "友達が遊びに来て誕生日パーティーを開き、遅くまでたくさんおしゃべりをしました。",
+      },
+    },
   },
   {
     id: 40,
     place: "千葉縣・成田市",
     continent: "亞洲",
     region: "東亞 | 日本",
-    date: "2025-12-26",
+    date: "2024-11-30",
     method: "蘑菇",
     scene: "scene-1",
     image: "/images/sample-japan/japan_15.jpeg",
     note: "公司逐漸擴展海外市場，你開始到各地出差",
     favorite: false,
+    translations: {
+      en: {
+        place: "Narita, Chiba",
+        note: "As the company expanded into overseas markets, you began traveling to various places for business trips.",
+      },
+      ja: {
+        place: "千葉県・成田市",
+        note: "会社が海外市場を拡大するにつれ、さまざまな場所へ出張に行くようになりました。",
+      },
+    },
   },
 ];

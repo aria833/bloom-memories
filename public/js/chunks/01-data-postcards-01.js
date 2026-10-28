@@ -13,9 +13,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Dayuan District, Taoyuan",
         note: "Setting off with excitement, embarking on our little overseas journey together.",
       },
       ja: {
+        place: "桃園・大園区",
         note: "わくわくした気持ちで出発、ふたりだけの海外旅行がはじまります。",
       },
     },
@@ -33,9 +35,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Natori, Miyagi",
         note: "Arrived safely at Sendai Airport; the air feels crisp with a touch of winter freshness.",
       },
       ja: {
+        place: "宮城・名取市",
         note: "仙台空港に無事到着。冬の冷たい空気が心地よく新鮮です。",
       },
     },
@@ -53,9 +57,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Yamagata City",
         note: "Tasting the famous local Imoni hot pot; the warm soup instantly warms up the winter cold.",
       },
       ja: {
+        place: "山形・山形市",
         note: "名物の芋煮鍋をいただきました。あつあつのスープが身体を優しく温めてくれます。",
       },
     },
@@ -73,9 +79,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Yamagata City",
         note: "Finally arrived in Yamagata! Officially starting our snowy adventure.",
       },
       ja: {
+        place: "山形・山形市",
         note: "ついに山形に到着！雪国探検の旅が正式にスタートです。",
       },
     },
@@ -93,9 +101,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Yamagata City",
         note: "Strolling through the beautiful Kajo Park, soaking in the quiet and relaxed vibe of the historic castle.",
       },
       ja: {
+        place: "山形・山形市",
         note: "美しい霞城公園を散策。古城のゆったりとした静かな雰囲気を味わいます。",
       },
     },
@@ -113,6 +123,7 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Yamagata City",
         note: "Wandering into the art museum, letting art and inspiration enrich our journey.",
       },
       ja: {
@@ -133,9 +144,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Obanazawa, Yamagata",
         note: "Visiting Izu-no-Hana for flavorful buckwheat noodles and crispy fried eggplant.",
       },
       ja: {
+        place: "山形・尾花沢市",
         note: "「伊豆の華」へ。風味豊かな蕎麦とサクサクの揚げナスを堪能しました。",
       },
     },
@@ -153,9 +166,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Obanazawa, Yamagata",
         note: "Enjoying a relaxed pace, checking into the cozy Ginzanso for the night.",
       },
       ja: {
+        place: "山形・尾花沢市",
         note: "のんびりとした時間を楽しみ、今夜は温かく心地よい「銀山荘」に宿泊します。",
       },
     },
@@ -173,9 +188,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Obanazawa, Yamagata",
         note: "In a silvery snow-covered world, glowing lights create a dreamy and breathtaking night scene.",
       },
       ja: {
+        place: "山形・尾花沢市",
         note: "一面銀世界の中、あたたかな灯りが照らし出す夢のように美しい夜景。",
       },
     },
@@ -193,9 +210,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Obanazawa, Yamagata",
         note: "The weather clears up beautifully; having you by my side makes everything perfect.",
       },
       ja: {
+        place: "山形・尾花沢市",
         note: "お天気も良くなり、そばにあなたがいてくれて、すべてがとても愛おしいです。",
       },
     },
@@ -213,9 +232,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Yamagata City",
         note: "Witnessing the Zao Snow Monsters in person; nature's majestic masterpiece leaves us in awe.",
       },
       ja: {
+        place: "山形・山形市",
         note: "蔵王の樹氷を間近で鑑賞。大自然が造り出す神秘的で雄大な景観に感動の連続です。",
       },
     },
@@ -233,9 +254,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Yamagata City",
         note: "Stopping by a cozy café to enjoy your favorite pour-over coffee together.",
       },
       ja: {
+        place: "山形・山形市",
         note: "素敵なカフェに立ち寄り、あなたのお気に入りのドリップコーヒーを味わうひととき。",
       },
     },
@@ -253,9 +276,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Yamagata City",
         note: "Exploring Bunshokan, where British revival architecture makes us feel like we're in a classic castle.",
       },
       ja: {
+        place: "山形・山形市",
         note: "英国風レトロな文翔館を見学。まるでクラシカルな城の中に迷い込んだようです。",
       },
     },
@@ -273,9 +298,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Yamagata City",
         note: "Holding hands and walking slowly through the streets, capturing our sweet romantic moments.",
       },
       ja: {
+        place: "山形・山形市",
         note: "手を繋いで街をゆっくり散策、ふたりだけの浪漫な時間を刻みます。",
       },
     },
@@ -293,9 +320,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Tsuruoka, Yamagata",
         note: "Starting our day in Tsuruoka, looking forward to the new surprises this town brings.",
       },
       ja: {
+        place: "山形・鶴岡市",
         note: "鶴岡の街の探索へ。どんな新しい出会いと驚きがあるのかわくわくします。",
       },
     },
@@ -313,9 +342,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Tsuruoka, Yamagata",
         note: "Unexpectedly bumped into Hachiko in Tsuruoka! Definitely a spot for a memorable photo.",
       },
       ja: {
+        place: "山形・鶴岡市",
         note: "鶴岡でハチ公像に遭遇！思わず記念写真を撮りました。",
       },
     },
@@ -333,9 +364,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Tsuruoka, Yamagata",
         note: "Discovered an 'Anywhere Door'! Feels like stepping into another dimension in a split second.",
       },
       ja: {
+        place: "山形・鶴岡市",
         note: "サプライズで「どこでもドア」を発見！今にも別の世界へ旅立てそうです。",
       },
     },
@@ -353,9 +386,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Tsuruoka, Yamagata",
         note: "Visiting Kamo Aquarium; watching countless jellyfish float soothingly in the tank.",
       },
       ja: {
+        place: "山形・鶴岡市",
         note: "加茂水族館を訪問。ゆらゆらと漂うたくさんのクラゲにとても癒やされます。",
       },
     },
@@ -373,9 +408,11 @@ const postcardBatch1 = [
     favorite: false,
     translations: {
       en: {
+        place: "Tsuruoka, Yamagata",
         note: "Look, it's your favorite crab! Can't resist wanting to try some fresh seafood.",
       },
       ja: {
+        place: "山形・鶴岡市",
         note: "見て見て、あなたの大好きなカニ！思わず味わいたくなりますね。",
       },
     },
@@ -393,9 +430,11 @@ const postcardBatch1 = [
     favorite: true,
     translations: {
       en: {
+        place: "Sakata, Yamagata",
         note: "Watching the sunset hit the horizon side-by-side; truly the most beautiful view of our trip.",
       },
       ja: {
+        place: "山形・酒田市",
         note: "肩を並べて水平線に沈む夕日を眺める、旅の中で最も美しい瞬間です。",
       },
     },

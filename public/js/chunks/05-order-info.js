@@ -4,7 +4,7 @@ function renderOrder() {
   const status = state.order.status || "訂單已建立";
   const statuses = ["訂單已建立", "印刷製作中", "已出貨", "已送達"];
   const current = Math.max(0, statuses.indexOf(status));
-  return `<div class="page-container"><section class="success-layout surface"><div class="success-mark"><i class="bi bi-check-lg"></i></div><span class="eyebrow">ORDER CONFIRMED</span><h1 class="mt-2">訂單已建立！</h1><p>謝謝你把這段回憶交給我們。這是一筆模擬訂單，沒有實際付款或印刷作業。</p><div class="surface p-3 text-start mt-4"><div class="d-flex justify-content-between gap-3"><span class="small text-secondary">訂單編號</span><strong>${escapeHTML(state.order.id)}</strong></div><div class="d-flex justify-content-between gap-3 mt-3"><span class="small text-secondary">相冊名稱</span><strong>${escapeHTML(state.order.title)}</strong></div><div class="d-flex justify-content-between gap-3 mt-3"><span class="small text-secondary">訂單成立時間</span><strong>${new Date(state.order.createdAt).toLocaleString(state.language === "ja" ? "ja-JP" : state.language === "en" ? "en-US" : "zh-TW")}</strong></div><div class="d-flex justify-content-between gap-3 mt-3"><span class="small text-secondary">印刷本數</span><strong>${state.order.printQty || 0}</strong></div><div class="d-flex justify-content-between gap-3 mt-3"><span class="small text-secondary">訂單小計</span><strong>${money(state.order.total)}</strong></div></div><div class="status-timeline">${statuses.map((item, index) => `<div class="status-row ${index <= current ? "done" : ""}"><div class="status-dot"><i class="bi bi-check-lg"></i></div><div><h3>${item}</h3><p>${["訂單資料已建立。", "等待製作安排。", "出貨資訊將於後續更新。", "送達後完成此次旅程。"][index]}</p></div></div>`).join("")}</div><div class="d-flex gap-2 justify-content-center flex-wrap"><button class="btn btn-outline-secondary" data-route="shop"><i class="bi bi-arrow-left me-1"></i>返回商店</button>${state.order.type === "album" ? '<button class="btn btn-primary" id="reorderSubmitted">再次下單</button>' : ""}<button class="btn btn-outline-primary" data-route="account">查看我的帳戶</button><button class="btn btn-outline-primary" data-route="home">返回首頁</button></div></section></div>`;
+  return `<div class="page-container"><section class="success-layout surface"><div class="success-mark"><i class="bi bi-check-lg"></i></div><span class="eyebrow">ORDER CONFIRMED</span><h1 class="mt-2">訂單已建立！</h1><p>謝謝你把這段回憶交給我們。這是一筆模擬訂單，沒有實際付款或印刷作業。</p><div class="surface p-3 text-start mt-4"><div class="d-flex justify-content-between gap-3"><span class="small text-secondary">訂單編號</span><strong>${escapeHTML(state.order.id)}</strong></div><div class="d-flex justify-content-between gap-3 mt-3"><span class="small text-secondary">相冊名稱</span><strong>${escapeHTML(state.order.title)}</strong></div><div class="d-flex justify-content-between gap-3 mt-3"><span class="small text-secondary">訂單成立時間</span><strong>${new Date(state.order.createdAt).toLocaleString(state.language === "ja" ? "ja-JP" : state.language === "en" ? "en-US" : "zh-TW")}</strong></div><div class="d-flex justify-content-between gap-3 mt-3"><span class="small text-secondary">印刷本數</span><strong>${state.order.printQty || 0}</strong></div><div class="d-flex justify-content-between gap-3 mt-3"><span class="small text-secondary">訂單小計</span><strong>${money(state.order.total)}</strong></div></div><div class="status-timeline">${statuses.map((item, index) => `<div class="status-row ${index <= current ? "done" : ""}"><div class="status-dot"><i class="bi bi-check-lg"></i></div><div><h3>${item}</h3><p>${["訂單資料已建立。", "等待製作安排。", "出貨資訊將於後續更新。", "送達後完成此次旅程。"][index]}</p></div></div>`).join("")}</div><div class="d-flex gap-2 justify-content-center flex-wrap"><button class="btn btn-outline-primary" data-route="account">查看我的帳戶</button><button class="btn btn-outline-primary" data-route="home">返回首頁</button></div></section></div>`;
 }
 function renderInfo() {
   if (["faq", "shipping"].includes(state.infoPage)) {
@@ -12,7 +12,7 @@ function renderInfo() {
     const faqItems = [
       [
         "相冊最多可以放幾張明信片？",
-        `第一版原型每本最多 ${MAX_POSTCARDS} 張，實際上限需要依印刷規格驗證。`,
+        `第一版原型每本最多 24 張，實際上限需要依印刷規格驗證。`,
       ],
       [
         "我可以中途離開再回來嗎？",
@@ -44,14 +44,14 @@ function renderInfo() {
     const faq = `<div class="accordion info-accordion " id="faqAccordion">${faqItems
       .map(
         (item, i) => `
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button ${i ? "collapsed" : ""}" type="button" data-bs-toggle="collapse" data-bs-target="#faq${i}" aria-expanded="${i === 0}">${item[0]}</button>
-        </h2>
-        <div id="faq${i}" class="accordion-collapse collapse ${i === 0 ? "show" : ""}" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">${item[1]}</div>
-        </div>
-      </div>`,
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button ${i ? "collapsed" : ""}" type="button" data-bs-toggle="collapse" data-bs-target="#faq${i}" aria-expanded="${i === 0}">${item[0]}</button>
+    </h2>
+    <div id="faq${i}" class="accordion-collapse collapse ${i === 0 ? "show" : ""}" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">${item[1]}</div>
+    </div>
+  </div>`,
       )
       .join("")}</div>`;
 

@@ -119,8 +119,10 @@
   }
 }
 .address-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex: 0 0 auto;
-  width: 56px;
   min-width: 56px;
   white-space: nowrap;
   text-align: center;
@@ -214,7 +216,9 @@
 .showcase-book-page.page-turn-in {
   animation: corner-page-turn 0.42s cubic-bezier(0.2, 0.7, 0.25, 1) both;
 }
-.showcase-book-page.page-turn-in::after { content: none; }
+.showcase-book-page.page-turn-in::after {
+  content: none;
+}
 @keyframes corner-page-turn {
   0% {
     transform: perspective(900px) rotateY(0) rotateZ(0);

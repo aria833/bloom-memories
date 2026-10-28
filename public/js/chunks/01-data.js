@@ -10,54 +10,61 @@ const STEPS = [
   "確認印刷",
 ];
 
+// ========================================
 // 明信片資料
+// 整合三批明信片，補上編輯與收藏功能需要的初始資料
+// ========================================
+
 const postcards = [...postcardBatch1, ...postcardBatch2, ...postcardBatch3].map(
   (item) => ({
     ...item,
-    favorite: [1, 4, 7, 10].includes(item.id),
+
+    // 保留資料原本的收藏狀態
+    favorite: item.favorite ?? [1, 4, 7, 10].includes(item.id),
+
+    // 使用者的明信片狀態
     acquired: true,
     decoration: "",
+
+    // 保留原始繁體中文文字，供舊功能相容使用
     text: item.note,
+
+    // 明信片編輯設定
     includeDate: true,
     layout: "memory",
   }),
 );
 
 // ========================================
-// Showcase 明信片多語系字典
-// 只翻譯展示文字，不更動原始圖片與資料
+// 取得明信片目前語系的文字
+// 優先使用翻譯，沒有翻譯時回退至原始資料
 // ========================================
 
-const postcardTranslations = {
-  ...postcardTranslationBatch1,
-  ...postcardTranslationBatch2,
-  ...postcardTranslationBatch3,
-  ...postcardTranslationBatch4,
-};
-
-// ========================================
-// 將翻譯套用至明信片
-// 不覆蓋原始文字、圖片或其他資料
-// ========================================
-
-postcards.forEach((postcard) => {
-  postcard.translations = postcardTranslations[postcard.id] || {};
-});
-
-
-
-/** Return a postcard field in the active UI language without changing stored data. */
 function getPostcardFieldText(card, field) {
-  const locale = state?.language || "zh-Hant";
-  if (!card) return "";
-
-  if (locale !== "zh-Hant") {
-    const translated = card.translations?.[locale]?.[field];
-    if (translated) return translated;
-    const fieldTranslation = postcardFieldLabels[field]?.[card[field]]?.[locale];
-    if (fieldTranslation) return fieldTranslation;
+  if (!card) {
+    return "";
   }
 
+  const locale = state?.language || "zh-Hant";
+
+  // 優先取得明信片資料內的對應語系翻譯
+  const translated = card.translations?.[locale]?.[field];
+
+  if (translated) {
+    return translated;
+  }
+
+  // 如果沒有明信片翻譯，嘗試使用既有的欄位翻譯字典
+  if (typeof postcardFieldLabels !== "undefined") {
+    const fieldTranslation =
+      postcardFieldLabels?.[field]?.[card[field]]?.[locale];
+
+    if (fieldTranslation) {
+      return fieldTranslation;
+    }
+  }
+
+  // 最後回退至原始資料，例如繁體中文
   return card[field] || "";
 }
 
@@ -67,7 +74,7 @@ const showcaseAlbums = {
     title: "致勇敢的自己",
     desc: "異國生活裡的第一次、獨自前行的日常與成長。",
     coverImage: "/images/album_1.png",
-    backImage: "/images/album_1.png",
+    backImage: "/images/coverback_1.png",
     coverTitle: "致勇敢的自己",
     coverSubtitle: "謝謝那個沒有放棄的自己。",
     translations: {
@@ -95,7 +102,7 @@ const showcaseAlbums = {
     title: "我們的第一次海外旅行",
     desc: "以山形為起點，收藏兩個人一起走過的風景。",
     coverImage: "/images/album_2.png",
-    backImage: "/images/album_2.png",
+    backImage: "/images/coverback_2.png",
     coverTitle: "我們的第一次海外旅行",
     coverSubtitle: "下次還想和你一起出發。",
     translations: {
@@ -123,7 +130,7 @@ const showcaseAlbums = {
     title: "成長日記",
     desc: "把和家人的溫馨日常裝訂起來。",
     coverImage: "/images/album_3.png",
-    backImage: "/images/album_3.png",
+    backImage: "/images/coverback_3.png",
     coverTitle: "金色回憶球的成長日記",
     coverSubtitle: "每一天都值得好好收藏。",
     translations: {

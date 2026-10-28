@@ -42,10 +42,15 @@
   background: #f2f1e9;
   border-radius: 16px;
   padding: 28px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
+
 .create-preview .mini-book {
-  width: 341px;
-  height: 228px;
+  width: min(341px, 100%);
+  aspect-ratio: 341 / 228;
+  height: auto;
+  max-width: 100%;
 }
 .selection-toolbar {
   display: flex;

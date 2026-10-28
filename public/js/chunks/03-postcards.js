@@ -170,7 +170,6 @@ function stepperHTML() {
   const current = Math.max(1, Math.min(STEPS.length, Number(state.step) || 1));
   const percent = Math.round(((current - 1) / (STEPS.length - 1)) * 100);
   return `
-  <div class="container">
     <div class="stepper-summary" aria-live="polite">
       <span class="stepper-summary__label">相冊製作進度</span>
       <strong>${getLocale() === "en" ? `Step ${current} of ${STEPS.length}` : getLocale() === "ja" ? `全${STEPS.length}ステップ中 ${current}ステップ目` : `第 ${current} 步／共 ${STEPS.length} 步`}</strong>
@@ -179,15 +178,16 @@ function stepperHTML() {
       <div class="stepper-progress-track" role="progressbar" aria-label="相簿製作進度" data-i18n="相簿製作進度" data-i18n-attr="aria-label" aria-valuemin="1" aria-valuemax="${STEPS.length}" aria-valuenow="${current}">
     <span style="width:${Math.max(0, percent)}%"></span>
   </div>
-  </div>
  
 
-  <div class="stepper" aria-label="相簿製作步驟" data-i18n="相簿製作步驟" data-i18n-attr="aria-label">${STEPS.map((label, index) => {
-    const number = index + 1;
-    const status =
-      number === current ? "active" : number < current ? "completed" : "";
-    return `<div class="stepper-item ${status}" ${number === current ? 'aria-current="step"' : ""}><div class="stepper-circle">${number < current ? '<i class="bi bi-check-lg"></i>' : number}</div><div class="stepper-label">${label}</div></div>`;
-  }).join("")}</div>`;
+  <div class="stepper" aria-label="相簿製作步驟" data-i18n="相簿製作步驟" data-i18n-attr="aria-label">${STEPS.map(
+    (label, index) => {
+      const number = index + 1;
+      const status =
+        number === current ? "active" : number < current ? "completed" : "";
+      return `<div class="stepper-item ${status}" ${number === current ? 'aria-current="step"' : ""}><div class="stepper-circle">${number < current ? '<i class="bi bi-check-lg"></i>' : number}</div><div class="stepper-label">${label}</div></div>`;
+    },
+  ).join("")}</div>`;
 }
 
 function scrollToCurrentStep() {

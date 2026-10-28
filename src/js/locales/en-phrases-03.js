@@ -53,8 +53,8 @@ export default {
   "出貨資訊將於後續更新。": "Shipping information will be updated later.",
   "送達後完成此次旅程。": "This journey is complete once the order arrives.",
   "相冊最多可以放幾張明信片？": "How many postcards can an album hold?",
-  "第一版原型每本最多 ${MAX_POSTCARDS} 張，實際上限需要依印刷規格驗證。":
-    "The first prototype allows up to ${MAX_POSTCARDS} postcards per album. The actual limit must be verified against print specifications.",
+  "第一版原型每本最多 24 張，實際上限需要依印刷規格驗證。":
+    "The first prototype allows up to 24 postcards per album. The actual limit must be verified against print specifications.",
   "我可以中途離開再回來嗎？": "Can I leave and come back later?",
   "可以。草稿會保存在目前瀏覽器的本機儲存空間；這不是雲端同步。":
     "Yes. Drafts are saved in this browser's local storage; they are not synced to the cloud.",
@@ -105,8 +105,8 @@ export default {
   "這是展示用表單，訊息沒有實際送出。":
     "This demo form does not actually send messages.",
   已完成示意: "Demo Complete",
-  "每本相冊最多選取 ${MAX_POSTCARDS} 張明信片。":
-    "You can select up to ${MAX_POSTCARDS} postcards per album.",
+  "每本相冊最多選取 24 張明信片。":
+    "You can select up to 24 postcards per album.",
   已達選取上限: "Selection Limit Reached",
   "每張明信片最多放置 8 個裝飾。":
     "Each postcard can have up to 8 decorations.",
@@ -184,7 +184,8 @@ export default {
   "相冊會依選定的單一規格自動安排頁面。此步驟只負責調整明信片順序。":
     "Pages are arranged automatically using the selected format. This step only changes the postcard order.",
   返回編輯: "Back to Editing",
-  "下一步：設計封面": "Next: Design the Cover",
+  設計封面: "Design the Cover",
+  預覽: "Preview",
   返回商店: "Back to Shop",
   建立草稿: "Create Draft",
   編輯內容: "Edit Content",

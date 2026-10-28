@@ -23,7 +23,6 @@ function renderHome() {
             <div class="album-cover-art">
               <img src="/images/album_2.png" alt="" class="cover-photo">
             </div>
-            <div class="album-cover-title">Little Moments<br>in Pikmin Bloom</div>
           </div>
         </div>
         <div class="floating-postcard"><div class="postcard-scene has-photo"><img class="postcard-photo" src="/images/sample-yamagata/yamagata_1.PNG" alt="山形旅行明信片照片"><span class="sample-photo-sticker" aria-hidden="true">✿</span></div><div class="floating-postcard-caption">Yamagata · 2025.12</div>

@@ -2,7 +2,6 @@ function renderAccount() {
   if (!state.loggedIn) return renderAuth();
   const tabs = [
     { id: "drafts", label: "草稿相冊", icon: "bi-journal" },
-    { id: "submitted", label: "已提交相冊", icon: "bi-box-seam" },
     { id: "orders", label: "訂單紀錄", icon: "bi-receipt" },
     { id: "wishlist", label: "商品願望清單", icon: "bi-heart" },
     { id: "profile", label: "個人資料", icon: "bi-person" },
@@ -48,7 +47,7 @@ function renderAccount() {
       : `<div class="empty-state"><i class="bi bi-heart"></i><h3>願望清單還是空的</h3><p>可以把喜歡的一般商品先收藏起來。</p><button class="btn btn-primary" data-route="shop">瀏覽商品</button></div>`;
   }
   if (state.accountTab === "profile")
-    content = `<h2>個人資料</h2><label class="field-label">顯示名稱</label><input class="form-control mb-3" id="profileName" value="${escapeHTML(state.user.name)}"><label class="field-label">電子郵件</label><input class="form-control mb-3" value="${escapeHTML(state.user.email)}" disabled><button class="btn btn-primary" id="saveProfile">儲存資料</button>`;
+    content = `<label class="field-label">顯示名稱</label><input class="form-control mb-3" id="profileName" value="${escapeHTML(state.user.name)}"><label class="field-label">電子郵件</label><input class="form-control mb-3" value="${escapeHTML(state.user.email)}" disabled><button class="btn btn-primary" id="saveProfile">儲存資料</button>`;
   if (state.accountTab === "addresses") {
     const editing = state.addresses.find(
       (address) => address.id === state.editingAddressId,

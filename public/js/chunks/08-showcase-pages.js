@@ -48,13 +48,11 @@ function showcaseCopyrightHTML(album) {
         </p>
 
         <p>
-          ${escapeHTML(album.completedDate || "2026.10/20")}
+          ${escapeHTML(album.completedDate || "2026.10.20")}
         </p>
 
         <small>
           Bloom Memories Concept · © ${new Date().getFullYear()}
-          <br>
-          獨立非官方概念原型
         </small>
       </div>
     </div>

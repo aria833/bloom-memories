@@ -58,7 +58,7 @@ function openShowcaseModal() {
             id="showcasePrev"
           >
             <i class="bi bi-arrow-left"></i>
-            上一頁
+            <span data-i18n="上一頁">上一頁</span>
           </button>
 
           <span
@@ -71,12 +71,12 @@ function openShowcaseModal() {
             data-showcase-turn="1"
             id="showcaseNext"
           >
-            下一頁
+            <span data-i18n="下一頁">下一頁</span>
             <i class="bi bi-arrow-right"></i>
           </button>
         </div>
 
-        <p class="showcase-disclaimer">
+        <p class="showcase-disclaimer" data-i18n="成品畫面為概念示意，使用模擬明信片資料。">
           成品畫面為概念示意，使用模擬明信片資料。
         </p>
       </div>

@@ -23,7 +23,6 @@ function renderProductDetail(id) {
 
   const wished = state.wishlist.includes(product.id);
 
-
   return `
     <div class="page-container">
 
@@ -254,16 +253,17 @@ function renderProductDetail(id) {
           <div class="mt-4 pt-3 border-top">
             <h2 class="h6 fw-bold">商品資訊</h2>
 
-            <div class="product-details-list small text-secondary">
+            <div class="product-details-list small text-secondary pb-2 border-bottom">
               ${(Array.isArray(getProductText(product, "details"))
                 ? getProductText(product, "details")
-                : [getProductText(product, "details")])
+                : [getProductText(product, "details")]
+              )
                 .filter(Boolean)
                 .map((detail) => `<p>${escapeHTML(detail)}</p>`)
                 .join("")}
             </div>
 
-            <p class="small text-secondary">
+            <p class="small text-secondary pt-2">
               本頁商品資料為作品集原型示意，非正式販售資訊。
             </p>
           </div>

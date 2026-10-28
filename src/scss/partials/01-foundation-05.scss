@@ -1,4 +1,3 @@
-
 .showcase-caption strong {
   font-size: clamp(0.9rem, 1.8vw, 1.3rem);
   line-height: 1.4;
@@ -101,13 +100,10 @@
 
 .showcase-modal-controls {
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   flex: 0 0 auto;
-
   gap: 18px;
 }
 
@@ -115,11 +111,36 @@
   white-space: nowrap;
 }
 
-.showcase-modal-controls span {
+/* 上一頁：綠色外框＋綠色文字 */
+.showcase-modal-controls #showcasePrev {
+  color: var(--green-dark);
+  border-color: var(--green-dark);
+  background-color: transparent;
+}
+
+.showcase-modal-controls #showcasePrev:hover {
+  color: var(--green-dark);
+  border-color: var(--green-dark);
+  background-color: var(--green-soft);
+}
+
+/* 下一頁：綠色背景＋白色文字 */
+.showcase-modal-controls #showcaseNext {
+  color: #fff;
+  border-color: var(--green-dark);
+  background-color: var(--green-dark);
+}
+
+.showcase-modal-controls #showcaseNext:hover {
+  color: #fff;
+  border-color: var(--green-dark);
+  background-color: var(--green);
+}
+
+/* 頁碼 */
+.showcase-modal-controls > span {
   min-width: 130px;
-
   text-align: center;
-
   font-size: 0.8rem;
   color: var(--muted);
 }

@@ -1,8 +1,9 @@
 function studioShell(content) {
   const draft = currentDraft();
   return `<section class="studio-shell page-container">
+    <div class="container">
     <div class="studio-topbar"><div><h1>Album Studio</h1><div class="small text-secondary mt-1">${escapeHTML(draft?.title || t("相冊製作工作區"))}</div></div><div class="studio-topbar-actions"><span class="save-state" id="saveStatus"><i class="bi bi-check-circle-fill"></i> 已儲存</span><button class="btn btn-sm btn-outline-primary" data-route="account">儲存並離開</button></div></div>
-    <div class="progress-wrap">${stepperHTML()}</div>
+    <div class="progress-wrap">${stepperHTML()}</div></div>
     ${content}
   </section>`;
 }
@@ -66,37 +67,45 @@ function renderSelection() {
   const regions = [...new Set(postcards.map((card) => card.region || "東亞"))];
   const locations = [...new Set(postcards.map((card) => card.place))];
   return studioShell(
-    `<section class="surface studio-content"><div class="studio-heading"><div><h2>選取明信片</h2><p>從你的收藏中挑選想印成實體相冊的明信片。可以跨篩選條件選取，已選內容會保留。</p></div><span class="badge text-bg-light border">最多 ${MAX_POSTCARDS} 張</span></div><div class="selection-toolbar"><div class="filter-row"><button class="filter-chip ${state.filter === "all" ? "active" : ""}" data-filter="all">全部明信片</button><button class="filter-chip ${state.filter === "favorites" ? "active" : ""}" data-filter="favorites"><i class="bi bi-star-fill me-1"></i>收藏</button><select class="form-select form-select-sm" id="continentFilter"><option value="all">所有洲</option>${continents.map((loc) => `<option value="${loc}" ${state.locationContinent === loc ? "selected" : ""}>${escapeHTML(getPostcardFieldText({ continent: loc }, "continent"))}</option>`).join("")}</select><select class="form-select form-select-sm" id="regionFilter"><option value="all">所有地區</option>${regions.map((loc) => `<option value="${loc}" ${state.locationRegion === loc ? "selected" : ""}>${escapeHTML(getPostcardFieldText({ region: loc }, "region"))}</option>`).join("")}</select><select class="form-select form-select-sm"  id="locationFilter"><option value="all">所有地點</option>${locations.map((loc) => { const card = postcards.find((item) => item.place === loc); return `<option value="${loc}" ${state.locationFilter === loc ? "selected" : ""}>${escapeHTML(getPostcardFieldText(card, "place"))}</option>`; }).join("")}</select><select class="form-select form-select-sm"  id="dateFilter"><option value="all">所有日期</option><option value="2026" ${state.dateFilter === "2026" ? "selected" : ""}>2026</option><option value="2025" ${state.dateFilter === "2025" ? "selected" : ""}>2025</option></select><select class="form-select form-select-sm"  id="methodFilter"><option value="all">所有取得方式</option>${[...new Set(postcards.map((card) => card.method))].map((method) => `<option value="${method}" ${state.methodFilter === method ? "selected" : ""}>${escapeHTML(getPostcardFieldText({ method }, "method"))}</option>`).join("")}</select></div><span class="small text-secondary">預設依最新日期排序</span></div><div class="postcard-grid">${list.map(postcardCardHTML).join("")}</div>${list.length ? "" : `<div class="empty-state"><i class="bi bi-search"></i><h3>找不到符合條件的明信片</h3><p>試著清除篩選條件，看看其他收藏。</p><button class="btn btn-outline-primary" id="clearFilters">清除篩選</button></div>`}
+    `<section class="surface studio-content"><div class="studio-heading"><div><h2>選取明信片</h2><p>從你的收藏中挑選想印成實體相冊的明信片。可以跨篩選條件選取，已選內容會保留。</p></div><span class="badge text-bg-light border">最多 ${MAX_POSTCARDS} </span></div><div class="selection-toolbar"><div class="filter-row"><button class="filter-chip ${state.filter === "all" ? "active" : ""}" data-filter="all">全部明信片</button><button class="filter-chip ${state.filter === "favorites" ? "active" : ""}" data-filter="favorites"><i class="bi bi-star-fill me-1"></i>收藏</button><select class="form-select form-select-sm" id="continentFilter"><option value="all">所有洲</option>${continents.map((loc) => `<option value="${loc}" ${state.locationContinent === loc ? "selected" : ""}>${escapeHTML(getPostcardFieldText({ continent: loc }, "continent"))}</option>`).join("")}</select><select class="form-select form-select-sm" id="regionFilter"><option value="all">所有地區</option>${regions.map((loc) => `<option value="${loc}" ${state.locationRegion === loc ? "selected" : ""}>${escapeHTML(getPostcardFieldText({ region: loc }, "region"))}</option>`).join("")}</select><select class="form-select form-select-sm"  id="locationFilter"><option value="all">所有地點</option>${locations
+      .map((loc) => {
+        const card = postcards.find((item) => item.place === loc);
+        return `<option value="${loc}" ${state.locationFilter === loc ? "selected" : ""}>${escapeHTML(getPostcardFieldText(card, "place"))}</option>`;
+      })
+      .join(
+        "",
+      )}</select><select class="form-select form-select-sm"  id="dateFilter"><option value="all">所有日期</option><option value="2026" ${state.dateFilter === "2026" ? "selected" : ""}>2026</option><option value="2025" ${state.dateFilter === "2025" ? "selected" : ""}>2025</option></select><select class="form-select form-select-sm"  id="methodFilter"><option value="all">所有取得方式</option>${[...new Set(postcards.map((card) => card.method))].map((method) => `<option value="${method}" ${state.methodFilter === method ? "selected" : ""}>${escapeHTML(getPostcardFieldText({ method }, "method"))}</option>`).join("")}</select></div><span class="small text-secondary">預設依最新日期排序</span></div><div class="postcard-grid">${list.map(postcardCardHTML).join("")}</div>${list.length ? "" : `<div class="empty-state"><i class="bi bi-search"></i><h3>找不到符合條件的明信片</h3><p>試著清除篩選條件，看看其他收藏。</p><button class="btn btn-outline-primary" id="clearFilters">清除篩選</button></div>`}
     <div class="selection-footer">
   <div class="selection-footer__info">
-    <strong>已選取 ${count} / ${MAX_POSTCARDS} 張</strong>
+    <strong>已選取 ${count} / ${MAX_POSTCARDS} </strong>
     <span class="ms-2">
       ${
         count === MAX_POSTCARDS
           ? "已達本冊上限"
-          : `還可以選取 ${MAX_POSTCARDS - count} 張`
+          : `還可以選取 ${MAX_POSTCARDS - count} `
       }
     </span>
   </div>
-  <div class="selection-footer__actions">
-    <button
-      type="button"
-      class="btn btn-outline-primary"
-      id="backToCreateDraft"
-    >
-      <i class="bi bi-arrow-left me-1"></i>
-      返回草稿
-    </button>
-<button
-  type="button"
-  class="btn btn-primary text-white"
-  id="continueSelection"
-  ${count === 0 ? "disabled" : ""}
->
-  編輯內容
-  <i class="bi bi-arrow-right ms-1"></i>
-</button>
-  </div>
+<div class="selection-footer__actions">
+  <button
+    type="button"
+    class="btn btn-outline-primary"
+    id="backToCreateDraft"
+  >
+    <i class="bi bi-arrow-left" aria-hidden="true"></i>
+    <span>返回草稿</span>
+  </button>
+
+  <button
+    type="button"
+    class="btn btn-primary text-white"
+    id="continueSelection"
+    ${count === 0 ? "disabled" : ""}
+  >
+    <span>編輯內容</span>
+    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+  </button>
+</div>
 </div></section>`,
   );
 }

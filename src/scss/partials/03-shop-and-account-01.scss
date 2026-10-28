@@ -1,5 +1,4 @@
 @media (max-width: 760px) {
-
   .site-header {
     height: 66px;
     padding-inline: 16px;
@@ -122,7 +121,7 @@
     }
   }
   .stepper {
-    min-width: 650px;
+    display: none;
   }
   .stepper-label {
     font-size: 0.67rem;

@@ -60,9 +60,20 @@ function renderCheckout() {
       <div class="checkout-layout">
         <div>
           <div class="checkout-step">
-            <span>1</span>配送資訊
-            <span>2</span>付款方式
-            <span>3</span>確認訂單
+            <div class="checkout-step__item">
+              <span>1</span>
+              <span class="checkout-step__label">配送資訊</span>
+            </div>
+
+            <div class="checkout-step__item">
+              <span>2</span>
+              <span class="checkout-step__label">付款方式</span>
+            </div>
+
+            <div class="checkout-step__item">
+              <span>3</span>
+              <span class="checkout-step__label">確認訂單</span>
+            </div>
           </div>
 
           ${renderCheckoutShippingForm(country)}
@@ -248,7 +259,7 @@ function renderCheckout() {
                           >${escapeHTML(state.giftMessage)}</textarea>
 
                           <div class="form-text">
-                            最多 180 字，會印在禮物小卡上（概念示意）。
+                            最多 180 字，會印在禮物小卡上。
                           </div>
                         </div>
                       `

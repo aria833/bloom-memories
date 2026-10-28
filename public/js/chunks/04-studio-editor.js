@@ -247,10 +247,11 @@ function renderEditor() {
             返回選取
           </button>
 
-          <button class="btn btn-primary" id="finishEditing">
-            頁面排序
-            <i class="bi bi-arrow-right ms-1"></i>
-          </button>
+        <button class="btn btn-primary" id="finishEditing">
+          <span data-i18n="頁面排序">頁面排序</span>
+          <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+        </button>
+
         </div>
 
       </section>

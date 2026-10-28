@@ -27,8 +27,10 @@
   }
 }
 .mini-book {
-  width: 135px;
-  height: 170px;
+  width: min(135px, 100%);
+  aspect-ratio: 135 / 170;
+  height: auto;
+  box-sizing: border-box;
   background: #dce6d2;
   border: 7px solid #fffefa;
   box-shadow: 0 12px 24px #35413715;
@@ -36,7 +38,7 @@
   display: grid;
   place-items: center;
   color: #66845b;
-  font-size: 2.2rem;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
 }
 .mini-book.orange {
   background: #f0d4bd;

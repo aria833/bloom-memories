@@ -24,10 +24,6 @@ const appChunks = [
   "01-data-postcards-01.js",
   "01-data-postcards-02.js",
   "01-data-postcards-03.js",
-  "01-data-translations-01.js",
-  "01-data-translations-02.js",
-  "01-data-translations-03.js",
-  "01-data-translations-04.js",
   "postcard-translations.js",
   "01-data.js",
   "01-data-products.js",
@@ -54,7 +50,7 @@ const appChunks = [
   "07-header-events.js",
   "08-showcase.js",
   "08-showcase-postcards.js",
-  "08-showcase-pages.js"
+  "08-showcase-pages.js",
 ];
 
 async function loadApplicationChunks() {

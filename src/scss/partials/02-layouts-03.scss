@@ -2,7 +2,8 @@
   border-bottom: 0;
 }
 .cart-thumb {
-  height: 76px;
+  max-height: 76px;
+  padding: 8px;
   border-radius: 10px;
   background: #e6ecdf;
   display: grid;
@@ -111,23 +112,60 @@
   font-weight: 800;
   margin-bottom: 18px;
 }
+/* 結帳步驟列 */
 .checkout-step {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 12px;
   margin-bottom: 18px;
   color: var(--muted);
   font-size: 0.78rem;
 }
-.checkout-step span {
+
+/* 單一步驟 */
+.checkout-step__item {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  min-width: 0;
+}
+
+/* 步驟數字 */
+.checkout-step__item > span:first-child {
+  display: grid;
+  place-items: center;
+  flex: 0 0 26px;
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
   background: var(--green-soft);
   color: var(--green-dark);
   font-weight: 800;
+}
+
+/* 步驟文字 */
+.checkout-step__label {
+  white-space: nowrap;
+}
+
+/* 手機版 */
+@media (max-width: 575.98px) {
+  .checkout-step {
+    gap: 8px;
+    justify-content: space-between;
+    font-size: 0.72rem;
+  }
+
+  .checkout-step__item {
+    gap: 5px;
+  }
+
+  .checkout-step__item > span:first-child {
+    flex-basis: 24px;
+    width: 24px;
+    height: 24px;
+  }
 }
 .form-grid {
   display: grid;

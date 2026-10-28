@@ -15,21 +15,26 @@ function getLocalizedShowcaseText(item, key) {
   return localized[key] || item[key] || "";
 }
 // ========================================
-// 取得明信片目前語系的文字
+// 取得 Showcase 明信片目前語系的文字
+// 直接讀取明信片內的 translations
 // ========================================
 
 function getShowcasePostcardText(card, key) {
+  if (!card) {
+    return "";
+  }
+
   const language = state.language || "zh-Hant";
 
-  const translations = card.translations || {};
+  // 取得目前語系的明信片翻譯
+  const translated = card.translations?.[language]?.[key];
 
-  const localized =
-    translations[language] ||
-    translations[language.replace("-", "_")] ||
-    translations[language.split("-")[0]] ||
-    {};
+  if (translated) {
+    return translated;
+  }
 
-  return localized[key] || card[key] || "";
+  // 沒有翻譯時，回退至原始繁體中文資料
+  return card[key] || "";
 }
 
 // ========================================
@@ -47,17 +52,20 @@ function showcasePostcardHTML(card, index) {
     `;
   }
 
-  // 取得目前語系的文字
+  // 依照目前語系取得地點名稱
   const title = getShowcasePostcardText(card, "place") || "旅行中的小地方";
 
+  // 依照目前語系取得明信片文字
   const copy = (
     getShowcasePostcardText(card, "note") ||
     getShowcasePostcardText(card, "text") ||
     ""
   ).trim();
 
+  // 取得日期
   const date = card.includeDate === false ? "" : card.date || "";
 
+  // 裝飾貼紙
   const stickers = ["✿", "✦", "♡", "🌱"];
   const sticker = stickers[index % stickers.length];
 
@@ -101,4 +109,3 @@ function showcasePostcardHTML(card, index) {
 // ========================================
 // 產生封面與封底 HTML
 // ========================================
-

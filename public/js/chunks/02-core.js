@@ -26,13 +26,16 @@ function money(value) {
   const rates = { JPY: 1, TWD: 0.215, USD: 0.0067 };
   const amount = Number(value) * rates[currency];
 
+  // 台幣無條件捨去小數部分
+  const displayAmount = currency === "TWD" ? Math.floor(amount) : amount;
+
   const locale =
     getLocale() === "ja" ? "ja-JP" : getLocale() === "en" ? "en-US" : "zh-TW";
 
   const formattedAmount = new Intl.NumberFormat(locale, {
     minimumFractionDigits: 0,
-    maximumFractionDigits: currency === "JPY" ? 0 : 2,
-  }).format(amount);
+    maximumFractionDigits: currency === "JPY" || currency === "TWD" ? 0 : 2,
+  }).format(displayAmount);
 
   const currencySymbols = {
     JPY: "¥",
@@ -62,7 +65,8 @@ function toast(message, title = "提醒") {
   // Translate both fixed and interpolated messages through the same phrase matcher.
   const translatedTitle = localizeHTML(escapeHTML(title));
   const translatedMessage = localizeHTML(escapeHTML(message));
-  const closeLabel = getLocale() === "en" ? "Close" : getLocale() === "ja" ? "閉じる" : "關閉";
+  const closeLabel =
+    getLocale() === "en" ? "Close" : getLocale() === "ja" ? "閉じる" : "關閉";
   element.innerHTML = `<div class="d-flex"><div class="toast-body"><strong class="d-block mb-1">${translatedTitle}</strong>${translatedMessage}</div><button type="button" class="btn-close me-3 m-auto" aria-label="${closeLabel}"></button></div>`;
   container.append(element);
   element
