@@ -29,14 +29,14 @@ function scrollToCurrentStep() {
 
 function renderDraftLanding() {
   const drafts = state.drafts.filter((draft) => draft.status !== "submitted");
-  return `<div class="page-container studio-landing"><section class="page-intro"><span class="eyebrow">ALBUM STUDIO</span><h1 class="mt-2">先從一本相冊開始</h1><p>選擇要繼續編輯的草稿，或建立一本新的相冊。已完成訂單不會佔用草稿名額。</p></section><div class="draft-list">${drafts.map((draft) => `<article class="surface draft-card"><div class="product-image"><i class="bi bi-journal-richtext"></i></div><h3>${escapeHTML(draft.title)}</h3><p>上次修改：${new Date(draft.updatedAt).toLocaleDateString(state.language === "en" ? "en-US" : state.language === "ja" ? "ja-JP" : "zh-TW")} · ${(draft.postcardIds || []).length} 張明信片</p><button class="btn btn-primary w-100" data-resume-draft="${draft.id}">繼續編輯</button></article>`).join("")}</div><section class="surface create-new-draft">
+  return `<div class="page-container studio-landing"><section class="page-intro"><span class="eyebrow">ALBUM STUDIO</span><h1 class="mt-2">先從一本相冊開始</h1><p>選擇要繼續編輯的草稿，或建立一本新的相冊。</p></section><div class="draft-list">${drafts.map((draft) => `<article class="surface draft-card"><div class="product-image"><i class="bi bi-journal-richtext"></i></div><h3>${escapeHTML(draft.title)}</h3><p>上次修改：${new Date(draft.updatedAt).toLocaleDateString(state.language === "en" ? "en-US" : state.language === "ja" ? "ja-JP" : "zh-TW")} · ${(draft.postcardIds || []).length} 張明信片</p><button class="btn btn-primary w-100" data-resume-draft="${draft.id}">繼續編輯</button></article>`).join("")}</div><section class="surface create-new-draft">
   <div class="create-preview">
     <div class="mini-book">
       <i class="bi bi-plus-lg"></i>
     </div>
   </div>
 
-  <div class="create-new-draft__content">
+  <div class="create-new-draft__content pe-3">
     <h2>建立新相冊</h2><p>每個帳戶最多保留 ${MAX_DRAFTS} 本未完成草稿。建立後才會進入明信片選取畫面。</p><label class="field-label" for="newAlbumName">相冊名稱</label><input class="form-control mb-3" id="newAlbumName" maxlength="48" placeholder="${t("例如：山形旅行紀念冊")}" value="${t("我的旅行相冊")}"><button class="btn btn-primary" id="startNewDraft" ${drafts.length >= MAX_DRAFTS ? "disabled" : ""}>建立新相冊 <i class="bi bi-arrow-right ms-1"></i></button></div></section></div>`;
 }
 

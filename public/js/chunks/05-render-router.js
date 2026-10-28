@@ -37,7 +37,7 @@ function render() {
   main.innerHTML = localizeHTML((routes[state.route] || renderHome)());
 
   const routeTitles = {
-    home: "Bloom Memories｜獨立非官方概念專案",
+    home: "Bloom Memories｜UNOFFICIAL CONCEPT PROJECT",
     shop: "商店｜Bloom Memories",
     product: "商品詳情｜Bloom Memories",
     cart: "購物車｜Bloom Memories",
@@ -49,47 +49,67 @@ function render() {
     account: "我的帳戶｜Bloom Memories",
   };
   document.title = t(
-    routeTitles[state.route] || "Bloom Memories｜獨立非官方概念專案",
+    routeTitles[state.route] || "Bloom Memories｜UNOFFICIAL CONCEPT PROJECT",
   );
   document.documentElement.lang =
     state.language === "zh-Hant" ? "zh-Hant" : state.language;
 
   // Keep search and social-preview metadata aligned with the selected language.
-  const pageMetadata = {
-    "zh-Hant": {
-      description: "Bloom Memories 是一個非官方概念作品，探索如何將數位明信片整理成可珍藏、可送禮的實體相冊。",
-      socialTitle: "Bloom Memories｜把旅途中的明信片收藏成一冊回憶",
-      socialDescription: "探索將數位明信片轉化為實體相冊的專案作品。此為非官方的概念作品。",
-      keywords: "Bloom Memories, 明信片相冊, 旅行回憶, 相冊設計, 作品集概念, postcard album, Pikmin Bloom, 皮克敏",
-      ogLocale: "zh_TW",
-    },
-    en: {
-      description: "Bloom Memories is an unofficial concept exploring how digital postcards can become a keepsake album you can treasure or gift.",
-      socialTitle: "Bloom Memories | Turn Travel Postcards into a Keepsake Album",
-      socialDescription: "Explore a portfolio concept that turns digital postcards into a printed album. This is an unofficial concept project.",
-      keywords: "Bloom Memories, postcard album, travel memories, album design, portfolio concept, Pikmin Bloom",
-      ogLocale: "en_US",
-    },
-    ja: {
-      description: "Bloom Memoriesは、デジタルポストカードを大切に保存したり贈ったりできる実物のアルバムにする方法を探る、非公式のコンセプト作品です。",
-      socialTitle: "Bloom Memories｜旅のポストカードを思い出の一冊に",
-      socialDescription: "デジタルポストカードを実物のアルバムにするポートフォリオ作品です。非公式のコンセプトプロジェクトです。",
-      keywords: "Bloom Memories, ポストカードアルバム, 旅行の思い出, アルバムデザイン, ポートフォリオ作品, Pikmin Bloom",
-      ogLocale: "ja_JP",
-    },
-  }[state.language] || {};
+  const pageMetadata =
+    {
+      "zh-Hant": {
+        description:
+          "Bloom Memories 是一個非官方概念作品，探索如何將數位明信片整理成可珍藏、可送禮的實體相冊。",
+        socialTitle: "Bloom Memories｜把旅途中的明信片收藏成一冊回憶",
+        socialDescription:
+          "探索將數位明信片轉化為實體相冊的專案作品。此為非官方的概念作品。",
+        keywords:
+          "Bloom Memories, 明信片相冊, 旅行回憶, 相冊設計, 作品集概念, postcard album, Pikmin Bloom, 皮克敏",
+        ogLocale: "zh_TW",
+      },
+      en: {
+        description:
+          "Bloom Memories is an unofficial concept exploring how digital postcards can become a keepsake album you can treasure or gift.",
+        socialTitle:
+          "Bloom Memories | Turn Travel Postcards into a Keepsake Album",
+        socialDescription:
+          "Explore a portfolio concept that turns digital postcards into a printed album. This is an unofficial concept project.",
+        keywords:
+          "Bloom Memories, postcard album, travel memories, album design, portfolio concept, Pikmin Bloom",
+        ogLocale: "en_US",
+      },
+      ja: {
+        description:
+          "Bloom Memoriesは、デジタルポストカードを大切に保存したり贈ったりできる実物のアルバムにする方法を探る、非公式のコンセプト作品です。",
+        socialTitle: "Bloom Memories｜旅のポストカードを思い出の一冊に",
+        socialDescription:
+          "デジタルポストカードを実物のアルバムにするポートフォリオ作品です。非公式のコンセプトプロジェクトです。",
+        keywords:
+          "Bloom Memories, ポストカードアルバム, 旅行の思い出, アルバムデザイン, ポートフォリオ作品, Pikmin Bloom",
+        ogLocale: "ja_JP",
+      },
+    }[state.language] || {};
   const descriptionMeta = document.querySelector('meta[name="description"]');
   const ogTitleMeta = document.querySelector('meta[property="og:title"]');
-  const ogDescriptionMeta = document.querySelector('meta[property="og:description"]');
+  const ogDescriptionMeta = document.querySelector(
+    'meta[property="og:description"]',
+  );
   const ogLocaleMeta = document.querySelector('meta[property="og:locale"]');
   const keywordsMeta = document.querySelector('meta[name="keywords"]');
-  if (descriptionMeta && pageMetadata.description) descriptionMeta.content = pageMetadata.description;
-  if (ogTitleMeta && pageMetadata.socialTitle) ogTitleMeta.content = pageMetadata.socialTitle;
-  if (ogDescriptionMeta && pageMetadata.socialDescription) ogDescriptionMeta.content = pageMetadata.socialDescription;
-  if (ogLocaleMeta && pageMetadata.ogLocale) ogLocaleMeta.content = pageMetadata.ogLocale;
-  if (keywordsMeta && pageMetadata.keywords) keywordsMeta.content = pageMetadata.keywords;
+  if (descriptionMeta && pageMetadata.description)
+    descriptionMeta.content = pageMetadata.description;
+  if (ogTitleMeta && pageMetadata.socialTitle)
+    ogTitleMeta.content = pageMetadata.socialTitle;
+  if (ogDescriptionMeta && pageMetadata.socialDescription)
+    ogDescriptionMeta.content = pageMetadata.socialDescription;
+  if (ogLocaleMeta && pageMetadata.ogLocale)
+    ogLocaleMeta.content = pageMetadata.ogLocale;
+  if (keywordsMeta && pageMetadata.keywords)
+    keywordsMeta.content = pageMetadata.keywords;
 
-  const structuredData = document.querySelector('script[type="application/ld+json"]');
+  const structuredData = document.querySelector(
+    'script[type="application/ld+json"]',
+  );
   if (structuredData) {
     try {
       const schema = JSON.parse(structuredData.textContent);

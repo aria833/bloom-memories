@@ -127,7 +127,14 @@
   border: 1px solid #e1e0d4;
   border-radius: 8px;
   box-shadow: 0 24px 50px #3b49351c;
+
+  /* 讓內部內容水平、垂直置中 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 /* 相簿封面圖片區域 */
 .album-cover-art {
   position: relative;

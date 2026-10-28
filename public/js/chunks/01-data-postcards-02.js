@@ -168,7 +168,7 @@ const postcardBatch2 = [
     translations: {
       en: {
         place: "Yokohama, Kanagawa",
-        note: "Starting a new life, you made friends, went out together, and watched the Yokohama fireworks as a group.",
+        note: "Starting a new life, you made friends, went out together, and watched the Yokohama fireworks.",
       },
       ja: {
         place: "神奈川県・横浜市",

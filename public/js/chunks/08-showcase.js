@@ -76,8 +76,8 @@ function openShowcaseModal() {
           </button>
         </div>
 
-        <p class="showcase-disclaimer" data-i18n="成品畫面為概念示意，使用模擬明信片資料。">
-          成品畫面為概念示意，使用模擬明信片資料。
+        <p class="showcase-disclaimer" data-i18n="畫面為概念示意，使用模擬明信片資料。">
+          畫面為概念示意，使用模擬明信片資料。
         </p>
       </div>
     `;
@@ -199,12 +199,3 @@ function turnShowcasePage(direction) {
 
   updateShowcaseModal();
 }
-
-// ========================================
-// 產生明信片 HTML
-// ========================================
-
-/**
- * 取得目前語系的相冊文字。
- * 支援 zh-Hant、zh-TW、en、ja 等語系格式。
- */

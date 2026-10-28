@@ -88,9 +88,9 @@ function renderCart() {
   return `
     <div class="page-container">
       <section class="page-intro">
-        <span class="eyebrow">YOUR BAG</span>
+        <span class="eyebrow">SHOPPING CART</span>
         <h1 class="mt-2">購物車</h1>
-        <p>一般商品可以單獨購買；限定加購商品請從 Album Studio 加入。</p>
+        <p>一般商品可以單獨購買；限定加購商品請於製作相冊時加入。</p>
       </section>
       ${
         lines.length
@@ -137,7 +137,7 @@ function renderCart() {
         <div class="surface empty-state">
           <i class="bi bi-bag"></i>
           <h3>購物車還是空的</h3>
-          <p>去商店看看旅行書寫用品，或開始製作你的相冊。</p>
+          <p>去商店看看，或開始製作你的相冊。</p>
           <button class="btn btn-primary" data-route="shop">瀏覽商品</button>
         </div>
       `

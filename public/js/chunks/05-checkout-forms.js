@@ -7,7 +7,7 @@ function renderCheckoutShippingForm(country) {
               <div class="form-grid">
                 <div class="form-field">
                   <label class="field-label" for="checkoutName">
-                    收件人姓名
+                    收件人姓名(必填)
                   </label>
                   <input
                     class="form-control"
@@ -19,7 +19,7 @@ function renderCheckoutShippingForm(country) {
 
                 <div class="form-field">
                   <label class="field-label" for="checkoutEmail">
-                    電子郵件
+                    電子郵件(必填)
                   </label>
                   <input
                     class="form-control"
@@ -32,7 +32,7 @@ function renderCheckoutShippingForm(country) {
 
                 <div class="form-field full">
                   <label class="field-label" for="checkoutAddress">
-                    地址
+                    地址(必填)
                   </label>
                   <input
                     class="form-control"
@@ -44,7 +44,7 @@ function renderCheckoutShippingForm(country) {
 
                 <div class="form-field">
                   <label class="field-label" for="checkoutPhone">
-                    聯絡電話
+                    聯絡電話(必填)
                   </label>
                   <input
                     class="form-control"
@@ -57,7 +57,7 @@ function renderCheckoutShippingForm(country) {
 
                 <div class="form-field">
                   <label class="field-label" for="checkoutCountry">
-                    配送目的地
+                    配送目的地(必填)
                   </label>
 
                   <select class="form-select" id="checkoutCountry">
@@ -77,7 +77,7 @@ function renderCheckoutShippingForm(country) {
 
                 <div class="form-field">
                   <label class="field-label" for="checkoutPostal">
-                    郵遞區號
+                    郵遞區號(必填)
                   </label>
                   <input
                     class="form-control"

@@ -38,7 +38,7 @@ function renderEditor() {
 
       <div class="d-flex align-items-center justify-content-between gap-2 mt-2">
         <span class="small text-secondary">
-          已放置 ${(card.decorations || []).length} / 8 個
+          已放置 ${(card.decorations || []).length} / 8 
         </span>
 
         <button
@@ -63,7 +63,7 @@ function renderEditor() {
         <div class="studio-heading">
           <div>
             <h2>編輯內容</h2>
-            <p>保留原始明信片，加入一段文字、日期或少量裝飾，記錄當時的回憶。</p>
+            <p>保留原始明信片，或者加入一段文字、日期或少量裝飾，記錄當時的回憶。</p>
           </div>
 
           <span class="badge text-bg-light border">
@@ -176,7 +176,7 @@ function renderEditor() {
                       placeholder="寫下一小段回憶…"
                     >${escapeHTML((getPostcardNoteText(card) || "").trim())}</textarea>
 
-                    <div class="small text-secondary mt-1">
+                    <div class="small text-secondary mt-1　mb-1">
                       最多 120 字
                     </div>
                   </div>

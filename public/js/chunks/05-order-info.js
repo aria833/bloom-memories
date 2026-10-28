@@ -56,7 +56,38 @@ function renderInfo() {
       .join("")}</div>`;
 
     //配送資訊
-    const shipping = `<h3 class="h5 mt-4">地區</h3><ul><li>日本國內</li><li>台灣</li><li>其他亞洲地區：需逐一確認是否可配送</li><li>歐洲、北美與其他地區：目前不承諾支援</li></ul><h3 class="h5 mt-4">運費</h3><ul><li>日本國內：¥ 500 起</li><li>台灣：¥ 1,200 起</li><li>其他目的地：尚未估價</li></ul><h3 class="h5 mt-4">製作與配送時間</h3><ul><li>製作：約 7–14 個工作日</li><li>日本國內配送：約 2–5 個工作日</li><li>跨境配送：約 5–14 個工作日，可能因海關或物流延遲</li></ul><h3 class="h5 mt-4">追蹤資訊</h3><p>正式服務預計於出貨後提供追蹤編號；本原型不會連接真實物流系統。</p><h3 class="h5 mt-4">關稅與進口費用</h3><p>跨境訂單可能產生進口稅、關稅或代辦費用，實際負擔方式須依目的地規定確認。</p><h3 class="h5 mt-4">退換貨與取消政策</h3><p>客製化印刷商品原則上不接受因個人喜好而退貨；訂單進入製作流程後不得取消。若商品有瑕疵、印刷錯誤或運送損壞，正式政策需另行制定並遵守適用法律。</p>`;
+    const shipping = `
+  <h3 class="h5 mt-4">${t("shipping_region_title")}</h3>
+  <ul>
+    <li>${t("shipping_japan_domestic")}</li>
+    <li>${t("shipping_taiwan")}</li>
+    <li>${t("shipping_other_asia")}</li>
+    <li>${t("shipping_europe_north_america")}</li>
+  </ul>
+
+  <h3 class="h5 mt-4">${t("shipping_fee_title")}</h3>
+  <ul>
+    <li>${t("shipping_fee_japan")}</li>
+    <li>${t("shipping_fee_taiwan")}</li>
+    <li>${t("shipping_fee_other")}</li>
+  </ul>
+
+  <h3 class="h5 mt-4">${t("shipping_time_title")}</h3>
+  <ul>
+    <li>${t("shipping_production_time")}</li>
+    <li>${t("shipping_japan_delivery_time")}</li>
+    <li>${t("shipping_international_delivery_time")}</li>
+  </ul>
+
+  <h3 class="h5 mt-4">${t("shipping_tracking_title")}</h3>
+  <p>${t("shipping_tracking_description")}</p>
+
+  <h3 class="h5 mt-4">${t("shipping_customs_title")}</h3>
+  <p>${t("shipping_customs_description")}</p>
+
+  <h3 class="h5 mt-4">${t("shipping_returns_title")}</h3>
+  <p>${t("shipping_returns_description")}</p>
+`;
 
     return `
   <div class="page-container">

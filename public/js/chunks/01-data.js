@@ -79,9 +79,9 @@ const showcaseAlbums = {
     coverSubtitle: "謝謝那個沒有放棄的自己。",
     translations: {
       en: {
-        title: "To My Brave Self",
+        title: "A Life Overseas",
         desc: "First experiences abroad, everyday moments of independence, and personal growth.",
-        coverTitle: "To My Brave Self",
+        coverTitle: "A Life Overseas",
         coverSubtitle: "Thank you to the version of me who never gave up.",
       },
       ja: {
@@ -108,7 +108,7 @@ const showcaseAlbums = {
     translations: {
       en: {
         title: "Our First Trip Abroad",
-        desc: "Collecting the places we explored together, beginning in Yamagata.",
+        desc: "Collecting the places and memories we explored together in Yamagata.",
         coverTitle: "Our First Trip Abroad",
         coverSubtitle: "I want to set off with you again.",
       },
@@ -142,7 +142,7 @@ const showcaseAlbums = {
       },
       ja: {
         title: "成長日記",
-        desc: "家族と過ごしたあたたかな日常を、一冊に綴って。",
+        desc: "家族と過ごしたあたたかな日々や思い出を、一冊に綴って。",
         coverTitle: "金色の思い出玉の成長日記",
         coverSubtitle: "一日一日を、大切な思い出に。",
       },
@@ -239,11 +239,11 @@ const state = {
   route: "home",
   step: 1,
   loggedIn: false,
-  user: { name: "概念使用者", email: "" },
+  user: { name: "test", email: "" },
   drafts: [],
   currentDraftId: null,
   isCreatingDraft: false,
-  newDraftTitle: "我的旅行相冊",
+  newDraftTitle: "My travel album",
   selectedIds: [],
   filter: "all",
   locationFilter: "all",
@@ -252,8 +252,8 @@ const state = {
   editorIndex: 0,
   currentLayout: "memory",
   coverStyle: "botanical",
-  coverTitle: "我的旅行相冊",
-  coverSubtitle: "把旅途中的小小發現收藏起來",
+  coverTitle: "My travel album",
+  coverSubtitle: "Collect little discoveries",
   coverImage: "",
   authorName: "",
   completedDate: new Date().toISOString().slice(0, 10),

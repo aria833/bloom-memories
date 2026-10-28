@@ -6,7 +6,7 @@ export default {
   美元: "$ (USD US Dollar)",
   新台幣: "NT$ (TWD New Taiwan Dollar)",
   首頁: "Home",
-  製作相冊: "Make an Album",
+  製作相冊: "Album Studio",
   商店: "Shop",
   帳戶: "Account",
   瀏覽小物: "Browse Extras",
@@ -14,7 +14,7 @@ export default {
   "把旅途中的小小發現，": "Collect the little discoveries of your journey,",
   "收藏成一冊回憶。": "in a book of memories.",
   "每一本，都有自己的旅程": "Every Album Tells a Story",
-  致勇敢的自己: "To My Brave Self",
+  致勇敢的自己: "A Life Overseas",
   "作者：": "By: ",
   我們的第一次海外旅行: "Our First Trip Abroad",
   寶寶的成長日記: "Baby’s Growing Years",
@@ -52,7 +52,7 @@ export default {
   訂單成立時間: "Order Created At",
   瀏覽完成品: "View Finished Album",
   再次下單: "Order Again",
-  "三個步驟，把回憶留在手邊": "Three Steps to Keep Your Memories Close",
+  "三個步驟，把回憶留在手邊": "Three Steps to Keep Your Memories",
   挑選明信片: "Choose Postcards",
   編輯專屬內容: "Personalize Your Postcards",
   確認並印製: "Review and Print",
@@ -65,8 +65,8 @@ export default {
   "從 Pikmin Bloom 的明信片收藏出發，挑選喜歡的畫面、寫下當時的心情，製作成可以翻閱、保存，也能送給朋友的實體相冊。":
     "Inspired by a collection of Pikmin Bloom postcards, choose favorite scenes, add your thoughts, and create a printed album to keep or gift.",
   先從一本相冊開始: "Start with an Album",
-  "選擇要繼續編輯的草稿，或建立一本新的相冊。已完成訂單不會佔用草稿名額。":
-    "Resume a draft or create a new postcard album. Submitted orders do not count toward your draft limit.",
+  "選擇要繼續編輯的草稿，或建立一本新的相冊。":
+    "Resume a draft or create a new postcard album.",
   建立新相冊: "Create a New Album",
   每個帳戶最多保留: "Each account can keep up to",
   "本未完成草稿。建立後才會進入明信片選取畫面。":
@@ -101,7 +101,7 @@ export default {
   禮物包裝: "Gift wrapping",
   附上一段話: "Add a message",
   從願望清單加入: "Add from Wishlist",
-  前往結帳: "Proceed to Checkout",
+  前往結帳: "Checkout",
   "支援目的地（示意）": "Supported Destinations (Illustrative)",
   "預估製作與配送時間（示意）":
     "Estimated Production & Delivery (Illustrative)",

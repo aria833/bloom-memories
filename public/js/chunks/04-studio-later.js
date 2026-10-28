@@ -186,7 +186,7 @@ function renderCover() {
           <h3 class="h6 fw-bold">版權頁資訊</h3>
 
           <label class="field-label mt-2" for="authorName">
-            作者／製作人（選填）
+            作者（選填）
           </label>
 
           <input
@@ -218,12 +218,6 @@ function renderCover() {
             id="printDate"
             value="${escapeHTML(state.printDate || "")}"
           >
-
-          <div class="alert alert-light border small mt-3">
-            版權頁會列出作者、完稿日期、送印日期、
-            Bloom Memories 概念原型聲明，以及「非官方概念作品」標示。
-          </div>
-
         </div>
       </div>
 
@@ -318,9 +312,7 @@ function renderPreview() {
         }
 
         <div class="cover-book__copy">
-          <span class="book-end-label">
-            ${isBack ? "封底" : "封面"}
-          </span>
+
 
           ${
             !isBack
@@ -385,29 +377,33 @@ function renderPreview() {
   // 倒數第二頁：版權頁
   else if (spreadIndex === totalSpreads - 2) {
     spread = `
-版權頁
-
     <div class="copyright-page-content">
       <span class="copyright-mark">✿</span>
-      <h3 data-i18n="${escapeHTML(state.coverTitle)}">${escapeHTML(state.coverTitle)}</h3>
+
+      <h3>${escapeHTML(state.coverTitle)}</h3>
+
       <dl>
-        <dt data-i18n="作者／製作人">作者／製作人</dt>
+        <dt data-i18n="版權頁_作者">作者</dt>
         <dd>
-          <span data-i18n="作者：">作者：</span>
+          <span data-i18n="版權頁_作者標籤">作者：</span>
           ${escapeHTML(state.authorName || "未填寫")}
         </dd>
-        <dt data-i18n="完稿日期">完稿日期</dt>
+
+        <dt data-i18n="版權頁_完稿日期">完稿日期</dt>
         <dd>${escapeHTML(state.completedDate || "未填寫")}</dd>
-        <dt data-i18n="送印日期">送印日期</dt>
+
+        <dt data-i18n="版權頁_送印日期">送印日期</dt>
         <dd>${escapeHTML(state.printDate || "尚未設定")}</dd>
       </dl>
+
       <small>
         © ${new Date().getFullYear()} Bloom Memories Concept
-        · All rights reserved to their respective owners.
+        <span data-i18n="版權頁_版權聲明">
+          · All rights reserved to their respective owners.
+        </span>
       </small>
     </div>
-  </div>
-`;
+  `;
   }
 
   // 明信片內頁
@@ -426,8 +422,8 @@ function renderPreview() {
         <div>
           <h2>預覽整本相冊</h2>
           <p>
-            從封面開始逐頁翻閱，每個內頁只呈現一張橫式明信片，
-            最後到達版權頁與封底。
+            從封面開始逐頁翻閱，每個內頁呈現一張橫式明信片，
+            最後是版權頁與封底。
           </p>
         </div>
       </div>
@@ -519,7 +515,7 @@ function renderPreview() {
 
           <div class="summary-row">
             <span>明信片數量</span>
-            <strong>${selected.length} / ${MAX_POSTCARDS}</strong>
+            <strong>${selected.length}</strong>
           </div>
 
           <div class="summary-row">
@@ -574,7 +570,7 @@ function renderPreview() {
           class="btn btn-primary"
           id="goConfirmPrintBottom"
         >
-          下一步：確認印刷
+          確認印刷
           <i class="bi bi-arrow-right ms-1"></i>
         </button>
 
@@ -611,7 +607,7 @@ function renderPrintConfirm() {
     (state.gift && state.giftWrap ? 300 : 0) +
     (state.gift && state.ribbon ? 100 : 0);
   return studioShell(
-    `<section class="surface studio-content print-confirm-page"><div class="studio-heading"><div><span class="eyebrow">FINAL CHECK</span><h2>確認印刷設定</h2><p>送出前再次確認相冊內容、印刷本數與加購商品。所有價格皆為概念原型示意。</p></div></div><div class="print-confirm-grid"><div class="print-confirm-main"><section class="surface p-3 p-md-4 mb-4"><h3 class="h5">相冊摘要</h3><div class="summary-row"><span>相冊名稱</span><strong>${escapeHTML(draft?.title || state.coverTitle)}</strong></div><div class="summary-row"><span>明信片</span><strong>${selected.length} 張</strong></div><div class="summary-row"><span>封面</span><strong>${escapeHTML(state.coverTitle)}</strong></div><div class="summary-row"><span>版權頁作者</span><strong>${escapeHTML(state.authorName || "未填寫")}</strong></div><button class="btn btn-outline-primary btn-sm mt-2" data-studio-step="6">返回預覽整本相冊</button></section><section class="surface p-3 p-md-4 mb-4"><h3 class="h5">印刷本數</h3><p class="small text-secondary">需要送給不同的人？可以一次印製多本。</p><div class="qty-control large"><button data-album-qty="-1" aria-label="減少印刷本數" ${state.albumPrintQty <= 1 ? "disabled" : ""}>−</button><span>${state.albumPrintQty}</span><button data-album-qty="1" aria-label="增加印刷本數" ${state.albumPrintQty >= 20 ? "disabled" : ""}>+</button></div><div class="small text-secondary mt-2">目前原型上限為 20 本。</div></section><section class="surface p-3 p-md-4 mb-4"><h3 class="h5">限定加購</h3><p class="small text-secondary">選擇性加購，不會預先勾選。</p><div class="row g-2">${addOns
+    `<section class="surface studio-content print-confirm-page"><div class="studio-heading"><div><span class="eyebrow">FINAL CHECK</span><h2>確認印刷設定</h2><p>送出前再次確認相冊內容、印刷本數與加購商品。所有價格皆為概念原型示意。</p></div></div><div class="print-confirm-grid"><div class="print-confirm-main"><section class="surface p-3 p-md-4 mb-4"><h3 class="h5">相冊摘要</h3><div class="summary-row"><span>相冊名稱</span><strong>${escapeHTML(draft?.title || state.coverTitle)}</strong></div><div class="summary-row"><span>明信片</span><strong>${selected.length} </strong></div><div class="summary-row"><span>封面</span><strong>${escapeHTML(state.coverTitle)}</strong></div><div class="summary-row"><span>版權頁作者</span><strong>${escapeHTML(state.authorName || "未填寫")}</strong></div><button class="btn btn-outline-primary btn-sm mt-2" data-studio-step="6">返回預覽整本相冊</button></section><section class="surface p-3 p-md-4 mb-4"><h3 class="h5">印刷本數</h3><p class="small text-secondary">需要送給不同的人？可以一次印製多本。</p><div class="qty-control large"><button data-album-qty="-1" aria-label="減少印刷本數" ${state.albumPrintQty <= 1 ? "disabled" : ""}>−</button><span>${state.albumPrintQty}</span><button data-album-qty="1" aria-label="增加印刷本數" ${state.albumPrintQty >= 20 ? "disabled" : ""}>+</button></div><div class="small text-secondary mt-2">目前原型上限為 20 本。</div></section><section class="surface p-3 p-md-4 mb-4"><h3 class="h5">限定加購</h3><p class="small text-secondary">選擇性加購，不會預先勾選。</p><div class="row g-2">${addOns
       .map(
         (product) => `
 
@@ -680,7 +676,7 @@ function renderPrintConfirm() {
           .join("")}
       </section>`
         : ""
-    }</div><aside class="surface p-3 p-md-4 print-confirm-summary"><h3 class="h5">訂單摘要</h3><div class="summary-row"><span>相冊 × ${state.albumPrintQty} 本</span><strong>${money(2800 * state.albumPrintQty)}</strong></div>${state.addOnIds
+    }</div><aside class="surface p-3 p-md-4 print-confirm-summary"><h3 class="h5">訂單摘要</h3><div class="summary-row"><span>相冊 × ${state.albumPrintQty} </span><strong>${money(2800 * state.albumPrintQty)}</strong></div>${state.addOnIds
       .map((id) => {
         const p = products.find((product) => product.id === id);
         return p

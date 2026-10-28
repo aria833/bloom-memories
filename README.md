@@ -43,7 +43,7 @@ Add a new language by creating a locale dictionary, importing it in `i18n.js`, a
 - Edit postcard text/date and place up to 8 decorations from 8 decoration types per postcard; decorations can be dragged around while preserving original postcard artwork; landscape postcard layout uses image on the left and writing area on the right
 - Reorder postcards, upload one image for both the front and back cover, edit the title and subtitle, and preview one landscape postcard per page with a page-turn transition
 - Set print quantity (1–20)
-- Three clickable homepage album examples: “To My Brave Self”, “Our First Trip Abroad” (Yamagata), and “Baby’s Growing Years”
+- Three clickable homepage album examples: “A Life Overseas”, “Our First Trip Abroad” (Yamagata), and “Baby’s Growing Years”
 - Six mock products; product names, descriptions, and three specification paragraphs switch between Traditional Chinese, English, and Japanese. Product details include a gallery, quantity control (max 10), wishlist feedback, and recommendations
 - Optional album-only add-ons and wishlist products can be included during album checkout
 - FAQ uses the Bootstrap accordion; shipping info includes clearly marked illustrative assumptions; contact form uses Bootstrap form components
@@ -54,13 +54,12 @@ Add a new language by creating a locale dictionary, importing it in `i18n.js`, a
 
 Destination coverage, shipping rates, production/delivery estimates, duties, return/cancellation policies, print specs, prices, and product availability are illustrative only and must not be represented as confirmed operational terms. The prototype does not collect real payment details or send contact form submissions. The postcards and product imagery are mock visuals.
 
-
 ## Visual direction
 
 The UI has been refreshed with a visual direction inspired by the official [Pikmin Bloom Traditional Chinese website](https://pikminbloom.com/zh_hant): brighter garden greens, airy white space, friendly rounded controls, light seasonal color accents, and playful card surfaces. This is an original interpretation for a portfolio concept; it does not use official artwork or imply affiliation, endorsement, or authorization. The prototype disclaimer remains visible in the interface.
 
-
 ## v5 refinements
+
 - Working product name: Bloom Memories (unofficial concept only); alternate naming ideas are in `docs/product-name-options.md`.
 - Added a missing print-confirmation step, which was the cause of the Studio flow failing when entering step 7.
 - Added a colophon/copyright page before the back cover, including editable author, completion date and print date fields.
@@ -70,8 +69,8 @@ The UI has been refreshed with a visual direction inspired by the official [Pikm
 - Header language uses a select control; currency uses a symbol button with a dropdown.
 - This remains a front-end concept prototype with localStorage and simulated orders; no real Pikmin Bloom integration, payments, print fulfillment or shipping is connected.
 
-
 ## v6 refinement notes
+
 - Product brand is now Bloom Memories.
 - Checkout includes optional gift wrap, ribbon, and gift-card message controls for album orders.
 - Related product cards include a dedicated add-to-cart action; product detail navigation scrolls to the top.
@@ -95,13 +94,12 @@ Place the favicon file in the project's `public/` folder. For example, if your f
 
 If your file uses a different name or format, update the path and `type` accordingly (for example, `/favicon.ico` or `/favicon.svg`). Vite copies files in `public/` to the site root when building the project.
 
-
 ## v7 source-organization refinements
+
 - Added an original SVG flower-mark image for the header and footer brand; replace `public/images/bloom-memories-mark.svg` with your final logo if desired.
 - Switched recognized template phrases to `data-i18n` attributes and applied the locale dictionary through the i18n helper.
 - Split JavaScript into eight commented chunks and SCSS into six ordered partials, each kept under 200 lines.
 - Removed the currency selector border and documented the favicon insertion point.
-
 
 ## v8 maintenance notes
 
@@ -114,7 +112,6 @@ If your file uses a different name or format, update the path and `type` accordi
 - The app shell uses a flex-column sticky-footer pattern; long pages continue to scroll naturally.
 - FAQ and delivery layout uses Bootstrap row/column utilities rather than fixed column widths.
 - This is a portfolio prototype with mock products and orders; structured data does not imply an active commercial store.
-
 
 ## v9 bug fixes and maintenance
 

@@ -60,30 +60,31 @@
   color: #d28d6e;
 }
 
+/* 裝飾選擇區：一排 8 個 */
 .decor-picker {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  justify-items: center;
+  gap: 6px 4px;
   width: 100%;
 }
 
+/* 裝飾按鈕 */
 .decor-button {
   box-sizing: border-box;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   width: 100%;
   min-width: 0;
   aspect-ratio: 1;
 
-  padding: 6px;
+  padding: 4px;
   overflow: hidden;
 
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 8px;
   background: var(--surface);
 
   transition:
@@ -92,6 +93,7 @@
     transform 0.2s ease;
 }
 
+/* 裝飾圖片 */
 .decor-button__image {
   display: block;
   width: 100%;
@@ -103,11 +105,13 @@
   user-select: none;
 }
 
+/* 已選取的裝飾 */
 .decor-button.active {
   border-color: var(--accent);
   background: var(--accent-soft);
 }
 
+/* 滑鼠移入效果 */
 @media (hover: hover) and (pointer: fine) {
   .decor-button:hover {
     transform: translateY(-2px);

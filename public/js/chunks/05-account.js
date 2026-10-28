@@ -22,8 +22,95 @@ function renderAccount() {
         ? allOrders.filter((order) => order.type === "album")
         : allOrders;
     content = orders.length
-      ? `<div class="order-history-list">${orders.map((order) => `<article class="surface p-3 mb-3"><div class="d-flex justify-content-between gap-3 flex-wrap"><div><strong>訂單 ${escapeHTML(order.id)}</strong><p class="small text-secondary mt-1 mb-1">${escapeHTML(order.title)}</p><small class="text-secondary">成立時間：${new Date(order.createdAt).toLocaleString()}</small></div><span class="badge text-bg-light border">${escapeHTML(order.status)}</span></div><div class="d-flex gap-2 flex-wrap mt-3"><button class="btn btn-sm btn-primary" data-view-order="${order.id}">查看訂單狀態</button>${order.type === "album" ? `<button class="btn btn-sm btn-outline-primary" data-view-submitted-book="${order.id}">瀏覽完成品</button><button class="btn btn-sm btn-outline-primary" data-reorder-id="${order.id}">再次下單</button>` : ""}</div></article>`).join("")}</div>`
-      : `<div class="empty-state"><i class="bi bi-box-seam"></i><h3>目前沒有已提交的訂單</h3><p>完成相冊並確認印刷後，訂單會顯示在這裡。</p><button class="btn btn-primary" data-route="studio">開始製作</button></div>`;
+      ? `
+    <div class="order-history-list">
+      ${orders
+        .map((order) => {
+          // 訂單狀態翻譯
+          const statusKey = {
+            待付款: "order_status_pending_payment",
+            待確認: "order_status_pending",
+            製作中: "order_status_producing",
+            已完成: "order_status_completed",
+            已出貨: "order_status_shipped",
+            已取消: "order_status_cancelled",
+          }[order.status];
+
+          const translatedStatus = statusKey ? t(statusKey) : order.status;
+
+          return `
+            <article class="surface p-3 mb-3">
+              <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                <div>
+                  <strong>
+                    ${t("order_label")} ${escapeHTML(order.id)}
+                  </strong>
+
+                  <p class="small text-secondary mt-1 mb-1">
+                    ${escapeHTML(order.title)}
+                  </p>
+
+                  <small class="text-secondary">
+                    ${t("order_created_at")}
+                    ${new Date(order.createdAt).toLocaleString(
+                      state.language === "zh-TW"
+                        ? "zh-TW"
+                        : state.language === "ja"
+                          ? "ja-JP"
+                          : "en-US",
+                    )}
+                  </small>
+                </div>
+
+                <span class="badge text-bg-light border d-flex align-items-center justify-content-center">
+                  ${escapeHTML(translatedStatus)}
+                </span>
+              </div>
+
+              <div class="d-flex gap-2 flex-wrap mt-3">
+                <button
+                  class="btn btn-sm btn-primary"
+                  data-view-order="${escapeHTML(order.id)}"
+                >
+                  ${t("order_view_status")}
+                </button>
+
+                ${
+                  order.type === "album"
+                    ? `
+                      <button
+                        class="btn btn-sm btn-outline-primary"
+                        data-view-submitted-book="${escapeHTML(order.id)}"
+                      >
+                        ${t("order_view_album")}
+                      </button>
+
+                      <button
+                        class="btn btn-sm btn-outline-primary"
+                        data-reorder-id="${escapeHTML(order.id)}"
+                      >
+                        ${t("order_reorder")}
+                      </button>
+                    `
+                    : ""
+                }
+              </div>
+            </article>
+          `;
+        })
+        .join("")}
+    </div>
+  `
+      : `
+    <div class="empty-state">
+      <i class="bi bi-box-seam"></i>
+      <h3>${t("order_empty_title")}</h3>
+      <p>${t("order_empty_description")}</p>
+      <button class="btn btn-primary" data-route="studio">
+        ${t("order_start_creating")}
+      </button>
+    </div>
+  `;
   }
   if (state.accountTab === "wishlist") {
     const items = products.filter((product) =>
@@ -44,7 +131,7 @@ function renderAccount() {
 </div><h3>${escapeHTML(getProductText(product, "name"))}</h3><p>${money(product.price)}</p><button class="btn btn-sm btn-outline-primary" data-product-detail="${product.id}">查看商品</button></article>`,
           )
           .join("")}</div>`
-      : `<div class="empty-state"><i class="bi bi-heart"></i><h3>願望清單還是空的</h3><p>可以把喜歡的一般商品先收藏起來。</p><button class="btn btn-primary" data-route="shop">瀏覽商品</button></div>`;
+      : `<div class="empty-state"><i class="bi bi-heart"></i><h3>願望清單還是空的</h3><p商品先收藏起來。</p><button class="btn btn-primary" data-route="shop">瀏覽商品</button></div>`;
   }
   if (state.accountTab === "profile")
     content = `<label class="field-label">顯示名稱</label><input class="form-control mb-3" id="profileName" value="${escapeHTML(state.user.name)}"><label class="field-label">電子郵件</label><input class="form-control mb-3" value="${escapeHTML(state.user.email)}" disabled><button class="btn btn-primary" id="saveProfile">儲存資料</button>`;

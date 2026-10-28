@@ -9,14 +9,12 @@ export default {
   "配送資訊｜Bloom Memories": "Shipping | Bloom Memories",
   "製作相冊｜Bloom Memories": "Album Studio | Bloom Memories",
   "我的帳戶｜Bloom Memories": "My Account | Bloom Memories",
-  "Bloom Memories｜獨立非官方概念專案":
-    "Bloom Memories | Independent Unofficial Concept Project",
 
   提醒: "Notice",
   關閉: "Close",
   先從一本相冊開始: "Start with an Album",
-  "選擇要繼續編輯的草稿，或建立一本新的相冊。已完成訂單不會佔用草稿名額。":
-    "Resume a draft or create a new album. Completed orders do not count toward the draft limit.",
+  "選擇要繼續編輯的草稿，或建立一本新的相冊。":
+    "Resume a draft or create a new album.",
   預設依最新日期排序: "Sorted by newest date",
   已達本冊上限: "Album limit reached",
   選擇裝飾: "Choose Decorations",
@@ -131,7 +129,7 @@ export default {
   "完成相冊並確認印刷後，訂單會顯示在這裡。":
     "Orders will appear here after you finish an album and confirm printing.",
   願望清單還是空的: "Your Wishlist Is Empty",
-  "可以把喜歡的一般商品先收藏起來。":
+  "可以把喜歡的商品先收藏起來。":
     "Save regular products you like to your wishlist.",
   尚未儲存地址: "No Saved Addresses Yet",
   "新增常用地址，結帳時就能快速管理收件資訊。":
@@ -141,7 +139,7 @@ export default {
   顯示名稱: "Display Name",
   "本頁商品資料為作品集原型示意，非正式販售資訊。":
     "Product details on this page are illustrative portfolio prototype content, not a real sales offer.",
-  "一般商品可以單獨購買；限定加購商品請從 Album Studio 加入。":
+  "一般商品可以單獨購買；限定加購商品請於製作相冊時加入":
     "Regular products can be purchased separately. Add album-only items from Album Studio.",
   "請先填寫收件人姓名與完整地址。":
     "Please enter the recipient's name and full address.",
@@ -165,9 +163,9 @@ export default {
   開啟導覽選單: "Open Navigation Menu",
   關閉導覽選單: "Close Navigation Menu",
   "把旅途中的小小發現，收藏成可以翻閱的回憶。":
-    "Keep the little discoveries from your journeys in memories you can revisit.",
+    "Keep the little discoveries in memories you can revisit.",
   "獨立非官方概念專案，與 Nintendo 及 Pikmin Bloom 無官方合作、授權或背書關係。":
-    "An independent, unofficial concept project with no collaboration, authorization, or endorsement from Nintendo or Pikmin Bloom.",
+    "An unofficial concept project with no collaboration, authorization, or endorsement from Nintendo or Pikmin Bloom.",
 
   // Additional controls and responsive studio copy.
   全部明信片: "All Postcards",
@@ -208,11 +206,12 @@ export default {
   新增地址: "Add Address",
   修改地址: "Edit Address",
   地址名稱: "Address Label",
-  收件人: "Recipient",
-  聯絡電話: "Phone Number",
+  "收件人姓名(必填)": "Recipient (Required)",
+  "聯絡電話(必填)": "Phone (Required)",
+  "地址(必填)": "Address (Required)",
   "國家／地區": "Country / Region",
   完整地址: "Full Address",
-  郵遞區號: "Postal Code",
+  "郵遞區號(必填)": "Postal Code (Required)",
   付款方式: "Payment Method",
   "信用卡（模擬）": "Credit Card (Simulated)",
   配送方式: "Shipping Method",
@@ -222,8 +221,8 @@ export default {
   送給別人: "As a Gift",
   禮物包裝: "Gift Wrapping",
   附上一段話: "Add a Message",
-  收件人姓名: "Recipient Name",
-  電子郵件: "Email Address",
+  "收件人姓名(必填)": "Recipient (Required)",
+  "電子郵件(必填)": "Email (Required)",
   聯絡主題: "Subject",
   訊息內容: "Message",
   送出表單: "Submit Form",
@@ -233,7 +232,7 @@ export default {
   小計: "Subtotal",
   移除: "Remove",
   繼續購物: "Continue Shopping",
-  前往結帳: "Proceed to Checkout",
+  前往結帳: "Checkout",
   訂單紀錄: "Order History",
   個人資料: "Profile",
   地址簿: "Address Book",
@@ -245,7 +244,7 @@ export default {
   顯示名稱: "Display Name",
   "忘記密碼？": "Forgot password?",
   回到首頁: "Back to Home",
-  開始製作: "Start Creating",
+  開始製作: "START",
   關於服務: "About the Service",
   聯絡我們: "Contact Us",
   隱私權政策: "Privacy Policy",
@@ -281,8 +280,8 @@ export default {
   常見QA: "FAQ",
   帳戶: "Account",
   首頁: "Home",
-  製作相冊: "Make an Album",
-  瀏覽小物: "Browse Extras",
+  製作相冊: "Album Studio",
+  瀏覽小物: "ITEMS",
   "語言已切換。": "Language changed.",
   "幣別已切換。": "Currency changed.",
 };

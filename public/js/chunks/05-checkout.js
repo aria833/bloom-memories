@@ -98,7 +98,7 @@ function renderCheckout() {
                     </strong>
 
                     <div class="small text-secondary mt-1">
-                      ${selected.length} 張明信片 × ${state.albumPrintQty} 本
+                      ${selected.length} ${t("張明信片 × 本")} ${state.albumPrintQty}
                     </div>
                   </div>
                 </div>
