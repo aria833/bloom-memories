@@ -15,22 +15,22 @@ function renderCover() {
       id: "botanical",
       name: "植物觀察",
       swatch: "#dce6d2",
-      frontImage: "/images/bloom-memories/covers/botanical-front.jpg",
-      backImage: "/images/bloom-memories/covers/botanical-back.jpg",
+      frontImage: "/images/bloom-memories/covers/botanical-front.webp",
+      backImage: "/images/bloom-memories/covers/botanical-back.webp",
     },
     {
       id: "orange",
       name: "旅途暖陽",
       swatch: "#f0d4bd",
-      frontImage: "/images/bloom-memories/covers/orange-front.jpg",
-      backImage: "/images/bloom-memories/covers/orange-back.jpg",
+      frontImage: "/images/bloom-memories/covers/orange-front.webp",
+      backImage: "/images/bloom-memories/covers/orange-back.webp",
     },
     {
       id: "blue",
       name: "海岸微風",
       swatch: "#d7e5e7",
-      frontImage: "/images/bloom-memories/covers/blue-front.jpg",
-      backImage: "/images/bloom-memories/covers/blue-back.jpg",
+      frontImage: "/images/bloom-memories/covers/blue-front.webp",
+      backImage: "/images/bloom-memories/covers/blue-back.webp",
     },
   ];
 
@@ -269,16 +269,16 @@ function renderPreview() {
   // 三款封面設定，與設計封面頁使用相同圖片路徑
   const coverStyles = {
     botanical: {
-      frontImage: "/images/bloom-memories/covers/botanical-front.jpg",
-      backImage: "/images/bloom-memories/covers/botanical-back.jpg",
+      frontImage: "/images/bloom-memories/covers/botanical-front.webp",
+      backImage: "/images/bloom-memories/covers/botanical-back.webp",
     },
     orange: {
-      frontImage: "/images/bloom-memories/covers/orange-front.jpg",
-      backImage: "/images/bloom-memories/covers/orange-back.jpg",
+      frontImage: "/images/bloom-memories/covers/orange-front.webp",
+      backImage: "/images/bloom-memories/covers/orange-back.webp",
     },
     blue: {
-      frontImage: "/images/bloom-memories/covers/blue-front.jpg",
-      backImage: "/images/bloom-memories/covers/blue-back.jpg",
+      frontImage: "/images/bloom-memories/covers/blue-front.webp",
+      backImage: "/images/bloom-memories/covers/blue-back.webp",
     },
   };
 

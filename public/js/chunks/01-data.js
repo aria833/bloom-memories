@@ -73,8 +73,8 @@ const showcaseAlbums = {
   self: {
     title: "致勇敢的自己",
     desc: "異國生活裡的第一次、獨自前行的日常與成長。",
-    coverImage: "/images/album_1.png",
-    backImage: "/images/coverback_1.png",
+    coverImage: "/images/album_1.webp",
+    backImage: "/images/coverback_1.webp",
     coverTitle: "致勇敢的自己",
     coverSubtitle: "謝謝那個沒有放棄的自己。",
     translations: {
@@ -101,8 +101,8 @@ const showcaseAlbums = {
   travel: {
     title: "我們的第一次海外旅行",
     desc: "以山形為起點，收藏兩個人一起走過的風景。",
-    coverImage: "/images/album_2.png",
-    backImage: "/images/coverback_2.png",
+    coverImage: "/images/album_2.webp",
+    backImage: "/images/coverback_2.webp",
     coverTitle: "我們的第一次海外旅行",
     coverSubtitle: "下次還想和你一起出發。",
     translations: {
@@ -129,8 +129,8 @@ const showcaseAlbums = {
   family: {
     title: "成長日記",
     desc: "把和家人的溫馨日常裝訂起來。",
-    coverImage: "/images/album_3.png",
-    backImage: "/images/coverback_3.png",
+    coverImage: "/images/album_3.webp",
+    backImage: "/images/coverback_3.webp",
     coverTitle: "金色回憶球的成長日記",
     coverSubtitle: "每一天都值得好好收藏。",
     translations: {

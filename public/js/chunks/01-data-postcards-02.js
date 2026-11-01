@@ -8,7 +8,7 @@ const postcardBatch2 = [
     date: "2025-12-26",
     method: "花朵",
     scene: "scene-1",
-    image: "/images/sample-yamagata/yamagata_24.PNG",
+    image: "/images/sample-yamagata/yamagata_24.webp",
     note: "這隻石獅子的表情逗趣又怪可愛的，和你簡直一模一樣（笑）。",
     favorite: false,
     translations: {
@@ -30,7 +30,7 @@ const postcardBatch2 = [
     date: "2025-12-24",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-yamagata/yamagata_25.PNG",
+    image: "/images/sample-yamagata/yamagata_25.webp",
     note: "夜間點燈後的雪景夢幻如畫，美得讓人捨不得轉移視線。",
     favorite: false,
     translations: {
@@ -52,7 +52,7 @@ const postcardBatch2 = [
     date: "2025-12-26",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-yamagata/yamagata_26.PNG",
+    image: "/images/sample-yamagata/yamagata_26.webp",
     note: "享受這份遠離喧囂的寧靜，就算只是安靜相伴也覺得無比美好。",
     favorite: false,
     translations: {
@@ -74,7 +74,7 @@ const postcardBatch2 = [
     date: "2025-12-25",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-yamagata/yamagata_27.PNG",
+    image: "/images/sample-yamagata/yamagata_27.webp",
     note: "許下心願，未來的日子裡也要繼續手牽手去探索更多未知的角落。",
     favorite: false,
     translations: {
@@ -96,7 +96,7 @@ const postcardBatch2 = [
     date: "2025-12-26",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-yamagata/yamagata_28.PNG",
+    image: "/images/sample-yamagata/yamagata_28.webp",
     note: "在熟悉的景點前合影，留下我們一起走過痕跡的珍貴紀念。",
     favorite: false,
     translations: {
@@ -118,7 +118,7 @@ const postcardBatch2 = [
     date: "2023-02-14",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_1.jpeg",
+    image: "/images/sample-japan/japan_1.webp",
     note: "櫻花盛開的季節，你一個人來到陌生的地方",
     favorite: false,
     translations: {
@@ -140,7 +140,7 @@ const postcardBatch2 = [
     date: "2023-03-29",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_2.jpeg",
+    image: "/images/sample-japan/japan_2.webp",
     note: "搬進新家的頭幾日，電還沒有通，床架跟棉被還沒送來，你只能裹著大衣入睡",
     favorite: false,
     translations: {
@@ -162,7 +162,7 @@ const postcardBatch2 = [
     date: "2023-05-11",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_3.jpeg",
+    image: "/images/sample-japan/japan_3.webp",
     note: "開始了新生活，你交到了朋友，大家一起出去玩、一起看橫濱的煙火",
     favorite: false,
     translations: {
@@ -184,7 +184,7 @@ const postcardBatch2 = [
     date: "2023-06-03",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_4.jpeg",
+    image: "/images/sample-japan/japan_4.webp",
     note: "開始到機場打工，這裡的人很多，來來去去",
     favorite: false,
     translations: {
@@ -206,7 +206,7 @@ const postcardBatch2 = [
     date: "2023-07-18",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_5.jpeg",
+    image: "/images/sample-japan/japan_5.webp",
     note: "有時你會跟著超市的老奶奶圍著日式甜食區，挑著糰子、桃餅",
     favorite: false,
     translations: {
@@ -228,7 +228,7 @@ const postcardBatch2 = [
     date: "2023-09-02",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_6.jpeg",
+    image: "/images/sample-japan/japan_6.webp",
     note: "在異國的第一次生病，自己去看醫生，買一包吐司和幾瓶水躺在床上好幾天",
     favorite: false,
     translations: {
@@ -250,7 +250,7 @@ const postcardBatch2 = [
     date: "2023-11-20",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_7.jpeg",
+    image: "/images/sample-japan/japan_7.webp",
     note: "偶爾會遇見不錯的人，但你不知道你會停留在這裡多久",
     favorite: false,
     translations: {
@@ -272,7 +272,7 @@ const postcardBatch2 = [
     date: "2024-01-15",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_8.jpeg",
+    image: "/images/sample-japan/japan_8.webp",
     note: "畢業時，你是唯一拿到獎項的外國人",
     favorite: false,
     translations: {
@@ -294,7 +294,7 @@ const postcardBatch2 = [
     date: "2024-02-28",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_9.jpeg",
+    image: "/images/sample-japan/japan_9.webp",
     note: "從沒搬過家的你，在這裡搬了好幾次家",
     favorite: false,
     translations: {
@@ -316,7 +316,7 @@ const postcardBatch2 = [
     date: "2024-04-10",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_10.jpeg",
+    image: "/images/sample-japan/japan_10.webp",
     note: "畢業後，你進入一家貿易公司工作",
     favorite: false,
     translations: {
@@ -338,7 +338,7 @@ const postcardBatch2 = [
     date: "2024-05-22",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_11.jpeg",
+    image: "/images/sample-japan/japan_11.webp",
     note: "有時候加班的日子，就到超市買個便當當晚餐，回家洗個澡就睡覺了",
     favorite: false,
     translations: {
@@ -360,7 +360,7 @@ const postcardBatch2 = [
     date: "2024-07-04",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_12.jpeg",
+    image: "/images/sample-japan/japan_12.webp",
     note: "家裡附近有好吃的家庭餐廳，即使只有這桌是一個人",
     favorite: false,
     translations: {
@@ -382,7 +382,7 @@ const postcardBatch2 = [
     date: "2024-08-19",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_13.jpeg",
+    image: "/images/sample-japan/japan_13.webp",
     note: "休假時躺在木地板，看著落地窗外的雲緩緩飄過",
     favorite: false,
     translations: {
@@ -404,7 +404,7 @@ const postcardBatch2 = [
     date: "2024-10-05",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_14.jpeg",
+    image: "/images/sample-japan/japan_14.webp",
     note: "朋友來訪，你們辦了個生日派對，聊了很久的天",
     favorite: false,
     translations: {
@@ -426,7 +426,7 @@ const postcardBatch2 = [
     date: "2024-11-30",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_15.jpeg",
+    image: "/images/sample-japan/japan_15.webp",
     note: "公司逐漸擴展海外市場，你開始到各地出差",
     favorite: false,
     translations: {

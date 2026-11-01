@@ -75,14 +75,18 @@ function sceneHTML(card, extraClass = "") {
 }
 
 const decorationOptions = [
-  { id: "redP", label: "redPikmin", image: "/images/Red_Pikmin.png" },
-  { id: "blueP", label: "bluePikmin", image: "/images/Blue_Pikmin.png" },
-  { id: "yellowP", label: "yellowPikmin", image: "/images/Yellow_Pikmin.png" },
-  { id: "whiteP", label: "whitePikmin", image: "/images/White_Pikmin.png" },
-  { id: "wingedP", label: "wingedPikmin", image: "/images/Winged_Pikmin.png" },
-  { id: "purpleP", label: "purplePikmin", image: "/images/Purple_Pikimin.png" },
-  { id: "rockP", label: "rockPikmin", image: "/images/Rock_Pikmin.png" },
-  { id: "iceP", label: "icePikmin", image: "/images/Ice_Pikmin.png" },
+  { id: "redP", label: "redPikmin", image: "/images/Red_Pikmin.webp" },
+  { id: "blueP", label: "bluePikmin", image: "/images/Blue_Pikmin.webp" },
+  { id: "yellowP", label: "yellowPikmin", image: "/images/Yellow_Pikmin.webp" },
+  { id: "whiteP", label: "whitePikmin", image: "/images/White_Pikmin.webp" },
+  { id: "wingedP", label: "wingedPikmin", image: "/images/Winged_Pikmin.webp" },
+  {
+    id: "purpleP",
+    label: "purplePikmin",
+    image: "/images/Purple_Pikimin.webp",
+  },
+  { id: "rockP", label: "rockPikmin", image: "/images/Rock_Pikmin.webp" },
+  { id: "iceP", label: "icePikmin", image: "/images/Ice_Pikmin.webp" },
 ];
 
 function decorationHTML(card, { interactive = true } = {}) {

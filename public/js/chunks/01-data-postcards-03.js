@@ -8,7 +8,7 @@ const postcardBatch3 = [
     date: "2025-01-12",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_16.jpeg",
+    image: "/images/sample-japan/japan_16.webp",
     note: "出差去了泰國，通過百貨公司的安檢口，買了杯泰式奶茶",
     favorite: false,
     translations: {
@@ -30,7 +30,7 @@ const postcardBatch3 = [
     date: "2025-02-20",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_17.jpeg",
+    image: "/images/sample-japan/japan_17.webp",
     note: "出差去了越南，認識同個行業的厲害人士",
     favorite: false,
     translations: {
@@ -52,7 +52,7 @@ const postcardBatch3 = [
     date: "2025-04-05",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_18.jpeg",
+    image: "/images/sample-japan/japan_18.webp",
     note: "出差去了印度，雖然過程很辛苦，但你成功了好幾筆訂單",
     favorite: false,
     translations: {
@@ -74,7 +74,7 @@ const postcardBatch3 = [
     date: "2025-05-18",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_19.jpeg",
+    image: "/images/sample-japan/japan_19.webp",
     note: "假日喜歡去動物園、水族館，好像又能得到滿滿能量",
     favorite: false,
     translations: {
@@ -96,7 +96,7 @@ const postcardBatch3 = [
     date: "2025-07-01",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_20.jpeg",
+    image: "/images/sample-japan/japan_20.webp",
     note: "你開始習慣餐桌上總會有的味增湯，但同時也有點想念家鄉的料理",
     favorite: false,
     translations: {
@@ -118,7 +118,7 @@ const postcardBatch3 = [
     date: "2025-08-14",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-japan/japan_21.jpeg",
+    image: "/images/sample-japan/japan_21.webp",
     note: "無論下一段故事在哪裡，謝謝勇敢的你",
     favorite: false,
     translations: {
@@ -140,7 +140,7 @@ const postcardBatch3 = [
     date: "2025-09-25",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-family/family_1.jpeg",
+    image: "/images/sample-family/family_1.webp",
     note: "3500 克的分量，是生命給的禮物",
     favorite: false,
     translations: {
@@ -162,7 +162,7 @@ const postcardBatch3 = [
     date: "2025-11-08",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-family/family_2.jpeg",
+    image: "/images/sample-family/family_2.webp",
     note: "傳說中的天使寶寶。總是安穩地睡到天亮",
     favorite: false,
     translations: {
@@ -184,7 +184,7 @@ const postcardBatch3 = [
     date: "2025-12-20",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-family/family_3.jpeg",
+    image: "/images/sample-family/family_3.webp",
     note: "一截一截胖嘟嘟的『米其林手臂』，還有喜宴一不注意爬上桌的探險家",
     favorite: false,
     translations: {
@@ -206,7 +206,7 @@ const postcardBatch3 = [
     date: "2026-01-30",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-family/family_4.jpeg",
+    image: "/images/sample-family/family_4.webp",
     note: "深夜抱著媽媽的手搖來搖去在掃地的小腦袋瓜，至今依然在夢裡裝著許多異想世界",
     favorite: false,
     translations: {
@@ -228,7 +228,7 @@ const postcardBatch3 = [
     date: "2026-03-12",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-family/family_5.jpeg",
+    image: "/images/sample-family/family_5.webp",
     note: "世界很大，但也可以將專注力留給眼前的小沙堆和玩具",
     favorite: false,
     translations: {
@@ -250,7 +250,7 @@ const postcardBatch3 = [
     date: "2026-04-25",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-family/family_6.jpeg",
+    image: "/images/sample-family/family_6.webp",
     note: "燈會時，坐在爸爸的肩膀上，那裡的視野最高、燈籠最亮，是童年裡的特等席",
     favorite: false,
     translations: {
@@ -272,7 +272,7 @@ const postcardBatch3 = [
     date: "2026-06-08",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-family/family_7.jpeg",
+    image: "/images/sample-family/family_7.webp",
     note: "爸爸開著車，載著全家去海邊釣魚。海風鹹鹹的，回憶甜甜的",
     favorite: false,
     translations: {
@@ -294,7 +294,7 @@ const postcardBatch3 = [
     date: "2026-07-21",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-family/family_8.jpeg",
+    image: "/images/sample-family/family_8.webp",
     note: "第一次看見雪。全身包得只剩下眼睛，連呼吸都變成白色的探險",
     favorite: false,
     translations: {
@@ -316,7 +316,7 @@ const postcardBatch3 = [
     date: "2026-08-30",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-family/family_9.jpeg",
+    image: "/images/sample-family/family_9.webp",
     note: "小時候嚮往、長大卻不敢坐的雲霄飛車。原來長大不是變得無所不能，而是學會了『承認害怕』",
     favorite: true,
     translations: {
@@ -338,7 +338,7 @@ const postcardBatch3 = [
     date: "2026-10-11",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-family/family_10.jpeg",
+    image: "/images/sample-family/family_10.webp",
     note: "紅通通的草莓，嘴角甜甜",
     favorite: false,
     translations: {
@@ -360,7 +360,7 @@ const postcardBatch3 = [
     date: "2026-10-12",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-family/family_11.jpeg",
+    image: "/images/sample-family/family_11.webp",
     note: "第一次放風箏，線拉得高高的，心也飛得高高的",
     favorite: false,
     translations: {
@@ -382,7 +382,7 @@ const postcardBatch3 = [
     date: "2026-10-15",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-family/family_12.jpeg",
+    image: "/images/sample-family/family_12.webp",
     note: "第一次騎腳踏車，雖然總是在轉彎處摔倒，但迎面吹來的風，是長大的第一步",
     favorite: false,
     translations: {
@@ -404,7 +404,7 @@ const postcardBatch3 = [
     date: "2026-10-20",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-family/family_13.jpeg",
+    image: "/images/sample-family/family_13.webp",
     note: "去動物園，每一隻動物，都是童年裡最棒的新朋友",
     favorite: false,
     translations: {
@@ -426,7 +426,7 @@ const postcardBatch3 = [
     date: "2026-10-22",
     method: "蘑菇",
     scene: "scene-1",
-    image: "/images/sample-family/family_14.jpeg",
+    image: "/images/sample-family/family_14.webp",
     note: "金色記憶球回憶持續累積",
     favorite: true,
     translations: {

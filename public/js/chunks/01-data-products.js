@@ -6,9 +6,9 @@ const products = [
     price: 660, // 約 NT$ 140
     type: "add-on",
     images: [
-      "/images/products/sticker_1.png",
-      "/images/products/sticker_2.png",
-      "/images/products/sticker_3.png",
+      "/images/products/sticker_1.webp",
+      "/images/products/sticker_2.webp",
+      "/images/products/sticker_3.webp",
     ],
     desc: "皮克敏為你搬來了閃耀著高級光澤的金箔與精美貼紙！輕輕一貼，平凡的包裹與手帳立刻質感大躍升。無論是紀錄日常靈感，還是傳遞滿滿祝福，就讓皮克敏幫你把心意華麗亮眼地貼在最珍惜的角落吧！",
     details: [
@@ -43,9 +43,9 @@ const products = [
     price: 1320, // 約 NT$ 280
     type: "general",
     images: [
-      "/images/products/stationary_1.png",
-      "/images/products/stationary_2.png",
-      "/images/products/stationary_3.png",
+      "/images/products/stationary_1.webp",
+      "/images/products/stationary_2.webp",
+      "/images/products/stationary_3.webp",
     ],
     desc: "桌面上冒出了一座皮克敏文具基地！隨時為你的工作與學習補滿滿滿靈感。包含可愛的岩石皮克敏造型筆筒、花葉造型便籤紙、印章膠帶與質感皮質筆記本。讓皮克敏隊員陪伴你書寫、紀錄每一個精彩創意！",
     details: [
@@ -80,9 +80,9 @@ const products = [
     price: 3960, // 約 NT$ 840 (一組三個陶瓷杯)
     type: "general",
     images: [
-      "/images/products/mug_1.png",
-      "/images/products/mug_2.png",
-      "/images/products/mug_3.png",
+      "/images/products/mug_1.webp",
+      "/images/products/mug_2.webp",
+      "/images/products/mug_3.webp",
     ],
     desc: "「隊長，休息時間到了！」這款馬克杯組融入了藍皮克敏、紫皮克敏與岩石皮克敏等豐富意象。杯緣還附有小皮克敏立體公仔陪你喝飲料！無論是早上醒腦的黑咖啡，還是下午茶的奶茶，就讓皮克敏陪你享受溫馨放鬆的時光吧！",
     details: [
@@ -117,9 +117,9 @@ const products = [
     price: 1980, // 約 NT$ 420
     type: "general",
     images: [
-      "/images/products/toothBrush_1.png",
-      "/images/products/toothBrush_2.png",
-      "/images/products/toothBrush_3.png",
+      "/images/products/toothBrush_1.webp",
+      "/images/products/toothBrush_2.webp",
+      "/images/products/toothBrush_3.webp",
     ],
     desc: "早起刷牙不再枯燥！紅、黃、藍皮克敏頂著蓬鬆牙膏泡泡登場囉！專為日常清潔設計的精細毛牙刷與透光專屬漱口杯，搭配專用牙膏，讓皮克敏大隊幫你打擊邪惡蛀蟲，每天都帶著滿滿元氣迎向清新的一天！",
     details: [
@@ -154,9 +154,9 @@ const products = [
     price: 1540, // 約 NT$ 330
     type: "add-on",
     images: [
-      "/images/products/hairTie_1.png",
-      "/images/products/hairTie_2.png",
-      "/images/products/hairTie_3.png",
+      "/images/products/hairTie_1.webp",
+      "/images/products/hairTie_2.webp",
+      "/images/products/hairTie_3.webp",
     ],
     desc: "吸取了滿滿的陽光，皮克敏的花朵在你的頭髮上綻放啦！包含水鑽寶石花朵髮圈、古典緞帶髮圈與幾何礦石款式。高彈力不拉扯髮絲，無論是綁馬尾、編髮還是配戴在手腕當作飾品點綴，隨時都能展現俏皮又精緻的風格！",
     details: [
@@ -191,8 +191,8 @@ const products = [
     price: 3520, // 約 NT$ 750
     type: "general",
     images: [
-      "/images/products/umbrella_1.png",
-      "/images/products/umbrella_2.png",
+      "/images/products/umbrella_1.webp",
+      "/images/products/umbrella_2.webp",
     ],
     desc: "下雨天不用躲，像皮克敏一樣頂起一片大荷葉吧！以自然荷葉流線為設計靈感，頂端還帶有別致的嫩芽裝飾，傘面印有優雅的蓮花金線圖騰。具備超強防潑水與抗 UV 機能，撐開瞬間彷彿置身於皮克敏的微觀探險世界中！",
     details: [

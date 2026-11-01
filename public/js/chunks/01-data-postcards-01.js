@@ -8,7 +8,7 @@ const postcardBatch1 = [
     date: "2025-12-23",
     method: "花朵",
     scene: "scene-1",
-    image: "/images/sample-yamagata/yamagata_1.PNG",
+    image: "/images/sample-yamagata/yamagata_1.webp",
     note: "懷著期待的心情出發，展開屬於我們的海外小旅行。",
     favorite: false,
     translations: {
@@ -30,7 +30,7 @@ const postcardBatch1 = [
     date: "2025-12-23",
     method: "花朵",
     scene: "scene-2",
-    image: "/images/sample-yamagata/yamagata_2.PNG",
+    image: "/images/sample-yamagata/yamagata_2.webp",
     note: "順利抵達仙台機場，空氣裡有些許冬日的涼意與新鮮感。",
     favorite: false,
     translations: {
@@ -52,7 +52,7 @@ const postcardBatch1 = [
     date: "2025-12-23",
     method: "花朵",
     scene: "scene-3",
-    image: "/images/sample-yamagata/yamagata_3.PNG",
+    image: "/images/sample-yamagata/yamagata_3.webp",
     note: "品嚐當地名物芋煮鍋，暖呼呼的湯頭瞬間驅散了全身寒意。",
     favorite: false,
     translations: {
@@ -74,7 +74,7 @@ const postcardBatch1 = [
     date: "2025-12-23",
     method: "花朵",
     scene: "scene-2",
-    image: "/images/sample-yamagata/yamagata_4.PNG",
+    image: "/images/sample-yamagata/yamagata_4.webp",
     note: "終於抵達山形囉！正式開啟這趟雪國探險之旅。",
     favorite: false,
     translations: {
@@ -96,7 +96,7 @@ const postcardBatch1 = [
     date: "2025-12-23",
     method: "花朵",
     scene: "scene-1",
-    image: "/images/sample-yamagata/yamagata_6.PNG",
+    image: "/images/sample-yamagata/yamagata_6.webp",
     note: "漫步在漂亮的霞城公園，感受古城悠閒沉靜的氛圍。",
     favorite: false,
     translations: {
@@ -118,7 +118,7 @@ const postcardBatch1 = [
     date: "2025-12-23",
     method: "花朵",
     scene: "scene-3",
-    image: "/images/sample-yamagata/yamagata_7.PNG",
+    image: "/images/sample-yamagata/yamagata_7.webp",
     note: "隨意走進美術館逛逛，讓藝術與美感豐富這段旅程。",
     favorite: false,
     translations: {
@@ -139,7 +139,7 @@ const postcardBatch1 = [
     date: "2025-12-24",
     method: "花朵",
     scene: "scene-1",
-    image: "/images/sample-yamagata/yamagata_9.PNG",
+    image: "/images/sample-yamagata/yamagata_9.webp",
     note: "拜訪伊豆之華，享用香氣濃郁的蕎麥麵與酥脆的炸茄子。",
     favorite: false,
     translations: {
@@ -161,7 +161,7 @@ const postcardBatch1 = [
     date: "2025-12-24",
     method: "花朵",
     scene: "scene-2",
-    image: "/images/sample-yamagata/yamagata_11.PNG",
+    image: "/images/sample-yamagata/yamagata_11.webp",
     note: "享受愜意的慢步調，今晚入住溫暖舒適的銀山莊。",
     favorite: false,
     translations: {
@@ -183,7 +183,7 @@ const postcardBatch1 = [
     date: "2025-12-24",
     method: "花朵",
     scene: "scene-3",
-    image: "/images/sample-yamagata/yamagata_12.PNG",
+    image: "/images/sample-yamagata/yamagata_12.webp",
     note: "銀裝素裹的世界裡，點點燈火映照出絕美的夢幻夜景。",
     favorite: false,
     translations: {
@@ -205,7 +205,7 @@ const postcardBatch1 = [
     date: "2025-12-24",
     method: "花朵",
     scene: "scene-1",
-    image: "/images/sample-yamagata/yamagata_13.PNG",
+    image: "/images/sample-yamagata/yamagata_13.webp",
     note: "天氣漸漸晴朗，身邊有你相伴，一切都顯得格外美好。",
     favorite: false,
     translations: {
@@ -227,7 +227,7 @@ const postcardBatch1 = [
     date: "2025-12-25",
     method: "花朵",
     scene: "scene-2",
-    image: "/images/sample-yamagata/yamagata_14.PNG",
+    image: "/images/sample-yamagata/yamagata_14.webp",
     note: "親眼目睹藏王樹冰，自然造化的奇景令人讚嘆連連。",
     favorite: false,
     translations: {
@@ -249,7 +249,7 @@ const postcardBatch1 = [
     date: "2025-12-26",
     method: "花朵",
     scene: "scene-3",
-    image: "/images/sample-yamagata/yamagata_15.PNG",
+    image: "/images/sample-yamagata/yamagata_15.webp",
     note: "走進一家質感小店，陪你品嚐一杯最心儀的手沖咖啡。",
     favorite: false,
     translations: {
@@ -271,7 +271,7 @@ const postcardBatch1 = [
     date: "2025-12-27",
     method: "花朵",
     scene: "scene-1",
-    image: "/images/sample-yamagata/yamagata_16.PNG",
+    image: "/images/sample-yamagata/yamagata_16.webp",
     note: "參觀充滿復古英倫風情的文翔館，彷彿置身古典城堡之中。",
     favorite: false,
     translations: {
@@ -293,7 +293,7 @@ const postcardBatch1 = [
     date: "2025-12-27",
     method: "花朵",
     scene: "scene-2",
-    image: "/images/sample-yamagata/yamagata_17.PNG",
+    image: "/images/sample-yamagata/yamagata_17.webp",
     note: "手牽著手穿過街道，記錄下屬於我們的浪漫漫步。",
     favorite: false,
     translations: {
@@ -315,7 +315,7 @@ const postcardBatch1 = [
     date: "2025-12-26",
     method: "花朵",
     scene: "scene-3",
-    image: "/images/sample-yamagata/yamagata_18.PNG",
+    image: "/images/sample-yamagata/yamagata_18.webp",
     note: "開啟鶴岡探索之旅，期待這裡會帶來什麼新的驚喜。",
     favorite: false,
     translations: {
@@ -337,7 +337,7 @@ const postcardBatch1 = [
     date: "2025-12-26",
     method: "花朵",
     scene: "scene-1",
-    image: "/images/sample-yamagata/yamagata_19.PNG",
+    image: "/images/sample-yamagata/yamagata_19.webp",
     note: "居然在鶴岡巧遇忠犬八公像！一定要拍張照留念。",
     favorite: false,
     translations: {
@@ -359,7 +359,7 @@ const postcardBatch1 = [
     date: "2025-12-26",
     method: "花朵",
     scene: "scene-1",
-    image: "/images/sample-yamagata/yamagata_20.PNG",
+    image: "/images/sample-yamagata/yamagata_20.webp",
     note: "驚喜發現了「任意門」，好像下一秒就能穿越到異世界。",
     favorite: false,
     translations: {
@@ -381,7 +381,7 @@ const postcardBatch1 = [
     date: "2025-12-26",
     method: "花朵",
     scene: "scene-1",
-    image: "/images/sample-yamagata/yamagata_21.PNG",
+    image: "/images/sample-yamagata/yamagata_21.webp",
     note: "探訪加茂水族館，水槽裡優游浮動的水母群好療癒。",
     favorite: false,
     translations: {
@@ -403,7 +403,7 @@ const postcardBatch1 = [
     date: "2025-12-26",
     method: "花朵",
     scene: "scene-1",
-    image: "/images/sample-yamagata/yamagata_22.PNG",
+    image: "/images/sample-yamagata/yamagata_22.webp",
     note: "你看，這裡有你最愛的螃蟹！忍不住想要點一份來嚐鮮。",
     favorite: false,
     translations: {
@@ -425,7 +425,7 @@ const postcardBatch1 = [
     date: "2025-12-26",
     method: "花朵",
     scene: "scene-1",
-    image: "/images/sample-yamagata/yamagata_23.PNG",
+    image: "/images/sample-yamagata/yamagata_23.webp",
     note: "肩並肩看著夕陽沉入海平線，這是旅程中最美的景色。",
     favorite: true,
     translations: {

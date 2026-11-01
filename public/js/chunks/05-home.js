@@ -21,11 +21,11 @@ function renderHome() {
           <div class="album-back"></div>
           <div class="album-front">
             <div class="album-cover-art">
-              <img src="/images/album_2.png" alt="" class="cover-photo">
+              <img src="/images/album_2.webp" alt="" class="cover-photo">
             </div>
           </div>
         </div>
-        <div class="floating-postcard"><div class="postcard-scene has-photo"><img class="postcard-photo" src="/images/sample-yamagata/yamagata_1.PNG" alt="山形旅行明信片照片"><span class="sample-photo-sticker" aria-hidden="true">✿</span></div><div class="floating-postcard-caption">Yamagata · 2025.12</div>
+        <div class="floating-postcard"><div class="postcard-scene has-photo"><img class="postcard-photo" src="/images/sample-yamagata/yamagata_1.webp" alt="山形旅行明信片照片"><span class="sample-photo-sticker" aria-hidden="true">✿</span></div><div class="floating-postcard-caption">Yamagata · 2025.12</div>
           </div>
         </div>
     </div>
@@ -74,7 +74,7 @@ function renderHome() {
       <div class="showcase-grid">
         <button class="surface showcase-card showcase-button" data-showcase="self">
           <div class="showcase-image">
-            <div class="showcase-cover-photo"><img src="/images/album_1.png" alt="旅行相冊範例照片"><span class="showcase-photo-sticker">✿</span></div>
+            <div class="showcase-cover-photo"><img src="/images/album_1.webp" alt="旅行相冊範例照片"><span class="showcase-photo-sticker">✿</span></div>
           </div>
           <span class="eyebrow">FOR MYSELF</span>
           <h3>致勇敢的自己</h3>
@@ -83,7 +83,7 @@ function renderHome() {
         </button>
         <button class="surface showcase-card showcase-button" data-showcase="travel">
           <div class="showcase-image">
-            <div class="showcase-cover-photo"><img src="/images/album_2.png" alt="山形旅行相冊範例照片"><span class="showcase-photo-sticker">✦</span></div>
+            <div class="showcase-cover-photo"><img src="/images/album_2.webp" alt="山形旅行相冊範例照片"><span class="showcase-photo-sticker">✦</span></div>
           </div>
           <span class="eyebrow">FOR US</span>
           <h3>我們的第一次海外旅行</h3>
@@ -92,7 +92,7 @@ function renderHome() {
         </button>
         <button class="surface showcase-card showcase-button" data-showcase="family">
           <div class="showcase-image">
-            <div class="showcase-cover-photo"><img src="/images/album_3.png" alt="成長日記相冊範例照片"><span class="showcase-photo-sticker">♡</span></div>
+            <div class="showcase-cover-photo"><img src="/images/album_3.webp" alt="成長日記相冊範例照片"><span class="showcase-photo-sticker">♡</span></div>
           </div>
           <span class="eyebrow">FOR FAMILY</span>
           <h3>成長日記</h3>
@@ -108,7 +108,7 @@ function renderHome() {
     <div class="page-container">
       <div class="gift-panel">
         <div class="gift-illustration">
-          <img src="/images/album_gift.png" alt="禮物範例" class="cover-photo">
+          <img src="/images/album_gift.webp" alt="禮物範例" class="cover-photo">
         </div>
         <div>
         <span class="eyebrow">A GIFT OF MEMORIES</span>
