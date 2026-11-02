@@ -1,6 +1,6 @@
 function studioShell(content) {
   const draft = currentDraft();
-  return `<section class="studio-shell page-container">
+  return `<section class="studio-shell">
     <div class="container">
     <div class="studio-topbar"><div><h1>Album Studio</h1><div class="small text-secondary mt-1">${escapeHTML(draft?.title || t("相冊製作工作區"))}</div></div><div class="studio-topbar-actions"><span class="save-state" id="saveStatus"><i class="bi bi-check-circle-fill"></i> 已儲存</span><button class="btn btn-sm btn-outline-primary" data-route="account">儲存並離開</button></div></div>
     <div class="progress-wrap">${stepperHTML()}</div></div>
@@ -42,7 +42,10 @@ function renderDraftLanding() {
 
 function renderCreate() {
   return studioShell(
-    `<section class="surface studio-content"><div class="studio-heading"><div><h2>建立你的相冊</h2><p>先為這本相冊取個名字。之後可以隨時修改，現在不需要決定封面或印刷細節。</p></div></div><div class="create-layout"><div><label class="field-label" for="albumName">相冊名稱</label><input class="form-control mb-4" id="albumName" maxlength="48" value="${escapeHTML(currentDraft()?.title || state.newDraftTitle || t("我的旅行相冊"))}" placeholder="${t("例如：春日散步紀錄")}"><div class="alert alert-light border small" role="note"><i class="bi bi-info-circle me-2"></i>第一版採用單一印刷規格，每本最多選取 ${MAX_POSTCARDS} 張明信片。這些規格是目前的原型假設。</div>
+    ` <div class="container">
+    <section class="surface studio-content">
+   
+    <div class="studio-heading"><div><h2>建立你的相冊</h2><p>先為這本相冊取個名字。之後可以隨時修改，現在不需要決定封面或印刷細節。</p></div></div><div class="create-layout"><div><label class="field-label" for="albumName">相冊名稱</label><input class="form-control mb-4" id="albumName" maxlength="48" value="${escapeHTML(currentDraft()?.title || state.newDraftTitle || t("我的旅行相冊"))}" placeholder="${t("例如：春日散步紀錄")}"><div class="alert alert-light border small" role="note"><i class="bi bi-info-circle me-2"></i>第一版採用單一印刷規格，每本最多選取 ${MAX_POSTCARDS} 張明信片。這些規格是目前的原型假設。</div>
     <button class="btn btn-primary" id="createDraftContinue" type="button">建立草稿 <i class="bi bi-arrow-right ms-1"></i>
     </button>
     </div>
@@ -50,7 +53,7 @@ function renderCreate() {
             class="brand-logo-image"
             src="/images/bloom-memories-mark.svg"
             alt=""
-          /></i></div></div></div></section>`,
+          /></i></div></div></div></section></div>`,
   );
 }
 
@@ -67,7 +70,7 @@ function renderSelection() {
   const regions = [...new Set(postcards.map((card) => card.region || "東亞"))];
   const locations = [...new Set(postcards.map((card) => card.place))];
   return studioShell(
-    `<section class="surface studio-content"><div class="studio-heading"><div><h2>選取明信片</h2><p>從你的收藏中挑選想印成實體相冊的明信片。可以跨篩選條件選取，已選內容會保留。</p></div><span class="badge text-bg-light border">最多 ${MAX_POSTCARDS} </span></div><div class="selection-toolbar"><div class="filter-row"><button class="filter-chip ${state.filter === "all" ? "active" : ""}" data-filter="all">全部明信片</button><button class="filter-chip ${state.filter === "favorites" ? "active" : ""}" data-filter="favorites"><i class="bi bi-star-fill me-1"></i>收藏</button><select class="form-select form-select-sm" id="continentFilter"><option value="all">所有洲</option>${continents.map((loc) => `<option value="${loc}" ${state.locationContinent === loc ? "selected" : ""}>${escapeHTML(getPostcardFieldText({ continent: loc }, "continent"))}</option>`).join("")}</select><select class="form-select form-select-sm" id="regionFilter"><option value="all">所有地區</option>${regions.map((loc) => `<option value="${loc}" ${state.locationRegion === loc ? "selected" : ""}>${escapeHTML(getPostcardFieldText({ region: loc }, "region"))}</option>`).join("")}</select><select class="form-select form-select-sm"  id="locationFilter"><option value="all">所有地點</option>${locations
+    `<div class="container><section class="surface studio-content"><div class="studio-heading"><div><h2>選取明信片</h2><p>從你的收藏中挑選想印成實體相冊的明信片。可以跨篩選條件選取，已選內容會保留。</p></div><span class="badge text-bg-light border">最多 ${MAX_POSTCARDS} </span></div><div class="selection-toolbar"><div class="filter-row"><button class="filter-chip ${state.filter === "all" ? "active" : ""}" data-filter="all">全部明信片</button><button class="filter-chip ${state.filter === "favorites" ? "active" : ""}" data-filter="favorites"><i class="bi bi-star-fill me-1"></i>收藏</button><select class="form-select form-select-sm" id="continentFilter"><option value="all">所有洲</option>${continents.map((loc) => `<option value="${loc}" ${state.locationContinent === loc ? "selected" : ""}>${escapeHTML(getPostcardFieldText({ continent: loc }, "continent"))}</option>`).join("")}</select><select class="form-select form-select-sm" id="regionFilter"><option value="all">所有地區</option>${regions.map((loc) => `<option value="${loc}" ${state.locationRegion === loc ? "selected" : ""}>${escapeHTML(getPostcardFieldText({ region: loc }, "region"))}</option>`).join("")}</select><select class="form-select form-select-sm"  id="locationFilter"><option value="all">所有地點</option>${locations
       .map((loc) => {
         const card = postcards.find((item) => item.place === loc);
         return `<option value="${loc}" ${state.locationFilter === loc ? "selected" : ""}>${escapeHTML(getPostcardFieldText(card, "place"))}</option>`;
@@ -106,6 +109,6 @@ function renderSelection() {
     <i class="bi bi-arrow-right" aria-hidden="true"></i>
   </button>
 </div>
-</div></section>`,
+</div></section></div>`,
   );
 }

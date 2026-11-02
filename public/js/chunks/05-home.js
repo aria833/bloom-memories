@@ -25,9 +25,14 @@ function renderHome() {
             </div>
           </div>
         </div>
-        <div class="floating-postcard"><div class="postcard-scene has-photo"><img class="postcard-photo" src="/images/sample-yamagata/yamagata_1.webp" alt="山形旅行明信片照片"><span class="sample-photo-sticker" aria-hidden="true">✿</span></div><div class="floating-postcard-caption">Yamagata · 2025.12</div>
+        <div class="floating-postcard">
+          <div class="postcard-scene has-photo">
+            <img class="postcard-photo" src="/images/sample-yamagata/yamagata_1.webp" alt="山形旅行明信片照片">
+            <span class="sample-photo-sticker" aria-hidden="true">✿</span>
           </div>
+          <div class="floating-postcard-caption">Yamagata · 2025.12</div>
         </div>
+      </div>
     </div>
   </section>
           
