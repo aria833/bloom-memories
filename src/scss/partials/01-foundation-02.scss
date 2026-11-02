@@ -139,7 +139,6 @@
 .album-cover-art {
   position: relative;
   width: 100%;
-  max-width: 100%;
   height: auto;
   overflow: hidden;
   border-radius: 12px 12px 0 0;
@@ -166,27 +165,59 @@
   text-align: center;
   letter-spacing: 0.02em;
 }
+/* ========================================
+Floating Postcard：浮動明信片
+======================================== */
 .floating-postcard {
   position: absolute;
-  width: 142px;
-  height: 105px;
+  display: flex;
+  flex-direction: column;
+  width: clamp(100px, 18vw, 142px);
+  aspect-ratio: 142 / 105;
+  box-sizing: border-box;
   right: -2%;
   bottom: 0;
   transform: rotate(8deg);
   padding: 7px;
   background: white;
   box-shadow: 0 12px 30px #3b49351c;
+  border-radius: 12px;
 }
+
+/* 明信片照片容器 */
 .floating-postcard .postcard-scene {
-  height: 100%;
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
 }
+
+/* 明信片文字 */
+.floating-postcard-caption {
+  position: absolute;
+  left: 7px;
+  right: 7px;
+  bottom: 7px;
+  padding: 4px 6px;
+  background: rgba(255, 254, 250, 0.92);
+  color: #3d4b38;
+  font-size: 0.58rem;
+  text-align: center;
+  border-radius: 4px;
+}
+/* ========================================
+Postcard Scene：明信片場景
+======================================== */
 .postcard-scene {
   position: relative;
   overflow: hidden;
   background: #dce8d4;
-  border-radius: 3px;
+  border-radius: 5px;
   min-height: 100px;
 }
+
 .postcard-scene::before {
   content: "";
   position: absolute;
@@ -197,6 +228,7 @@
   background: #a7bd94;
   border-radius: 60% 60% 0 0;
 }
+
 .postcard-scene::after {
   content: "";
   position: absolute;
@@ -206,6 +238,32 @@
   bottom: 2%;
   background: #78956a;
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+/* ========================================
+Real Postcard Photography
+======================================== */
+.postcard-scene.has-photo {
+  background: #e8eadf;
+}
+
+.postcard-scene.has-photo::before,
+.postcard-scene.has-photo::after {
+  display: none;
+}
+
+.postcard-photo {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.postcard-scene.has-photo > .postcard-photo[hidden] {
+  display: none;
 }
 .scene-2 {
   background: #f2d8bd;
