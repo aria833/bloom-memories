@@ -50,15 +50,26 @@
 
 .showcase-card {
   padding: 14px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: left;
+  border-radius: 22px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .showcase-image {
-  min-height: 220px;
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
   display: grid;
   place-items: center;
   padding: 25px;
-  background: #f1f0e8;
+  background: linear-gradient(140deg, #eff8e7, #fff6e3);
   border-radius: 12px;
+  margin-bottom: 8px;
 }
 
 .showcase-card h3 {
