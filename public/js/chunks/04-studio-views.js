@@ -1,7 +1,7 @@
 function studioShell(content) {
   const draft = currentDraft();
   return `<section class="studio-shell">
-    <div class="container">
+    <div class="container mx-0">
     <div class="studio-topbar"><div><h1>Album Studio</h1><div class="small text-secondary mt-1">${escapeHTML(draft?.title || t("相冊製作工作區"))}</div></div><div class="studio-topbar-actions"><span class="save-state" id="saveStatus"><i class="bi bi-check-circle-fill"></i> 已儲存</span><button class="btn btn-sm btn-outline-primary" data-route="account">儲存並離開</button></div></div>
     <div class="progress-wrap">${stepperHTML()}</div></div>
     ${content}
