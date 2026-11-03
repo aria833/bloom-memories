@@ -41,57 +41,179 @@
 }
 
 /* ========================================
+   相冊預覽：書本結構
+======================================== */
+
+.open-book {
+  width: 100%;
+  max-width: 590px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  perspective: 1500px;
+  transform-style: preserve-3d;
+}
+
+.book-page {
+  position: relative;
+
+  aspect-ratio: 0.78;
+  padding: 9px;
+
+  background: #fffefa;
+  border: 1px solid #e1e2d8;
+  box-shadow: 0 5px 14px #35413710;
+
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.book-page:first-child {
+  border-radius: 4px 0 0 4px;
+  transform: rotateY(3deg);
+}
+
+.book-page:last-child {
+  border-radius: 0 4px 4px 0;
+  transform: rotateY(-3deg);
+}
+
+.book-page .postcard-scene {
+  height: 100%;
+}
+
+.book-page .page-note {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+
+  padding: 8px;
+
+  background: #fffefaeb;
+  font-family: Georgia, serif;
+  font-size: 0.72rem;
+}
+
+/* ========================================
+   相冊預覽：內頁
+======================================== */
+
+.book-page.inner-page {
+  padding: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
+
+/* ========================================
+   相冊預覽：翻頁動畫
+======================================== */
+
+.open-book.book-page-turn-forward .book-page {
+  animation: bloom-page-forward 0.62s cubic-bezier(0.22, 0.72, 0.22, 1) both;
+  transform-origin: left center;
+}
+
+.open-book.book-page-turn-backward .book-page {
+  animation: bloom-page-backward 0.62s cubic-bezier(0.22, 0.72, 0.22, 1) both;
+  transform-origin: right center;
+}
+
+.showcase-book-page.book-page-turn-forward {
+  animation: bloom-page-forward 0.62s cubic-bezier(0.22, 0.72, 0.22, 1) both;
+  transform-origin: left center;
+  backface-visibility: hidden;
+}
+
+.showcase-book-page.book-page-turn-backward {
+  animation: bloom-page-backward 0.62s cubic-bezier(0.22, 0.72, 0.22, 1) both;
+  transform-origin: right center;
+  backface-visibility: hidden;
+}
+
+/* ========================================
    版權頁
 ======================================== */
 
+.book-page.copyright-page,
 .showcase-book-page.copyright-page {
+  display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 30px;
-
-  text-align: center;
+  padding: 20px;
 
   background: #fffefa;
+  color: #48574a;
+
+  text-align: center;
 }
 
 .copyright-page-content {
-  width: min(85%, 400px);
-}
+  width: 100%;
+  max-width: 440px;
 
-.copyright-mark {
-  display: block;
+  padding: 12px;
 
-  margin-bottom: 20px;
-
-  font-size: 2rem;
-  color: #7a8d65;
+  text-align: center;
 }
 
 .copyright-page-content h3 {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 
   font-family: Georgia, serif;
-  line-height: 1.5;
+  line-height: 1.2;
+
+  overflow-wrap: anywhere;
+}
+
+.copyright-page-content dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 4px 12px;
+
+  max-width: 320px;
+  margin: 14px auto;
+
+  font-size: 0.72rem;
+  text-align: left;
+}
+
+.copyright-page-content dt {
+  color: #778177;
+  font-weight: 600;
+}
+
+.copyright-page-content dd {
+  margin: 0;
+
+  text-align: right;
+  overflow-wrap: anywhere;
 }
 
 .copyright-page-content p {
   margin-bottom: 10px;
 
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   line-height: 1.6;
 }
 
 .copyright-page-content small {
   display: block;
 
-  margin-top: 28px;
+  margin-top: 16px;
 
-  color: var(--muted);
+  color: #7c857b;
 
-  font-size: 0.65rem;
-  line-height: 1.8;
+  font-size: 0.58rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 /* ========================================

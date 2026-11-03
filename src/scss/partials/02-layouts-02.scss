@@ -64,29 +64,7 @@
   align-items: center;
   justify-content: center;
 }
-.open-book {
-  width: 100%;
-  max-width: 590px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  perspective: 900px;
-}
-.book-page {
-  aspect-ratio: 0.78;
-  padding: 9px;
-  background: #fffefa;
-  border: 1px solid #e1e2d8;
-  box-shadow: 0 5px 14px #35413710;
-  position: relative;
-}
-.book-page:first-child {
-  border-radius: 4px 0 0 4px;
-  transform: rotateY(3deg);
-}
-.book-page:last-child {
-  border-radius: 0 4px 4px 0;
-  transform: rotateY(-3deg);
-}
+
 .book-page .postcard-scene {
   height: 100%;
 }

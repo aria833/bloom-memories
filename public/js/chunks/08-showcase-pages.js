@@ -36,8 +36,6 @@ function showcaseCopyrightHTML(album) {
   return `
     <div class="showcase-book-page copyright-page">
       <div class="copyright-page-content">
-        <span class="copyright-mark">✿</span>
-
         <h3>
           ${escapeHTML(album.coverTitle || album.title || "")}
         </h3>

@@ -96,32 +96,11 @@
   resize: vertical;
 }
 
-.open-book {
-  perspective: 1500px;
-  transform-style: preserve-3d;
-}
 .open-book .book-page {
   backface-visibility: hidden;
   transform-style: preserve-3d;
 }
-.open-book.book-page-turn-forward .book-page {
-  animation: bloom-page-forward 0.62s cubic-bezier(0.22, 0.72, 0.22, 1) both;
-  transform-origin: left center;
-}
-.open-book.book-page-turn-backward .book-page {
-  animation: bloom-page-backward 0.62s cubic-bezier(0.22, 0.72, 0.22, 1) both;
-  transform-origin: right center;
-}
-.showcase-book-page.book-page-turn-forward {
-  animation: bloom-page-forward 0.62s cubic-bezier(0.22, 0.72, 0.22, 1) both;
-  transform-origin: left center;
-  backface-visibility: hidden;
-}
-.showcase-book-page.book-page-turn-backward {
-  animation: bloom-page-backward 0.62s cubic-bezier(0.22, 0.72, 0.22, 1) both;
-  transform-origin: right center;
-  backface-visibility: hidden;
-}
+
 @keyframes bloom-page-forward {
   0% {
     transform: perspective(1500px) rotateY(-86deg);

@@ -297,16 +297,16 @@ function renderPreview() {
   // 三款封面設定，與設計封面頁使用相同圖片路徑
   const coverStyles = {
     white: {
-      frontImage: "/images/bloom-memories/covers/white-front.webp",
-      backImage: "/images/bloom-memories/covers/white-back.webp",
+      frontImage: "/images/covers/white-front.webp",
+      backImage: "/images/covers/white-back.webp",
     },
     orange: {
-      frontImage: "/images/bloom-memories/covers/orange-front.webp",
-      backImage: "/images/bloom-memories/covers/orange-back.webp",
+      frontImage: "/images/covers/orange-front.webp",
+      backImage: "/images/covers/orange-back.webp",
     },
     blue: {
-      frontImage: "/images/bloom-memories/covers/blue-front.webp",
-      backImage: "/images/bloom-memories/covers/blue-back.webp",
+      frontImage: "/images/covers/blue-front.webp",
+      backImage: "/images/covers/blue-back.webp",
     },
   };
 
@@ -315,6 +315,9 @@ function renderPreview() {
   // 產生封面與封底
   const coverPage = (isBack = false) => {
     const backgroundImage = isBack ? cover.backImage : cover.frontImage;
+
+    // 根據封面款式設定文字顏色
+    const coverTextColor = state.coverStyle === "white" ? "#D16029" : "#EBE8DC";
 
     // 封面使用第一張明信片，封底不疊加明信片
     const firstPostcard = selected[0];
@@ -339,7 +342,10 @@ function renderPreview() {
             : ""
         }
 
-        <div class="cover-book__copy">
+        <div
+          class="cover-book__copy"
+          style="color: ${!isBack ? coverTextColor : "inherit"}"
+        >
 
 
           ${
@@ -349,7 +355,7 @@ function renderPreview() {
                 <p>${escapeHTML(state.coverSubtitle || "")}</p>
               `
               : `
-                <small>Bloom Memories</small>
+                
               `
           }
         </div>
@@ -405,15 +411,13 @@ function renderPreview() {
   // 倒數第二頁：版權頁
   else if (spreadIndex === totalSpreads - 2) {
     spread = `
+    <div class="book-page inner-page copyright-page">
     <div class="copyright-page-content">
-      <span class="copyright-mark">✿</span>
-
       <h3>${escapeHTML(state.coverTitle)}</h3>
 
       <dl>
         <dt data-i18n="版權頁_作者">作者</dt>
         <dd>
-          <span data-i18n="版權頁_作者標籤">作者：</span>
           ${escapeHTML(state.authorName || "未填寫")}
         </dd>
 
@@ -426,10 +430,8 @@ function renderPreview() {
 
       <small>
         © ${new Date().getFullYear()} Bloom Memories Concept
-        <span data-i18n="版權頁_版權聲明">
-          · All rights reserved to their respective owners.
-        </span>
       </small>
+    </div>
     </div>
   `;
   }
