@@ -76,8 +76,8 @@ export default {
   關於這項服務: "About This Service",
   "這是一個探索遊戲數位明信片如何轉化為實體相冊的獨立概念專案。使用者可以挑選明信片、添加文字與裝飾、調整順序，確認印刷樣式，模擬下單。":
     "This independent concept explores turning digital game postcards into a printed album. Users can select postcards, add text and decorations, reorder pages, review the print layout, and simulate checkout.",
-  "本專案僅供個人作品集，並非官方服務，也沒有與 Nintendo 或 Pikmin Bloom 開發團隊合作。":
-    "This project is for a personal portfolio only. It is not an official service and is not affiliated with the Nintendo or Pikmin Bloom development teams.",
+  "本專案僅供個人作品集，並非官方服務，也沒有與 Nintendo、Scopely 或 Pikmin Bloom 開發團隊合作。":
+    "This project is for a personal portfolio only. It is not an official service and is not affiliated with the Nintendo, Scopely or Pikmin Bloom development teams.",
   服務資訊: "Service Information",
   "這是非官方概念專案。": "This is an unofficial concept project.",
   向前移動: "Move Forward",
@@ -161,8 +161,8 @@ export default {
   關閉導覽選單: "Close Navigation Menu",
   "把旅途中的小小發現，收藏成可以翻閱的回憶。":
     "Keep the little discoveries in memories you can revisit.",
-  "獨立非官方概念專案，與 Nintendo 及 Pikmin Bloom 無官方合作、授權或背書關係。":
-    "An unofficial concept project with no collaboration, authorization, or endorsement from Nintendo or Pikmin Bloom.",
+  "獨立非官方概念專案，與 Nintendo, Scopely 及 Pikmin Bloom 無官方合作、授權或背書關係。":
+    "An unofficial concept project with no collaboration, authorization, or endorsement from Nintendo, Scopely or Pikmin Bloom.",
 
   // Additional controls and responsive studio copy.
   全部明信片: "All Postcards",

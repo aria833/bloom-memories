@@ -72,12 +72,36 @@
     width: 100%;
   }
 }
+/* 頁碼導覽 */
+
 .preview-page-strip {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 7px;
   flex-wrap: wrap;
-  margin-top: 16px;
+  gap: 8px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.preview-page-item {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.preview-page-item:hover {
+  color: var(--accent);
+}
+
+.preview-page-item.active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.preview-page-divider {
+  color: var(--line);
+  pointer-events: none;
 }
 .print-confirm-grid {
   display: grid;

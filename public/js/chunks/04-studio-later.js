@@ -476,25 +476,22 @@ function renderPreview() {
             </div>
 
             <div class="preview-controls">
-
               <button
-                class="btn btn-sm btn-outline-primary"
                 id="previewPrevious"
                 ${spreadIndex === 0 ? "disabled" : ""}
                 aria-label="上一頁"
               >
-                <i class="bi bi-arrow-left"></i>
+                <i class="bi bi-chevron-left"></i>
               </button>
 
-              <span>${spreadIndex + 1} / ${totalSpreads} 頁</span>
+              <span>${spreadIndex + 1} / ${totalSpreads}</span>
 
               <button
-                class="btn btn-sm btn-outline-primary"
                 id="previewNext"
                 ${spreadIndex >= totalSpreads - 1 ? "disabled" : ""}
                 aria-label="下一頁"
               >
-                <i class="bi bi-arrow-right"></i>
+                <i class="bi bi-chevron-right"></i>
               </button>
 
             </div>
@@ -504,11 +501,13 @@ function renderPreview() {
             ${Array.from(
               { length: totalSpreads },
               (_, i) => `
-                <button
-                  class="btn btn-sm ${
-                    i === spreadIndex ? "btn-primary" : "btn-outline-primary"
-                  }"
+                <span
+                  class="preview-page-item ${i === spreadIndex ? "active" : ""}"
                   data-preview-index="${i}"
+                  role="button"
+                  tabindex="0"
+                  aria-label="前往第 ${i + 1} 頁"
+                  aria-current="${i === spreadIndex ? "page" : "false"}"
                 >
                   ${
                     i === 0
@@ -517,11 +516,11 @@ function renderPreview() {
                         ? "封底"
                         : i === totalSpreads - 2
                           ? "版權頁"
-                          : formatPageLabel(i)
+                          : i
                   }
-                </button>
+                </span>
               `,
-            ).join("")}
+            ).join('<span class="preview-page-divider">·</span>')}
           </div>
         </div>
 

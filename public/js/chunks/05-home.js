@@ -50,7 +50,7 @@ function renderHome() {
         <article class="surface step-card">
           <div class="step-number">01</div>
           <h3>挑選明信片</h3>
-          <p>從收藏中挑出最想留住的片段。</p>
+          <p>從收藏中選出最想留住的片段。</p>
         </article>
         <article class="surface step-card">
           <div class="step-number">02</div>
@@ -118,7 +118,7 @@ function renderHome() {
         <div>
         <span class="eyebrow">A GIFT OF MEMORIES</span>
         <h2 class="section-title mt-2">把一起走過的回憶，送給重要的人</h2>
-        <p class="body-copy mt-3">加上禮物包裝與一段彼此都懂的話語，讓這本相冊成為一份帶著共同回憶的禮物。</p>
+        <p class="body-copy mt-3">加上禮物包裝與一張卡片，讓這本相冊成為一份帶著共同回憶的禮物。</p>
         <button class="btn btn-primary mt-2" data-route="studio">開始製作 <i class="bi bi-arrow-right ms-1"></i></button>
         </div>
       </div>

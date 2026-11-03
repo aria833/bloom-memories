@@ -195,6 +195,6 @@ export default {
   關閉導覽選單: "Close navigation menu",
   "把旅途中的小小發現，收藏成可以翻閱的回憶。":
     "Keep the little discoveries in memories you can revisit.",
-  "獨立非官方概念專案，與 Nintendo 及 Pikmin Bloom 無官方合作、授權或背書關係。":
-    "An independent, unofficial concept project with no collaboration, authorization, or endorsement from Nintendo or Pikmin Bloom.",
+  "獨立非官方概念專案，與 Nintendo, Scopely 及 Pikmin Bloom 無官方合作、授權或背書關係。":
+    "An independent, unofficial concept project with no collaboration, authorization, or endorsement from Nintendo, Scopely or Pikmin Bloom.",
 };

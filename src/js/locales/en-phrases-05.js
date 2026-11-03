@@ -4,7 +4,7 @@ export default {
     "Choose postcards from Pikmin Bloom, memo how you felt, and turn them into a printed album you can browse, keep, or give to a friend.",
   "不需要自己設計每一個版面，簡單編輯就能完成專屬相冊。":
     "You don't need to design every page yourself. Only takes few simple steps.",
-  "從收藏中挑出最想留住的片段。":
+  "從收藏中選出最想留住的片段。":
     "Choose the moments you most want to keep from your collection.",
   "加上一句回憶、日期或小小裝飾。":
     "Add a memory, a date, or a little decoration.",
@@ -20,7 +20,7 @@ export default {
   翻閱範例: "View Example",
   "把一起走過的回憶，送給重要的人":
     "Give the memories you made together to someone important",
-  "加上禮物包裝與一段彼此都懂的話語，讓這本相冊成為一份帶著共同回憶的禮物。":
+  "加上禮物包裝與一張卡片，讓這本相冊成為一份帶著共同回憶的禮物。":
     "Add gift wrapping and a message, turning the album into a gift filled with shared memories.",
   為回憶準備的小物: "Little Extras for Your Memories",
   "非官方獨立概念作品，使用模擬資料展示體驗。":

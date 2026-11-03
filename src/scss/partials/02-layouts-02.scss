@@ -78,16 +78,48 @@
   font-family: Georgia, serif;
   font-size: 0.72rem;
 }
+/* 預覽翻頁控制 */
 .preview-controls {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-top: 20px;
+  justify-content: center;
+  gap: 14px;
+
+  margin-top: 10px;
 }
-.preview-controls span {
+
+.preview-controls button {
+  display: grid;
+  place-items: center;
+
+  width: 26px;
+  height: 26px;
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
   color: var(--muted);
-  font-size: 0.8rem;
-  min-width: 78px;
+  font-size: 0.85rem;
+
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.preview-controls button:hover:not(:disabled) {
+  color: var(--accent);
+}
+
+.preview-controls button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.preview-controls span {
+  min-width: auto;
+
+  color: var(--muted);
+  font-size: 0.72rem;
   text-align: center;
 }
 .preview-summary {

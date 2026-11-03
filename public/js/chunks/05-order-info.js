@@ -221,7 +221,7 @@ function renderInfo() {
     about: [
       "關於這項服務",
       "這是一個探索遊戲數位明信片如何轉化為實體相冊的獨立概念專案。使用者可以挑選明信片、添加文字與裝飾、調整順序，確認印刷樣式，模擬下單。",
-      "本專案僅供個人作品集，並非官方服務，也沒有與 Nintendo 或 Pikmin Bloom 開發團隊合作。",
+      "本專案僅供個人作品集，並非官方服務，也沒有與 Nintendo、Scopely 或 Pikmin Bloom 開發團隊合作。",
     ],
   }[state.infoPage] || ["服務資訊", "這是非官方概念專案。"];
   return `
