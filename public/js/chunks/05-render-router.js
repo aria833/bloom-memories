@@ -1,9 +1,4 @@
 function render() {
-  siteHeader.classList.toggle("d-none", ["auth"].includes(state.route));
-  siteFooter.classList.toggle(
-    "d-none",
-    ["auth", "studio"].includes(state.route),
-  );
   document
     .querySelectorAll("[data-route]")
     .forEach((button) =>
