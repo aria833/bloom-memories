@@ -248,7 +248,7 @@ function renderEditor() {
             </button>
 
           <button class="btn btn-primary" id="finishEditing">
-            <span data-i18n="頁面排序">頁面排序</span>
+            <span data-i18n="調整順序">調整順序</span>
             <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
           </button>
 

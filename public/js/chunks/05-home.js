@@ -12,7 +12,7 @@ function renderHome() {
             </button>
             <button class="btn btn-outline-primary" data-route="shop">瀏覽商品</button>
           </div>
-          <div class="hero-note"><i class="bi bi-info-circle me-1"></i>獨立非官方概念作品，使用模擬資料展示體驗。
+          <div class="hero-note"><i class="bi bi-info-circle me-1"></i>非官方獨立概念作品，使用模擬資料展示體驗。
           </div>
         </div>
         <div class="hero-art">

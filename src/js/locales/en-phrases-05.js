@@ -23,7 +23,7 @@ export default {
   "加上禮物包裝與一段彼此都懂的話語，讓這本相冊成為一份帶著共同回憶的禮物。":
     "Add gift wrapping and a message, turning the album into a gift filled with shared memories.",
   為回憶準備的小物: "Little Extras for Your Memories",
-  "獨立非官方概念作品，使用模擬資料展示體驗。":
+  "非官方獨立概念作品，使用模擬資料展示體驗。":
     "An unofficial concept using mock data to demonstrate the experience.",
   把旅途中的小小發現: "Collect little discoveries into",
   收藏成一冊回憶: "a book of memories",

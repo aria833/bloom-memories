@@ -187,7 +187,7 @@ export default {
   返回商店: "Back to Shop",
   建立草稿: "Create Draft",
   編輯內容: "Edit Content",
-  頁面排序: "Arrange Pages",
+  調整順序: "Arrange Pages",
   確認印刷: "Confirm Printing",
   目前沒有明信片: "No postcards available",
   日期標籤: "Date Label",

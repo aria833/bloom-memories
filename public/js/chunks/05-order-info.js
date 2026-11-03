@@ -174,7 +174,47 @@ function renderInfo() {
   if (state.infoPage === "privacy")
     return `<div class="page-container"><section class="page-intro"><span class="eyebrow">PRIVACY</span><h1 class="mt-2">隱私權政策</h1><p>本頁為概念原型的示意政策，不構成正式法律文件。</p></section><article class="surface p-4 p-md-5 info-content"><div class="alert alert-warning">本原型僅用於展示概念。請勿輸入真實付款資料或不必要的敏感個人資訊。</div><h2>資料處理方式</h2><p>此原型使用瀏覽器 localStorage 暫存登入狀態、相冊草稿、地址簿、購物車、願望清單及模擬訂單，以展示主要互動流程。</p><h2>資料儲存與刪除</h2><p>資料保留在目前使用的瀏覽器與裝置中。清除網站資料或瀏覽器儲存空間可能會移除這些原型資料。此原型沒有雲端帳戶同步功能。</p><h2>付款與第三方服務</h2><p>不會處理真實付款、收集信用卡號、連接遊戲帳戶或實際物流服務。聯絡表單也不會傳送訊息。</p><h2>正式服務注意事項</h2><p>若未來發展成正式服務，需依實際資料流程補齊資料控制者資訊、處理目的、法律依據、保存期限、第三方服務、跨境傳輸、使用者權利及聯絡方式，並由專業人士審閱。</p></article></div>`;
   if (state.infoPage === "contact")
-    return `<div class="page-container"><section class="page-intro"><span class="eyebrow">INFORMATION</span><h1 class="mt-2">聯絡我們</h1><p>這是作品集中的非官方概念原型，表單只用來展示互動，不會真的寄出訊息。</p></section><section class="surface contact-form-wrap"><form id="contactForm" class="row g-3"><div class="col-md-6"><label class="form-label" for="contactName">姓名</label><input class="form-control" id="contactName" required placeholder="你的名字"></div><div class="col-md-6"><label class="form-label" for="contactEmail">電子郵件</label><input class="form-control" id="contactEmail" type="email" required placeholder="name@example.com"></div><div class="col-12"><label class="form-label" for="contactTopic">聯絡主題</label><select class="form-select" id="contactTopic"><option>相冊製作體驗</option><option>商品與加購</option><option>配送資訊</option><option>其他建議</option></select></div><div class="col-12"><label class="form-label" for="contactMessage">訊息內容</label><textarea class="form-control" id="contactMessage" rows="5" required placeholder="寫下你的問題或建議…"></textarea></div><div class="col-12"><button class="btn btn-primary" type="submit">送出表單 <i class="bi bi-arrow-right ms-1"></i></button><p class="small text-secondary mt-3 mb-0">展示用表單，不會傳送或儲存個人資料。</p></div></form></section></div>`;
+    return `
+      <div class="page-container">
+        <section class="page-intro">
+          <span class="eyebrow">CONTACT US</span>
+          <h1 class="mt-2">聯絡我們</h1>
+          <p>這是作品集中的非官方概念原型，表單只用來展示互動，不會真的寄出訊息。</p>
+        </section>
+        <section class="surface contact-form-wrap">
+          <form id="contactForm" class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label" for="contactName">姓名</label>
+              <input class="form-control" id="contactName" required placeholder="你的名字">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="contactEmail">電子郵件</label>
+              <input class="form-control" id="contactEmail" type="email" required placeholder="name@example.com">
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="contactTopic">聯絡主題</label>
+              <select class="form-select" id="contactTopic">
+                <option>相冊製作體驗</option>
+                <option>商品與加購</option>
+                <option>配送資訊</option>
+                <option>其他建議</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="contactMessage">訊息內容</label>
+              <textarea class="form-control" id="contactMessage" rows="5" required placeholder="寫下你的問題或建議…">
+              </textarea>
+            </div>
+            <div class="col-12">
+              <div class="d-flex  justify-content-center">
+                <button class="btn btn-primary w-100" type="submit">送出表單 <i class="bi bi-arrow-right ms-1"></i>
+                </button>
+              </div>
+              <p class="small text-secondary mt-3 mb-0">展示用表單，不會傳送或儲存個人資料。</p>
+            </div>
+          </form>
+        </section>
+      </div>`;
 
   // 關於服務
   const content = {
@@ -184,10 +224,36 @@ function renderInfo() {
       "本專案僅供個人作品集，並非官方服務，也沒有與 Nintendo 或 Pikmin Bloom 開發團隊合作。",
     ],
   }[state.infoPage] || ["服務資訊", "這是非官方概念專案。"];
-  return `<div class="page-container"><section class="page-intro"><span class="eyebrow">INFORMATION</span><h1 class="mt-2">${content[0]}</h1></section><article class="surface p-4 p-md-5 info-content">${content
-    .slice(1)
-    .map((text) => `<p>${text}</p>`)
-    .join("")}</article></div>`;
+  return `
+    <div class="page-container">
+      <section class="page-intro">
+        <span class="eyebrow">INFORMATION</span>
+        <h1 class="mt-2">${content[0]}</h1>
+      </section>
+      <article class="surface p-4 p-md-5 info-content">
+        ${content
+          .slice(1)
+          .map((text) => `<p>${text}</p>`)
+          .join("")}
+        ${
+          state.infoPage === "about"
+            ? `
+            <div class="info-portfolio-link d-flex justify-content-center">
+              <a
+                href="https://portfolio.aria-carrotlab.com/projects/bloom-memories/"
+                class="btn btn-outline-success"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Explore the Story Behind
+                <i class="bi bi-arrow-up-right ms-1"></i>
+              </a>
+            </div>
+          `
+            : ""
+        }
+      </article>
+    </div>`;
 }
 
 // 首頁
