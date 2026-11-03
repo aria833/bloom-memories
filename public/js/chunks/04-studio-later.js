@@ -30,28 +30,27 @@ function renderCover() {
   const draft = currentDraft();
 
   // 三款封面設定
-  // 圖片路徑目前為暫定值，之後只需要修改這裡
   const styles = [
     {
       id: "botanical",
       name: "植物觀察",
       swatch: "#dce6d2",
-      frontImage: "/images/bloom-memories/covers/botanical-front.webp",
-      backImage: "/images/bloom-memories/covers/botanical-back.webp",
+      frontImage: "/images/covers/white-front.webp",
+      backImage: "/images/covers/white-back.webp",
     },
     {
       id: "orange",
       name: "旅途暖陽",
       swatch: "#f0d4bd",
-      frontImage: "/images/bloom-memories/covers/orange-front.webp",
-      backImage: "/images/bloom-memories/covers/orange-back.webp",
+      frontImage: "/images/covers/orange-front.webp",
+      backImage: "/images/covers/orange-back.webp",
     },
     {
       id: "blue",
       name: "海岸微風",
       swatch: "#d7e5e7",
-      frontImage: "/images/bloom-memories/covers/blue-front.webp",
-      backImage: "/images/bloom-memories/covers/blue-back.webp",
+      frontImage: "/images/covers/blue-front.webp",
+      backImage: "/images/covers/blue-back.webp",
     },
   ];
 
@@ -156,15 +155,20 @@ function renderCover() {
             }
 
             <!-- 封面標題與副標題 -->
-            <div class="cover-book__copy">
-              <h3 id="coverPreviewTitle">
-                ${escapeHTML(state.coverTitle)}
-              </h3>
+           <div
+            class="cover-book__copy"
+            style="color: ${
+              selectedStyle.id === "botanical" ? "#D16029" : "#EBE8DC"
+            };"
+          >
+            <h3 id="coverPreviewTitle">
+              ${escapeHTML(state.coverTitle)}
+            </h3>
 
-              <p id="coverPreviewSubtitle">
-                ${escapeHTML(state.coverSubtitle || "")}
-              </p>
-            </div>
+            <p id="coverPreviewSubtitle">
+              ${escapeHTML(state.coverSubtitle || "")}
+            </p>
+          </div>
 
           </div>
 
