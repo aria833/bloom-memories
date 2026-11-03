@@ -29,7 +29,7 @@ export default {
   "商品規格為概念示意，尚待正式打樣確認。":
     "Product specifications are illustrative and subject to prototyping.",
   常見QA資訊: "FAQ & Shipping Information",
-  植物觀察貼紙組: "Botanical Observation Sticker Set",
+  植物觀察貼紙組: "white Observation Sticker Set",
   "以葉片、花朵與小小自然符號為主題，替相冊頁面增添手帳般的層次。內含多款紙感裝飾貼紙。":
     "Leaf, flower, and nature-themed stickers add a journal-like layer to album pages.",
   "概念規格：A6 尺寸貼紙頁 4 張；霧面紙感；適合紙本手帳與相冊裝飾。":

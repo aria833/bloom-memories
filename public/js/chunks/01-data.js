@@ -251,7 +251,7 @@ const state = {
   dateFilter: "all",
   editorIndex: 0,
   currentLayout: "memory",
-  coverStyle: "botanical",
+  coverStyle: "white",
   coverTitle: "My travel album",
   coverSubtitle: "Collect little discoveries",
   coverImage: "",

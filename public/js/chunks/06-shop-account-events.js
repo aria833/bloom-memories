@@ -13,7 +13,10 @@ document.addEventListener("click", (event) => {
     if (existing) existing.qty = Math.min(10, existing.qty + addQty);
     else state.cart.push({ id, qty: addQty });
     saveLocal();
-    toast(`${getProductText(product, "name")} × ${addQty} ${t("加入購物車")}`, t("加入成功"));
+    toast(
+      `${getProductText(product, "name")} × ${addQty} ${t("加入購物車")}`,
+      t("加入成功"),
+    );
     render();
     updateCartCount(true);
     return;
@@ -77,7 +80,7 @@ document.addEventListener("click", (event) => {
         postcardIds: [...order.postcardIds],
         coverTitle: order.coverTitle || order.title,
         coverSubtitle: order.coverSubtitle || "",
-        coverStyle: order.coverStyle || "botanical",
+        coverStyle: order.coverStyle || "white",
         coverImage: order.coverImage || "",
         lastStep: 6,
         updatedAt: new Date().toISOString(),

@@ -50,7 +50,7 @@ document.addEventListener("click", (event) => {
         id: `draft-${Date.now()}`,
         title,
         postcardIds: [],
-        coverStyle: "botanical",
+        coverStyle: "white",
         coverTitle: title,
         coverSubtitle: "把旅途中的小小發現收藏起來",
         coverImage: "",
@@ -60,7 +60,7 @@ document.addEventListener("click", (event) => {
       state.drafts.unshift(draft);
       state.currentDraftId = draft.id;
       state.selectedIds = [];
-      state.coverStyle = "botanical";
+      state.coverStyle = "white";
       state.coverTitle = title;
       state.coverSubtitle = draft.coverSubtitle;
       state.coverImage = "";
@@ -155,7 +155,7 @@ document.addEventListener("click", (event) => {
         postcardIds: [...order.postcardIds],
         coverTitle: order.coverTitle || order.title,
         coverSubtitle: order.coverSubtitle || "",
-        coverStyle: order.coverStyle || "botanical",
+        coverStyle: order.coverStyle || "white",
         coverImage: order.coverImage || "",
         lastStep: 6,
         updatedAt: new Date().toISOString(),

@@ -19,7 +19,7 @@ function createDraft() {
     id,
     title,
     postcardIds: [],
-    coverStyle: "botanical",
+    coverStyle: "white",
     coverTitle: title,
     coverSubtitle: t("把旅途中的小小發現收藏起來"),
     lastStep: 2,

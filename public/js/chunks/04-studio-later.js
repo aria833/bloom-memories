@@ -32,7 +32,7 @@ function renderCover() {
   // 三款封面設定
   const styles = [
     {
-      id: "botanical",
+      id: "white",
       name: "植物觀察",
       swatch: "#dce6d2",
       frontImage: "/images/covers/white-front.webp",
@@ -158,7 +158,7 @@ function renderCover() {
            <div
             class="cover-book__copy"
             style="color: ${
-              selectedStyle.id === "botanical" ? "#D16029" : "#EBE8DC"
+              selectedStyle.id === "white" ? "#D16029" : "#EBE8DC"
             };"
           >
             <h3 id="coverPreviewTitle">
@@ -296,9 +296,9 @@ function renderPreview() {
 
   // 三款封面設定，與設計封面頁使用相同圖片路徑
   const coverStyles = {
-    botanical: {
-      frontImage: "/images/bloom-memories/covers/botanical-front.webp",
-      backImage: "/images/bloom-memories/covers/botanical-back.webp",
+    white: {
+      frontImage: "/images/bloom-memories/covers/white-front.webp",
+      backImage: "/images/bloom-memories/covers/white-back.webp",
     },
     orange: {
       frontImage: "/images/bloom-memories/covers/orange-front.webp",
@@ -310,7 +310,7 @@ function renderPreview() {
     },
   };
 
-  const cover = coverStyles[state.coverStyle] || coverStyles.botanical;
+  const cover = coverStyles[state.coverStyle] || coverStyles.white;
 
   // 產生封面與封底
   const coverPage = (isBack = false) => {
