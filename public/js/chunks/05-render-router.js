@@ -30,6 +30,9 @@ function render() {
     product: () => renderProductDetail(state.currentProductId),
   };
   main.innerHTML = localizeHTML((routes[state.route] || renderHome)());
+  if (state.route === "studio") {
+    initMemoryTextCounter();
+  }
 
   const routeTitles = {
     home: "Bloom Memories｜UNOFFICIAL CONCEPT PROJECT",

@@ -1,3 +1,39 @@
+/* ========================================
+Memory Text：回憶文字設定
+======================================== */
+const MEMORY_TEXT_LIMITS = {
+  "zh-TW": 40,
+  en: 100,
+  ja: 40,
+};
+
+// 取得目前語系的回憶文字上限
+function getMemoryTextLimit() {
+  const lang = document.documentElement.lang || "zh-TW";
+
+  return MEMORY_TEXT_LIMITS[lang] || MEMORY_TEXT_LIMITS["zh-TW"];
+}
+
+// 取得計算目前的回憶文字字數
+function initMemoryTextCounter() {
+  const textarea = document.querySelector("#postcardText");
+  const counter = document.querySelector("#memoryTextCounter");
+
+  if (!textarea || !counter) return;
+
+  const limit = getMemoryTextLimit();
+
+  function updateCounter() {
+    const count = Array.from(textarea.value).length;
+
+    counter.textContent = `${count} / ${limit}`;
+  }
+
+  textarea.addEventListener("input", updateCounter);
+
+  updateCounter();
+}
+
 function renderEditor() {
   const selected = getSelectedPostcards();
   if (!selected.length) return renderSelection();
@@ -7,6 +43,7 @@ function renderEditor() {
   const card = selected[state.editorIndex];
   const layout = card.layout || state.currentLayout;
   const isOriginalLayout = layout === "original";
+  const memoryTextLimit = getMemoryTextLimit();
 
   const decorationPicker = `
     <div class="decoration-section">
@@ -170,14 +207,22 @@ function renderEditor() {
 
                       <textarea
                         class="form-control"
-                        rows="4"
-                        maxlength="120"
+                        rows="3"
+                        maxlength="${memoryTextLimit}"
                         id="postcardText"
                         placeholder="寫下一小段回憶…"
                       ></textarea>
 
-                      <div class="small text-secondary mt-1　mb-1">
-                        最多 120 字
+                      <div class="small text-secondary mt-1 mb-1">
+                        最多 ${memoryTextLimit} 字
+                      </div>
+                      <div class="d-flex justify-content-end mt-1">
+                        <span
+                          class="small text-secondary"
+                          id="memoryTextCounter"
+                        >
+                          0 / ${memoryTextLimit}
+                        </span>
                       </div>
                     </div>
                   `
