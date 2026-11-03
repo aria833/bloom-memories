@@ -20,7 +20,7 @@ function renderAuth() {
         </span>
       </div>
       <h1 class="mt-2">${isSignup ? "建立你的帳戶" : "歡迎回來"}</h1>
-      <p>${isSignup ? "建立帳戶後，就可以保存相冊草稿並繼續製作。" : "登入後就能回到原本的操作，繼續製作你的相冊。"}</p>
+      <p>${isSignup ? "建立帳戶後，就可以保存相冊草稿並製作相冊。" : "登入後就能查看會員資料，並繼續製作你的相冊。"}</p>
       <form id="authForm">
         <div class="mb-3">
           <label class="field-label" for="authEmail">電子郵件</label>

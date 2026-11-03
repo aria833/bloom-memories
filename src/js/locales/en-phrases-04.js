@@ -78,9 +78,9 @@ export default {
   其他建議: "Other feedback",
   建立你的帳戶: "Create your account",
   歡迎回來: "Welcome back",
-  "建立帳戶後，就可以保存相冊草稿並繼續製作。":
+  "建立帳戶後，就可以保存相冊草稿並製作相冊。":
     "Create an account to save album drafts and continue creating.",
-  "登入後就能回到原本的操作，繼續製作你的相冊。":
+  "登入後就能查看會員資料，並繼續製作你的相冊。":
     "Sign in to pick up where you left off and continue your album.",
   密碼: "Password",
   "至少 4 個字元": "At least 4 characters",
