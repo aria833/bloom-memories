@@ -243,10 +243,13 @@ Postcard Scene：明信片場景
 }
 
 /* ========================================
-Real Postcard Photography
+明信片
 ======================================== */
 .postcard-scene.has-photo {
   background: #e8eadf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .postcard-scene.has-photo::before,
@@ -255,12 +258,10 @@ Real Postcard Photography
 }
 
 .postcard-photo {
-  position: absolute;
-  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 

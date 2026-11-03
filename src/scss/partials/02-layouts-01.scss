@@ -1,3 +1,7 @@
+/* 選擇明信片時的footer */
+/* ========================================
+Selection Footer
+======================================== */
 .selection-footer {
   display: flex;
   align-items: center;
@@ -7,26 +11,40 @@
 
 .selection-footer__info {
   display: flex;
-  flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 0.5rem;
+  gap: 8px;
+  flex: 0 0 auto;
   white-space: nowrap;
+}
+
+.selection-footer__info strong {
+  display: inline-flex;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.selection-footer__remaining {
+  display: inline-block;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .selection-footer__actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.5rem;
+  flex-shrink: 0;
 }
 
 .selection-footer__actions .btn {
   display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   gap: 0.35rem;
+  white-space: nowrap;
 }
 
 .selection-footer__actions .btn span,
@@ -38,23 +56,11 @@
   .selection-footer {
     flex-direction: column;
     align-items: stretch;
-    gap: 1rem;
   }
 
   .selection-footer__info {
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    gap: 0.5rem;
-  }
-
-  .selection-footer__actions {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     width: 100%;
-    gap: 0.5rem;
+    justify-content: flex-start;
   }
 
   .selection-footer__actions .btn {
