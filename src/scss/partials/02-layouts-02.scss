@@ -38,12 +38,15 @@
   padding: 9px;
 }
 .cover-swatch {
+  display: block;
   width: 100%;
   max-width: 30px;
   aspect-ratio: 1023 / 684;
-  height: auto;
+  flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid #0000000d;
+  background-size: cover;
+  background-position: center;
 }
 .preview-layout {
   display: grid;

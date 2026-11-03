@@ -104,7 +104,12 @@ function renderCover() {
                 >
                   <span
                     class="cover-swatch"
-                    style="background:${style.swatch}"
+                    style="
+                      background-color: ${style.swatch};
+                      background-image: url('${style.frontImage}');
+                      background-size: cover;
+                      background-position: center;
+                    "
                   ></span>
 
                   ${
