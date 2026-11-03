@@ -60,19 +60,37 @@
     margin-bottom: 0;
   }
   .cover-layout {
-    grid-template-columns: 190px minmax(0, 1fr);
-  }
-  .cover-options {
-    grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
   }
+
+  /* 第一區：封面樣式 */
+  .cover-options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
   .cover-options h3 {
     grid-column: 1 / -1;
   }
+
   .cover-choice {
+    width: 100%;
     margin: 0;
+  }
+
+  /* 第二區：封面預覽 */
+  .cover-preview-area {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* 第三區：封面文字與版權資訊 */
+  .cover-layout > div:last-child {
+    width: 100%;
   }
   .postcard-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));

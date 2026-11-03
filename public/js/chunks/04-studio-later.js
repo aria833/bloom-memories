@@ -107,10 +107,6 @@ function renderCover() {
                     style="background:${style.swatch}"
                   ></span>
 
-                  <span class="small fw-semibold">
-                    ${style.name}
-                  </span>
-
                   ${
                     state.coverStyle === style.id
                       ? '<i class="bi bi-check-circle-fill ms-auto text-success"></i>'

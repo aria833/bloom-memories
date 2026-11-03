@@ -245,8 +245,8 @@ Selection Footer
 }
 .cover-layout {
   display: grid;
-  grid-template-columns: 240px minmax(0, 1fr) 240px;
-  gap: 25px;
+  grid-template-columns: 80px minmax(0, 1.8fr) minmax(280px, 1fr);
+  gap: 24px;
   align-items: start;
 }
 .cover-preview-area {
