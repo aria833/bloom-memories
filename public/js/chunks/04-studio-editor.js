@@ -119,7 +119,7 @@ function renderEditor() {
                       ${escapeHTML(card.date || "")}
                     </span>
 
-                    <div class="editor-note">${escapeHTML((getPostcardNoteText(card) || "").trim())}</div>
+                    <div class="editor-note"></div>
                   </div>
 
                   ${decorationHTML(card)}
@@ -174,7 +174,7 @@ function renderEditor() {
                         maxlength="120"
                         id="postcardText"
                         placeholder="寫下一小段回憶…"
-                      >${escapeHTML((getPostcardNoteText(card) || "").trim())}</textarea>
+                      ></textarea>
 
                       <div class="small text-secondary mt-1　mb-1">
                         最多 120 字
