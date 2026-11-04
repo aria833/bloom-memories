@@ -199,6 +199,6 @@ export default {
   關閉導覽選單: "ナビゲーションメニューを閉じる",
   "把旅途中的小小發現，收藏成可以翻閱的回憶。":
     "旅先で見つけた小さな発見を、何度でも読み返せる思い出に。",
-  "獨立非官方概念專案，與 Nintendo, Scopely 及 Pikmin Bloom 無官方合作、授權或背書關係。":
-    "Nintendo, Scopely および Pikmin Bloom との公式な協業・許諾・推奨関係のない、非公式コンセプトプロジェクトです。",
+  "獨立非官方概念專案，與 Nintendo, Scopely Explore 及 Pikmin Bloom 無官方合作、授權或背書關係。":
+    "Nintendo, Scopely Explore および Pikmin Bloom との公式な協業・許諾・推奨関係のない、非公式コンセプトプロジェクトです。",
 };

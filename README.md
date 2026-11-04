@@ -1,6 +1,6 @@
 # Bloom Memories — Unofficial Concept Prototype
 
-An independent portfolio/learning prototype exploring how digital postcard collections inspired by Pikmin Bloom could become personalized printed keepsake albums. It is not affiliated with, endorsed by, or sponsored by Nintendo, Scopely or the Pikmin Bloom development team.
+An independent portfolio/learning prototype exploring how digital postcard collections inspired by Pikmin Bloom could become personalized printed keepsake albums. It is not affiliated with, endorsed by, or sponsored by Nintendo, Scopely Explore or the Pikmin Bloom development team.
 
 ## Stack
 

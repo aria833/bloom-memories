@@ -19,4 +19,4 @@
 
 ## Naming note
 
-These are brainstorming candidates, not cleared names. Bloom Memories is used here as an unofficial portfolio concept. Before public or commercial use, check trademark rights, domain availability, and any risk of implying official affiliation. The prototype is not affiliated with, endorsed by, or sponsored by Nintendo, Scopely or the Pikmin Bloom development team.
+These are brainstorming candidates, not cleared names. Bloom Memories is used here as an unofficial portfolio concept. Before public or commercial use, check trademark rights, domain availability, and any risk of implying official affiliation. The prototype is not affiliated with, endorsed by, or sponsored by Nintendo, Scopely Explore or the Pikmin Bloom development team.
