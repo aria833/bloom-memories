@@ -389,7 +389,7 @@ function renderPreview() {
           ${escapeHTML(date || "")}
         </span>
 
-        <div class="editor-note">${escapeHTML(copy)}</div>
+        <div class="editor-note"></div>
       </div>
 
       ${decorationHTML(card, { interactive: false })}
